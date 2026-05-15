@@ -1,0 +1,413 @@
+{
+  "version": 1,
+  "pageId": "default",
+  "domain": "pokeapi-demo.zoolandingpage.com.mx",
+  "variables": {
+    "remote": {
+      "pokemon": {
+        "pikachu": {
+          "items": [
+            {
+              "name": "Pikachu",
+              "number": "#25",
+              "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+              "type": "Electric",
+              "href": "/pokemon?name=pikachu"
+            }
+          ]
+        },
+        "eevee": {
+          "items": [
+            {
+              "name": "Eevee",
+              "number": "#133",
+              "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png",
+              "type": "Normal",
+              "href": "/pokemon?name=eevee"
+            }
+          ]
+        },
+        "charizard": {
+          "items": [
+            {
+              "name": "Charizard",
+              "number": "#6",
+              "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png",
+              "type": "Fire",
+              "href": "/pokemon?name=charizard"
+            }
+          ]
+        },
+        "gengar": {
+          "items": [
+            {
+              "name": "Gengar",
+              "number": "#94",
+              "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png",
+              "type": "Ghost",
+              "href": "/pokemon?name=gengar"
+            }
+          ]
+        },
+        "bulbasaur": {
+          "items": [
+            {
+              "name": "Bulbasaur",
+              "number": "#1",
+              "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+              "type": "Grass",
+              "href": "/pokemon?name=bulbasaur"
+            }
+          ]
+        },
+        "squirtle": {
+          "items": [
+            {
+              "name": "Squirtle",
+              "number": "#7",
+              "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+              "type": "Water",
+              "href": "/pokemon?name=squirtle"
+            }
+          ]
+        },
+        "dragonite": {
+          "items": [
+            {
+              "name": "Dragonite",
+              "number": "#149",
+              "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/149.png",
+              "type": "Dragon",
+              "href": "/pokemon?name=dragonite"
+            }
+          ]
+        },
+        "lucario": {
+          "items": [
+            {
+              "name": "Lucario",
+              "number": "#448",
+              "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png",
+              "type": "Fighting",
+              "href": "/pokemon?name=lucario"
+            }
+          ]
+        },
+        "index": {
+          "items": [
+            {
+              "id": "pikachu",
+              "label": "pikachu",
+              "description": "Ficha dinamica de pikachu",
+              "href": "/pokemon?name=pikachu"
+            },
+            {
+              "id": "eevee",
+              "label": "eevee",
+              "description": "Ficha dinamica de eevee",
+              "href": "/pokemon?name=eevee"
+            },
+            {
+              "id": "charizard",
+              "label": "charizard",
+              "description": "Ficha dinamica de charizard",
+              "href": "/pokemon?name=charizard"
+            },
+            {
+              "id": "gengar",
+              "label": "gengar",
+              "description": "Ficha dinamica de gengar",
+              "href": "/pokemon?name=gengar"
+            },
+            {
+              "id": "bulbasaur",
+              "label": "bulbasaur",
+              "description": "Ficha dinamica de bulbasaur",
+              "href": "/pokemon?name=bulbasaur"
+            },
+            {
+              "id": "squirtle",
+              "label": "squirtle",
+              "description": "Ficha dinamica de squirtle",
+              "href": "/pokemon?name=squirtle"
+            },
+            {
+              "id": "dragonite",
+              "label": "dragonite",
+              "description": "Ficha dinamica de dragonite",
+              "href": "/pokemon?name=dragonite"
+            },
+            {
+              "id": "lucario",
+              "label": "lucario",
+              "description": "Ficha dinamica de lucario",
+              "href": "/pokemon?name=lucario"
+            }
+          ]
+        },
+        "catalog": {
+          "items": [
+            {
+              "id": 1,
+              "name": "Bulbasaur",
+              "number": "#1",
+              "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+              "primaryType": "grass",
+              "type": "grass",
+              "types": [
+                {
+                  "slot": 1,
+                  "type": {
+                    "name": "grass"
+                  }
+                }
+              ],
+              "evolvesFrom": "",
+              "generation": "generation-i",
+              "color": "green",
+              "moves": [
+                {
+                  "move": {
+                    "name": "vine-whip"
+                  }
+                },
+                {
+                  "move": {
+                    "name": "razor-wind"
+                  }
+                },
+                {
+                  "move": {
+                    "name": "tackle"
+                  }
+                },
+                {
+                  "move": {
+                    "name": "growth"
+                  }
+                }
+              ],
+              "moveCount": 4,
+              "href": "/pokemon?name=bulbasaur"
+            },
+            {
+              "id": 2,
+              "name": "Ivysaur",
+              "number": "#2",
+              "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
+              "primaryType": "grass",
+              "type": "grass",
+              "types": [
+                {
+                  "slot": 1,
+                  "type": {
+                    "name": "grass"
+                  }
+                }
+              ],
+              "evolvesFrom": "bulbasaur",
+              "generation": "generation-i",
+              "color": "green",
+              "moves": [
+                {
+                  "move": {
+                    "name": "vine-whip"
+                  }
+                },
+                {
+                  "move": {
+                    "name": "razor-leaf"
+                  }
+                },
+                {
+                  "move": {
+                    "name": "tackle"
+                  }
+                },
+                {
+                  "move": {
+                    "name": "growth"
+                  }
+                }
+              ],
+              "moveCount": 4,
+              "href": "/pokemon?name=ivysaur"
+            },
+            {
+              "id": 3,
+              "name": "Venusaur",
+              "number": "#3",
+              "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
+              "primaryType": "grass",
+              "type": "grass",
+              "types": [
+                {
+                  "slot": 1,
+                  "type": {
+                    "name": "grass"
+                  }
+                }
+              ],
+              "evolvesFrom": "ivysaur",
+              "generation": "generation-i",
+              "color": "green",
+              "moves": [
+                {
+                  "move": {
+                    "name": "vine-whip"
+                  }
+                },
+                {
+                  "move": {
+                    "name": "solar-beam"
+                  }
+                },
+                {
+                  "move": {
+                    "name": "razor-leaf"
+                  }
+                },
+                {
+                  "move": {
+                    "name": "growth"
+                  }
+                }
+              ],
+              "moveCount": 4,
+              "href": "/pokemon?name=venusaur"
+            },
+            {
+              "id": 4,
+              "name": "Charmander",
+              "number": "#4",
+              "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+              "primaryType": "fire",
+              "type": "fire",
+              "types": [
+                {
+                  "slot": 1,
+                  "type": {
+                    "name": "fire"
+                  }
+                }
+              ],
+              "evolvesFrom": "",
+              "generation": "generation-i",
+              "color": "red",
+              "moves": [
+                {
+                  "move": {
+                    "name": "ember"
+                  }
+                },
+                {
+                  "move": {
+                    "name": "scratch"
+                  }
+                },
+                {
+                  "move": {
+                    "name": "smokescreen"
+                  }
+                },
+                {
+                  "move": {
+                    "name": "fire-fang"
+                  }
+                }
+              ],
+              "moveCount": 4,
+              "href": "/pokemon?name=charmander"
+            }
+          ]
+        },
+        "catalogIndex": {
+          "items": [
+            {
+              "id": "snorlax",
+              "label": "snorlax",
+              "description": "Buscar en el catalogo: snorlax",
+              "href": "/?pokemon=snorlax#pokemon-grid"
+            },
+            {
+              "id": "mewtwo",
+              "label": "mewtwo",
+              "description": "Buscar en el catalogo: mewtwo",
+              "href": "/?pokemon=mewtwo#pokemon-grid"
+            },
+            {
+              "id": "greninja",
+              "label": "greninja",
+              "description": "Buscar en el catalogo: greninja",
+              "href": "/?pokemon=greninja#pokemon-grid"
+            },
+            {
+              "id": "gardevoir",
+              "label": "gardevoir",
+              "description": "Buscar en el catalogo: gardevoir",
+              "href": "/?pokemon=gardevoir#pokemon-grid"
+            },
+            {
+              "id": "arcanine",
+              "label": "arcanine",
+              "description": "Buscar en el catalogo: arcanine",
+              "href": "/?pokemon=arcanine#pokemon-grid"
+            },
+            {
+              "id": "lapras",
+              "label": "lapras",
+              "description": "Buscar en el catalogo: lapras",
+              "href": "/?pokemon=lapras#pokemon-grid"
+            },
+            {
+              "id": "ditto",
+              "label": "ditto",
+              "description": "Buscar en el catalogo: ditto",
+              "href": "/?pokemon=ditto#pokemon-grid"
+            },
+            {
+              "id": "mew",
+              "label": "mew",
+              "description": "Buscar en el catalogo: mew",
+              "href": "/?pokemon=mew#pokemon-grid"
+            }
+          ]
+        }
+      }
+    },
+    "remoteStatus": {
+      "pokemon": {
+        "pikachu": {
+          "state": "idle"
+        },
+        "eevee": {
+          "state": "idle"
+        },
+        "charizard": {
+          "state": "idle"
+        },
+        "gengar": {
+          "state": "idle"
+        },
+        "bulbasaur": {
+          "state": "idle"
+        },
+        "squirtle": {
+          "state": "idle"
+        },
+        "dragonite": {
+          "state": "idle"
+        },
+        "lucario": {
+          "state": "idle"
+        },
+        "index": {
+          "state": "idle"
+        },
+        "catalog": {
+          "state": "idle"
+        }
+      }
+    }
+  }
+}

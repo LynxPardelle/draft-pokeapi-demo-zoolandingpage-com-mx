@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "pageId": "pokemon-detail",
+  "domain": "pokeapi-demo.zoolandingpage.com.mx",
+  "rootIds": [
+    "skipToMainLink",
+    "detailPage"
+  ],
+  "modalRootIds": [],
+  "metadata": {
+    "status": "demo",
+    "source": "Codex generated PokeAPI parameterized detail page",
+    "versionTag": "v1.0.0",
+    "owner": "Zoolandingpage"
+  },
+  "seo": {
+    "title": "{{var:remote.pokemon.selected.items.0.name|titleCase}} | Ficha PokeAPI en Zoolandingpage",
+    "description": "Ficha dinamica de {{var:remote.pokemon.selected.items.0.name|titleCase}} con imagen oficial, tipos, estadisticas y movimientos consumidos desde PokeAPI por el API proxy de Zoolandingpage.",
+    "keywords": [
+      "Zoolandingpage",
+      "PokeAPI",
+      "{{var:remote.pokemon.selected.items.0.name|titleCase}}",
+      "{{var:remote.pokemon.selected.items.0.primaryTypeLabel}}",
+      "draft dinamico",
+      "API proxy"
+    ],
+    "robots": "index,follow,max-image-preview:large",
+    "openGraph": {
+      "title": "{{var:remote.pokemon.selected.items.0.name|titleCase}} | Ficha PokeAPI en Zoolandingpage",
+      "description": "Ficha dinamica de {{var:remote.pokemon.selected.items.0.name|titleCase}} con imagen oficial, tipos, estadisticas y movimientos consumidos desde PokeAPI por el API proxy de Zoolandingpage.",
+      "image": "{{var:remote.pokemon.selected.items.0.image}}",
+      "url": "https://pokeapi-demo.zoolandingpage.com.mx/pokemon?name={{query:name|uriComponent}}",
+      "type": "website"
+    },
+    "twitter": {
+      "title": "{{var:remote.pokemon.selected.items.0.name|titleCase}} | Ficha PokeAPI en Zoolandingpage",
+      "description": "Ficha dinamica de {{var:remote.pokemon.selected.items.0.name|titleCase}} con imagen oficial, tipos, estadisticas y movimientos consumidos desde PokeAPI por el API proxy de Zoolandingpage.",
+      "image": "{{var:remote.pokemon.selected.items.0.image}}",
+      "card": "summary_large_image"
+    },
+    "canonical": "https://pokeapi-demo.zoolandingpage.com.mx/pokemon?name={{query:name|uriComponent}}"
+  },
+  "structuredData": {
+    "entries": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "{{var:remote.pokemon.selected.items.0.name|titleCase}} | PokeAPI Runtime Demo",
+        "url": "https://pokeapi-demo.zoolandingpage.com.mx/pokemon?name={{query:name|uriComponent}}",
+        "description": "Ficha dinamica de {{var:remote.pokemon.selected.items.0.name|titleCase}} creada con Zoolandingpage y datos de PokeAPI.",
+        "image": "{{var:remote.pokemon.selected.items.0.image}}",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "PokeAPI Runtime Demo",
+          "url": "https://pokeapi-demo.zoolandingpage.com.mx"
+        },
+        "about": {
+          "@type": "Thing",
+          "name": "{{var:remote.pokemon.selected.items.0.name|titleCase}}",
+          "image": "{{var:remote.pokemon.selected.items.0.image}}",
+          "description": "Pokemon tipo {{var:remote.pokemon.selected.items.0.primaryTypeLabel}}."
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "PokeAPI Runtime Demo",
+            "item": "https://pokeapi-demo.zoolandingpage.com.mx"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "{{var:remote.pokemon.selected.items.0.name|titleCase}}",
+            "item": "https://pokeapi-demo.zoolandingpage.com.mx/pokemon?name={{query:name|uriComponent}}"
+          }
+        ]
+      }
+    ]
+  },
+  "analytics": {
+    "sectionIds": [
+      "detail-hero",
+      "detail-stats",
+      "detail-runtime"
+    ],
+    "scrollMilestones": [
+      25,
+      50,
+      75,
+      100
+    ]
+  }
+}

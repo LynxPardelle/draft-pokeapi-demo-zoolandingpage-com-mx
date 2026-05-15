@@ -1,0 +1,265 @@
+{
+  "version": 1,
+  "pageId": "pokemon-detail",
+  "domain": "pokeapi-demo.zoolandingpage.com.mx",
+  "combos": {
+    "demoPage": [
+      "ank-minHeight-100vh ank-bg-bgColor ank-color-textColor"
+    ],
+    "heroBand": [
+      "ank-width-100per ank-display-flex ank-justifyContent-center ank-paddingInline-16px ank-paddingTop-34px ank-paddingBottom-50px ank-bg-secondaryBgColor ank-borderBottom-1px__solid__secondaryAccentColor"
+    ],
+    "heroInner": [
+      "ank-width-100per ank-maxWidth-1180px ank-display-grid ank-gridTemplateColumns-1fr ank-gridTemplateColumns-lg-1_05fr__0_95fr ank-gap-24px ank-gap-lg-44px ank-alignItems-center"
+    ],
+    "heroCopy": [
+      "ank-display-flex ank-flexDirection-column ank-gap-18px ank-alignItems-flexStart"
+    ],
+    "heroKicker": [
+      "ank-display-flex ank-alignItems-center ank-gap-8px ank-paddingInline-12px ank-paddingBlock-7px ank-borderRadius-8px ank-border-1px__solid__secondaryAccentColor ank-bg-bgColor ank-color-secondaryLinkColor ank-fontSize-0_74rem ank-fontWeight-800 ank-letterSpacing-0_08rem ank-textTransform-uppercase"
+    ],
+    "heroTitle": [
+      "ank-m-0 ank-color-titleColor ank-fontWeight-900 ank-lineHeight-0_98 ank-letterSpacing-0 ank-fontSize-2_9rem ank-fontSize-md-4_35rem ank-fontSize-lg-5_05rem ank-maxWidth-10ch"
+    ],
+    "heroText": [
+      "ank-m-0 ank-fontSize-1_02rem ank-fontSize-md-1_12rem ank-lineHeight-1_62 ank-fontWeight-650 ank-maxWidth-43rem ank-color-textColor ank-opacity-0_9"
+    ],
+    "heroActions": [
+      "ank-display-flex ank-flexWrap-wrap ank-gap-12px ank-alignItems-center ank-marginTop-4px"
+    ],
+    "primaryAction": [
+      "ank-display-flex ank-width-fitMINcontent ank-alignItems-center ank-justifyContent-center ank-minHeight-46px ank-paddingInline-19px ank-paddingBlock-12px ank-borderRadius-8px ank-bg-secondaryLinkColor ank-color-onErrorColor ank-textDecoration-none ank-fontWeight-850 ank-letterSpacing-0 ank-boxShadow-0__12px__28px__secondaryLinkColor__OPA__0_22"
+    ],
+    "secondaryAction": [
+      "ank-display-flex ank-width-fitMINcontent ank-alignItems-center ank-justifyContent-center ank-minHeight-46px ank-paddingInline-18px ank-paddingBlock-12px ank-borderRadius-8px ank-border-1px__solid__secondaryAccentColor ank-bg-bgColor ank-color-titleColor ank-textDecoration-none ank-fontWeight-850 ank-letterSpacing-0 ank-bgHover-secondaryBgColor"
+    ],
+    "heroVisual": [
+      "ank-position-relative ank-display-flex ank-flexDirection-column ank-gap-16px ank-alignItems-center ank-justifyContent-center ank-padding-18px ank-padding-md-28px ank-borderRadius-8px ank-border-1px__solid__secondaryAccentColor ank-bg-bgColor ank-overflow-hidden ank-boxShadow-0__22px__60px__bgColor__OPA__0_18"
+    ],
+    "heroImage": [
+      "ank-width-100per ank-maxWidth-360px ank-aspectRatio-1__1 ank-objectFit-contain"
+    ],
+    "heroVisualMeta": [
+      "ank-width-100per ank-display-flex ank-justifyContent-spaceBetween ank-alignItems-center ank-gap-12px ank-flexWrap-wrap ank-borderTop-1px__solid__secondaryAccentColor ank-paddingTop-14px"
+    ],
+    "heroPokemonName": [
+      "ank-m-0 ank-color-titleColor ank-fontSize-1_1rem ank-fontWeight-900 ank-textTransform-uppercase ank-letterSpacing-0_06rem"
+    ],
+    "heroChip": [
+      "ank-display-inlineFlex ank-alignItems-center ank-minHeight-34px ank-paddingInline-12px ank-paddingBlock-7px ank-borderRadius-8px ank-bg-secondaryAccentColor ank-color-onSuccessColor ank-fontSize-0_82rem ank-fontWeight-850 ank-letterSpacing-0"
+    ],
+    "pokeSection": [
+      "ank-width-100per ank-display-flex ank-justifyContent-center ank-paddingInline-16px ank-paddingBlock-48px"
+    ],
+    "pokeSectionInner": [
+      "ank-width-100per ank-maxWidth-1180px ank-display-flex ank-flexDirection-column ank-gap-18px"
+    ],
+    "pokeSectionEyebrow": [
+      "ank-m-0 ank-display-flex ank-width-fitMINcontent ank-alignItems-center ank-paddingInline-12px ank-paddingBlock-7px ank-borderRadius-8px ank-bg-secondaryBgColor ank-color-secondaryLinkColor ank-fontSize-0_78rem ank-fontWeight-900 ank-letterSpacing-0_1rem ank-textTransform-uppercase"
+    ],
+    "pokeSectionTitle": [
+      "ank-m-0 ank-color-titleColor ank-fontSize-2rem ank-fontSize-md-3rem ank-lineHeight-1_04 ank-fontWeight-900 ank-letterSpacing-0 ank-maxWidth-17ch"
+    ],
+    "pokeSectionText": [
+      "ank-m-0 ank-fontSize-1rem ank-lineHeight-1_64 ank-maxWidth-58rem ank-color-textColor ank-opacity-0_86"
+    ],
+    "pokemonGrid": [
+      "ank-display-grid ank-gridTemplateColumns-1fr ank-gridTemplateColumns-sm-repeatSD2COM1frED ank-gridTemplateColumns-lg-repeatSD4COM1frED ank-gap-14px ank-marginTop-10px"
+    ],
+    "pokemonCard": [
+      "ank-display-flex ank-flexDirection-column ank-gap-11px ank-minHeight-330px ank-height-100per ank-padding-18px ank-borderRadius-8px ank-border-1px__solid__secondaryAccentColor ank-bg-secondaryBgColor ank-boxShadow-0__14px__34px__bgColor__OPA__0_12 ank-transition-all ank-transformHover-translateYSDMIN3pxED"
+    ],
+    "pokemonCardImageContainer": [
+      "ank-display-flex ank-alignItems-center ank-justifyContent-center ank-width-100per ank-aspectRatio-1__1 ank-borderRadius-8px ank-bg-bgColor ank-border-1px__solid__secondaryAccentColor ank-overflow-hidden"
+    ],
+    "pokemonCardImage": [
+      "ank-display-block ank-width-100per ank-aspectRatio-1__1 ank-objectFit-contain ank-padding-18px ank-borderRadius-8px ank-bg-bgColor ank-border-1px__solid__secondaryAccentColor"
+    ],
+    "pokemonCardTitle": [
+      "ank-m-0 ank-color-titleColor ank-fontSize-1_16rem ank-fontWeight-900 ank-letterSpacing-0 ank-textTransform-capitalize"
+    ],
+    "pokemonCardNumber": [
+      "ank-m-0 ank-color-secondaryLinkColor ank-fontSize-0_78rem ank-fontWeight-900 ank-letterSpacing-0_08rem"
+    ],
+    "pokemonCardDescription": [
+      "ank-m-0 ank-color-textColor ank-fontSize-0_93rem ank-lineHeight-1_5 ank-fontWeight-700 ank-opacity-0_84 ank-textTransform-capitalize"
+    ],
+    "pokemonCardType": [
+      "ank-display-inlineFlex ank-alignSelf-flexStart ank-minHeight-30px ank-alignItems-center ank-paddingInline-10px ank-paddingBlock-6px ank-borderRadius-8px ank-bg-secondaryAccentColor ank-color-onSuccessColor ank-fontSize-0_82rem ank-fontWeight-850 ank-textTransform-capitalize"
+    ],
+    "pokemonCardLink": [
+      "ank-marginTop-auto ank-display-inlineFlex ank-alignItems-center ank-justifyContent-center ank-minHeight-40px ank-paddingInline-13px ank-paddingBlock-9px ank-borderRadius-8px ank-border-1px__solid__secondaryAccentColor ank-color-secondaryLinkColor ank-bg-bgColor ank-textDecoration-none ank-fontWeight-850 ank-fontSize-0_9rem ank-bgHover-secondaryBgColor"
+    ],
+    "statusStrip": [
+      "ank-display-grid ank-gridTemplateColumns-1fr ank-gridTemplateColumns-md-repeatSD3COM1frED ank-gap-12px ank-marginTop-16px"
+    ],
+    "statusItem": [
+      "ank-display-flex ank-flexDirection-column ank-gap-5px ank-padding-17px ank-borderRadius-8px ank-border-1px__solid__secondaryAccentColor ank-bg-secondaryBgColor"
+    ],
+    "statusLabel": [
+      "ank-m-0 ank-color-titleColor ank-fontWeight-900 ank-fontSize-1_05rem"
+    ],
+    "statusText": [
+      "ank-m-0 ank-color-textColor ank-opacity-0_78 ank-fontSize-0_93rem ank-lineHeight-1_55"
+    ],
+    "footerBand": [
+      "ank-width-100per ank-display-flex ank-justifyContent-center ank-paddingInline-16px ank-paddingBlock-26px ank-borderTop-1px__solid__secondaryAccentColor ank-bg-secondaryBgColor"
+    ],
+    "footerInner": [
+      "ank-width-100per ank-maxWidth-1180px ank-display-flex ank-flexWrap-wrap ank-alignItems-center ank-justifyContent-spaceBetween ank-gap-12px"
+    ],
+    "footerText": [
+      "ank-m-0 ank-fontSize-0_9rem ank-fontWeight-750 ank-color-textColor ank-opacity-0_76"
+    ],
+    "footerLink": [
+      "ank-color-secondaryLinkColor ank-textDecoration-none ank-fontWeight-900"
+    ],
+    "pokemonSearch": [
+      "ank-width-100per ank-maxWidth-560px ank-marginTop-2px"
+    ],
+    "pokemonSearchInput": [
+      "ank-width-100per ank-minHeight-52px ank-borderRadius-8px ank-border-1px__solid__secondaryAccentColor ank-bg-bgColor ank-color-titleColor ank-paddingInline-16px ank-paddingBlock-13px ank-fontSize-1rem ank-fontWeight-760 ank-outline-none ank-boxShadow-0__12px__32px__bgColor__OPA__0_18 ank-borderColorFocus-secondaryLinkColor"
+    ],
+    "pokemonSearchResults": [
+      "ank-listStyle-none ank-margin-0 ank-padding-8px ank-display-flex ank-flexDirection-column ank-gap-4px ank-bg-bgColor ank-border-1px__solid__secondaryAccentColor ank-borderRadius-8px ank-boxShadow-0__18px__48px__bgColor__OPA__0_26 ank-minWidth-280px ank-zIndex-1300"
+    ],
+    "pokemonSearchResult": [
+      "ank-width-100per ank-display-flex ank-alignItems-center ank-justifyContent-flexStart ank-minHeight-38px ank-paddingInline-12px ank-paddingBlock-8px ank-borderRadius-8px ank-border-none ank-bg-transparent ank-color-titleColor ank-fontWeight-850 ank-textAlign-left ank-textTransform-capitalize ank-cursor-pointer ank-bgHover-secondaryBgColor"
+    ],
+    "pokemonSearchStatus": [
+      "ank-paddingInline-12px ank-paddingBlock-9px ank-color-textColor ank-opacity-0_72 ank-fontSize-0_88rem"
+    ],
+    "themeAction": [
+      "ank-display-flex ank-width-fitMINcontent ank-alignItems-center ank-justifyContent-center ank-gap-7px ank-minHeight-46px ank-paddingInline-14px ank-paddingBlock-11px ank-borderRadius-8px ank-border-1px__solid__secondaryAccentColor ank-bg-bgColor ank-color-titleColor ank-fontWeight-850 ank-cursor-pointer ank-bgHover-secondaryBgColor"
+    ],
+    "detailPage": [
+      "ank-bg-bgColor ank-color-textColor"
+    ],
+    "detailTopBar": [
+      "ank-width-100per ank-display-grid ank-gridTemplateColumns-1fr ank-gridTemplateColumns-md-auto__minmaxSD260pxCOM520pxED__auto ank-alignItems-center ank-gap-12px ank-paddingInline-16px ank-paddingBlock-12px ank-bg-secondaryBgColor ank-borderBottom-1px__solid__secondaryAccentColor"
+    ],
+    "detailSearch": [
+      "ank-width-100per"
+    ],
+    "detailHeroBand": [
+      "ank-width-100per ank-display-flex ank-justifyContent-center ank-paddingInline-16px ank-paddingTop-30px ank-paddingBottom-44px ank-bg-secondaryBgColor"
+    ],
+    "pokeDetailHeroInner": [
+      "ank-width-100per ank-maxWidth-1180px ank-display-grid ank-gridTemplateColumns-1fr ank-gridTemplateColumns-lg-1fr__0_92fr ank-gap-24px ank-gap-lg-44px ank-alignItems-center ank-paddingBlock-10px"
+    ],
+    "detailHeroCopy": [
+      "ank-display-flex ank-flexDirection-column ank-gap-18px ank-alignItems-flexStart"
+    ],
+    "detailTitle": [
+      "ank-m-0 ank-color-titleColor ank-fontWeight-900 ank-lineHeight-0_98 ank-letterSpacing-0 ank-fontSize-3rem ank-fontSize-md-4_35rem ank-fontSize-lg-5_2rem ank-textTransform-capitalize"
+    ],
+    "detailTypeRow": [
+      "ank-display-flex ank-flexWrap-wrap ank-alignItems-center ank-gap-10px"
+    ],
+    "detailAbilityChip": [
+      "ank-display-inlineFlex ank-alignItems-center ank-minHeight-34px ank-paddingInline-12px ank-paddingBlock-7px ank-borderRadius-8px ank-bg-secondaryBgColor ank-border-1px__solid__secondaryAccentColor ank-color-titleColor ank-fontSize-0_82rem ank-fontWeight-850 ank-textTransform-capitalize"
+    ],
+    "pokeDetailHeroVisual": [
+      "ank-position-relative ank-display-flex ank-flexDirection-column ank-gap-8px ank-alignItems-center ank-justifyContent-center ank-paddingInline-6px ank-paddingBlock-4px ank-overflow-visible"
+    ],
+    "pokeDetailImage": [
+      "ank-width-100per ank-maxWidth-410px ank-aspectRatio-1__1 ank-objectFit-contain ank-filter-dropShadowSD0__18px__26px__bgColor__OPA__0_24ED"
+    ],
+    "pokeDetailStatusPill": [
+      "ank-m-0 ank-textAlign-center ank-textTransform-uppercase ank-letterSpacing-0_08rem ank-fontSize-0_74rem ank-fontWeight-900 ank-color-secondaryLinkColor ank-paddingTop-2px"
+    ],
+    "detailStatsGrid": [
+      "ank-display-grid ank-gridTemplateColumns-1fr ank-gridTemplateColumns-sm-repeatSD2COM1frED ank-gridTemplateColumns-lg-repeatSD5COM1frED ank-gap-12px ank-marginTop-8px"
+    ],
+    "detailMetricCard": [
+      "ank-display-flex ank-flexDirection-column ank-gap-8px ank-padding-16px ank-minHeight-112px ank-borderRadius-8px ank-border-1px__solid__secondaryAccentColor ank-bg-secondaryBgColor"
+    ],
+    "detailMetricLabel": [
+      "ank-m-0 ank-color-textColor ank-opacity-0_7 ank-fontSize-0_78rem ank-fontWeight-900 ank-letterSpacing-0_08rem ank-textTransform-uppercase"
+    ],
+    "detailMetricValue": [
+      "ank-m-0 ank-color-titleColor ank-fontSize-1_55rem ank-fontWeight-900 ank-letterSpacing-0"
+    ],
+    "detailMovesGrid": [
+      "ank-display-flex ank-flexWrap-wrap ank-gap-9px ank-marginTop-6px"
+    ],
+    "detailMoveChip": [
+      "ank-m-0 ank-display-flex ank-alignItems-center ank-minHeight-34px ank-paddingInline-12px ank-paddingBlock-7px ank-borderRadius-8px ank-bg-secondaryBgColor ank-border-1px__solid__secondaryAccentColor ank-color-titleColor ank-fontSize-0_86rem ank-fontWeight-850 ank-textTransform-capitalize ank-textDecoration-none ank-bgHover-bgColor"
+    ],
+    "skeletonBlock": [
+      "ank-display-block ank-borderRadius-8px ank-bg-secondaryAccentColor ank-opacity-0_22 ank-overflow-hidden"
+    ],
+    "detailSkeletonKicker": [
+      "ank-width-170px ank-height-34px"
+    ],
+    "detailSkeletonTitleBlock": [
+      "ank-width-100per ank-maxWidth-520px ank-height-82px ank-height-md-112px"
+    ],
+    "detailSkeletonTextBlock": [
+      "ank-width-100per ank-maxWidth-620px ank-height-18px"
+    ],
+    "detailSkeletonTextShort": [
+      "ank-width-72per ank-maxWidth-430px ank-height-18px"
+    ],
+    "detailSkeletonChip": [
+      "ank-width-116px ank-height-34px"
+    ],
+    "detailSkeletonAction": [
+      "ank-width-180px ank-height-46px"
+    ],
+    "detailSkeletonVisual": [
+      "ank-pointerEvents-none"
+    ],
+    "detailSkeletonImageBlock": [
+      "ank-width-100per ank-maxWidth-390px ank-aspectRatio-1__1"
+    ],
+    "detailSkeletonCaption": [
+      "ank-width-70per ank-height-16px ank-marginTop-6px"
+    ],
+    "detailProfileGrid": [
+      "ank-display-grid ank-gridTemplateColumns-1fr ank-gridTemplateColumns-md-repeatSD2COM1frED ank-gap-12px ank-marginTop-12px ank-marginBottom-14px"
+    ],
+    "detailProfilePanel": [
+      "ank-display-flex ank-flexDirection-column ank-gap-12px ank-padding-16px ank-borderRadius-8px ank-border-1px__solid__secondaryAccentColor ank-bg-secondaryBgColor"
+    ],
+    "detailProfileTitle": [
+      "ank-m-0 ank-color-secondaryTitleColor ank-fontSize-0_95rem ank-fontWeight-900 ank-letterSpacing-0 ank-textTransform-uppercase"
+    ],
+    "detailTagList": [
+      "ank-display-flex ank-flexWrap-wrap ank-gap-8px"
+    ],
+    "detailTagChip": [
+      "ank-m-0"
+    ],
+    "heroFeatureRail": [
+      "ank-display-flex ank-flexWrap-wrap ank-gap-8px ank-marginTop-2px"
+    ],
+    "heroFeaturePill": [
+      "ank-m-0 ank-display-flex ank-alignItems-center ank-minHeight-34px ank-paddingInline-11px ank-paddingBlock-7px ank-borderRadius-8px ank-border-1px__solid__secondaryAccentColor ank-bg-bgColor ank-color-titleColor ank-fontSize-0_82rem ank-fontWeight-850 ank-letterSpacing-0"
+    ],
+    "catalogAutoSearch": [
+      "ank-minWidth-0"
+    ],
+    "catalogSwitchField": [
+      "ank-display-flex ank-alignItems-center ank-gap-12px ank-minHeight-46px ank-paddingInline-13px ank-paddingBlock-10px ank-borderRadius-8px ank-border-1px__solid__secondaryAccentColor ank-bg-bgColor ank-cursor-pointer ank-boxSizing-borderBox"
+    ],
+    "catalogSwitchInput": [
+      "ank-position-absolute ank-width-1px ank-height-1px ank-opacity-0 ank-pointerEvents-none"
+    ],
+    "catalogSwitchTrack": [
+      "ank-display-inlineFlex ank-alignItems-center ank-flexShrink-0 ank-width-52px ank-height-30px ank-borderRadius-8px ank-border-1px__solid__secondaryAccentColor ank-bg-secondaryBgColor ank-transition-all"
+    ],
+    "catalogSwitchTrackActive": [
+      "ank-bg-secondaryAccentColor ank-borderColor-secondaryAccentColor"
+    ],
+    "catalogSwitchThumb": [
+      "ank-display-block ank-width-20px ank-height-20px ank-marginLeft-4px ank-borderRadius-6px ank-bg-titleColor ank-transition-all"
+    ],
+    "catalogSwitchThumbActive": [
+      "ank-marginLeft-26px ank-bg-onSuccessColor"
+    ],
+    "catalogSwitchText": [
+      "ank-color-textColor ank-opacity-0_86 ank-fontSize-0_82rem ank-fontWeight-780 ank-lineHeight-1_35"
+    ]
+  }
+}

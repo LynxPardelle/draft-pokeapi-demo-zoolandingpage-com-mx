@@ -1,0 +1,7110 @@
+{
+  "version": 1,
+  "domain": "pokeapi-demo.zoolandingpage.com.mx",
+  "pageId": "default",
+  "components": [
+    {
+      "id": "skipToMainLink",
+      "type": "link",
+      "eventInstructions": "skipToMain:pokemon-demo-main",
+      "config": {
+        "id": "skipToMainLink",
+        "href": "#pokemon-demo-main",
+        "text": "Saltar al contenido principal",
+        "ariaLabel": "Saltar al contenido principal",
+        "classes": "ank-d-none"
+      }
+    },
+    {
+      "id": "demoPage",
+      "type": "container",
+      "config": {
+        "id": "pokemon-demo-main",
+        "tag": "main",
+        "classes": "demoPage",
+        "components": [
+          "heroSection",
+          "pokemonGridSection",
+          "runtimeProofSection",
+          "demoFooter"
+        ]
+      }
+    },
+    {
+      "id": "heroSection",
+      "type": "container",
+      "config": {
+        "id": "hero",
+        "tag": "section",
+        "classes": "heroBand",
+        "components": [
+          "heroInner"
+        ]
+      }
+    },
+    {
+      "id": "heroInner",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "heroInner",
+        "components": [
+          "heroCopy",
+          "pokeHeroVisual"
+        ]
+      }
+    },
+    {
+      "id": "heroCopy",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "heroCopy",
+        "components": [
+          "heroKicker",
+          "heroTitle",
+          "heroText",
+          "heroFeatureRail",
+          "heroActions"
+        ]
+      }
+    },
+    {
+      "id": "heroKicker",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Demo visual con datos vivos",
+        "classes": "heroKicker"
+      }
+    },
+    {
+      "id": "heroTitle",
+      "type": "text",
+      "config": {
+        "tag": "h1",
+        "text": "PokeAPI Runtime Demo",
+        "classes": "heroTitle"
+      }
+    },
+    {
+      "id": "heroText",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Una demo visual para mostrar como un draft puede consumir APIs externas, llenar plantillas y abrir rutas parametrizadas con datos vivos.",
+        "classes": "heroText"
+      }
+    },
+    {
+      "id": "heroFeatureRail",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "heroFeatureRail",
+        "components": [
+          "heroFeatureProxy",
+          "heroFeatureTemplate",
+          "heroFeatureRoute"
+        ]
+      }
+    },
+    {
+      "id": "heroFeatureProxy",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "API proxy seguro",
+        "classes": "heroFeaturePill"
+      }
+    },
+    {
+      "id": "heroFeatureTemplate",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Plantilla editable",
+        "classes": "heroFeaturePill"
+      }
+    },
+    {
+      "id": "heroFeatureRoute",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Ruta /pokemon",
+        "classes": "heroFeaturePill"
+      }
+    },
+    {
+      "id": "pokemonSearchBox",
+      "type": "search-box",
+      "valueInstructions": "set:config.suggestions,varOr,remote.pokemon.catalog.items,config.suggestions",
+      "eventInstructions": "navigateToUrl:event.eventData.href,_self,top",
+      "config": {
+        "minLength": 1,
+        "debounceMs": 80,
+        "ariaLabel": "Buscar Pokemon",
+        "placeholder": "Busca un Pokemon por nombre",
+        "classes": "pokemonSearch",
+        "inputClasses": "pokemonSearchInput",
+        "resultsClasses": "pokemonSearchResults",
+        "resultItemClasses": "pokemonSearchResult",
+        "statusItemClasses": "pokemonSearchStatus",
+        "maxResults": 8,
+        "historyEnabled": true,
+        "historyLimit": 5,
+        "suggestions": [
+          {
+            "id": "pikachu",
+            "label": "pikachu",
+            "description": "Ficha dinamica de pikachu",
+            "href": "/pokemon?name=pikachu"
+          },
+          {
+            "id": "eevee",
+            "label": "eevee",
+            "description": "Ficha dinamica de eevee",
+            "href": "/pokemon?name=eevee"
+          },
+          {
+            "id": "charizard",
+            "label": "charizard",
+            "description": "Ficha dinamica de charizard",
+            "href": "/pokemon?name=charizard"
+          },
+          {
+            "id": "gengar",
+            "label": "gengar",
+            "description": "Ficha dinamica de gengar",
+            "href": "/pokemon?name=gengar"
+          },
+          {
+            "id": "bulbasaur",
+            "label": "bulbasaur",
+            "description": "Ficha dinamica de bulbasaur",
+            "href": "/pokemon?name=bulbasaur"
+          },
+          {
+            "id": "squirtle",
+            "label": "squirtle",
+            "description": "Ficha dinamica de squirtle",
+            "href": "/pokemon?name=squirtle"
+          },
+          {
+            "id": "dragonite",
+            "label": "dragonite",
+            "description": "Ficha dinamica de dragonite",
+            "href": "/pokemon?name=dragonite"
+          },
+          {
+            "id": "lucario",
+            "label": "lucario",
+            "description": "Ficha dinamica de lucario",
+            "href": "/pokemon?name=lucario"
+          }
+        ]
+      }
+    },
+    {
+      "id": "heroActions",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "heroActions",
+        "components": [
+          "heroSecondaryAction",
+          "heroThemeToggle"
+        ]
+      }
+    },
+    {
+      "id": "heroPrimaryAction",
+      "type": "link",
+      "eventInstructions": "navigationToSection:#pokemon-grid",
+      "config": {
+        "href": "#pokemon-grid",
+        "text": "Ver criaturas",
+        "classes": "primaryAction"
+      }
+    },
+    {
+      "id": "heroSecondaryAction",
+      "type": "link",
+      "config": {
+        "href": "https://pokeapi.co/docs/v2",
+        "text": "Referencia PokeAPI",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "classes": "secondaryAction"
+      }
+    },
+    {
+      "id": "heroThemeToggle",
+      "type": "button",
+      "eventInstructions": "toggleTheme",
+      "config": {
+        "type": "button",
+        "label": "Tema",
+        "icon": "dark_mode",
+        "iconPosition": "before",
+        "ariaLabel": "Alternar tema claro y oscuro",
+        "classes": "themeAction"
+      },
+      "valueInstructions": "set:config.icon,themePick,dark_mode,light_mode"
+    },
+    {
+      "id": "pokeHeroVisual",
+      "type": "container",
+      "config": {
+        "tag": "aside",
+        "ariaLabel": "Pokemon destacado",
+        "classes": "pokeHeroVisual",
+        "components": [
+          "heroPikachuImage",
+          "pokeHeroVisualMeta"
+        ]
+      }
+    },
+    {
+      "id": "heroPikachuImage",
+      "type": "media",
+      "valueInstructions": "set:config.src,varOr,remote.pokemon.pikachu.items.0.image,https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png; set:config.alt,varOr,remote.pokemon.pikachu.items.0.name,Pikachu",
+      "config": {
+        "tag": "image",
+        "src": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+        "alt": "Pikachu",
+        "width": 475,
+        "height": 475,
+        "loading": "eager",
+        "fetchPriority": "high",
+        "decoding": "async",
+        "sizes": "(min-width: 1024px) 360px, 80vw",
+        "classes": "heroImage"
+      }
+    },
+    {
+      "id": "pokeHeroVisualMeta",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "pokeHeroVisualMeta",
+        "components": [
+          "heroPikachuName",
+          "heroPikachuType"
+        ]
+      }
+    },
+    {
+      "id": "heroPikachuName",
+      "type": "text",
+      "valueInstructions": "set:config.text,varOr,remote.pokemon.pikachu.items.0.name,Pikachu",
+      "config": {
+        "tag": "p",
+        "text": "Pikachu",
+        "classes": "heroPokemonName"
+      }
+    },
+    {
+      "id": "heroPikachuType",
+      "type": "text",
+      "valueInstructions": "set:config.text,varOr,remote.pokemon.pikachu.items.0.type,Electric",
+      "config": {
+        "tag": "p",
+        "text": "Electric",
+        "classes": "heroChip"
+      }
+    },
+    {
+      "id": "pokemonGridSection",
+      "type": "interaction-scope",
+      "config": {
+        "id": "pokemon-grid",
+        "scopeId": "pokemonCatalogView",
+        "tag": "form",
+        "classes": "pokeSection",
+        "initialValues": {
+          "search": "",
+          "type": "all",
+          "attack": "all",
+          "sort": "number-asc",
+          "page": "1",
+          "pageSize": "4",
+          "autoSearch": true
+        },
+        "autoSubmit": {
+          "enabled": true,
+          "eventNames": [
+            "valueChanged"
+          ],
+          "fieldIds": [
+            "type",
+            "attack",
+            "sort",
+            "pageSize"
+          ],
+          "enabledFieldId": "autoSearch"
+        },
+        "components": [
+          "pokemonGridInner"
+        ],
+        "submitEventInstructions": "navigateWithScopeQuery:/,#pokemon-grid,pokemon=values.search,type=values.type,move=values.attack,sort=values.sort,page=1,pageSize=values.pageSize,autoSearch=values.autoSearch"
+      }
+    },
+    {
+      "id": "pokemonGridInner",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "pokeSectionInner",
+        "components": [
+          "pokemonGridEyebrow",
+          "pokemonGridTitle",
+          "pokemonGridText",
+          "pokeCatalogControls",
+          "pokemonCatalogSkeleton",
+          "pokemonGrid",
+          "pokemonResultPagination"
+        ]
+      }
+    },
+    {
+      "id": "pokemonGridEyebrow",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Catalogo desde API",
+        "classes": "pokeSectionEyebrow"
+      }
+    },
+    {
+      "id": "pokemonGridTitle",
+      "type": "text",
+      "config": {
+        "tag": "h2",
+        "text": "Paginacion, filtros y rutas dinamicas",
+        "classes": "pokeSectionTitle"
+      }
+    },
+    {
+      "id": "pokemonGridText",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "El listado usa una plantilla de draft alimentada por PokeAPI. Puedes buscar Pokemon por nombre, filtrar por tipo o ataque, ordenar y abrir fichas dinamicas sin tocar el frontend.",
+        "classes": "pokeSectionText"
+      }
+    },
+    {
+      "id": "pokeCatalogControls",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "pokeCatalogControls",
+        "components": [
+          "catalogSearchBox",
+          "filterTypeInput",
+          "filterMoveInput",
+          "sortInput",
+          "pageSizeInput",
+          "autoSearchSwitch",
+          "nativeDraftDomainInput",
+          "nativeDebugWorkspaceInput",
+          "nativeSortInput",
+          "nativePageSizeInput",
+          "nativeTypeInput",
+          "nativeMoveInput",
+          "catalogApplyButton"
+        ]
+      }
+    },
+    {
+      "id": "catalogSearchBox",
+      "type": "input",
+      "valueInstructions": "set:config.value,queryParamOr,pokemon",
+      "eventInstructions": "setScopeValue:page,1",
+      "config": {
+        "fieldId": "search",
+        "controlType": "text",
+        "label": "Buscar por nombre",
+        "ariaLabel": "Buscar Pokemon en el catalogo",
+        "placeholder": "Nombre del Pokemon",
+        "value": "",
+        "classes": "catalogInput catalogSearch",
+        "labelClasses": "catalogInputLabel",
+        "inputClasses": "pokemonSearchInput catalogSearchInput",
+        "inputType": "search",
+        "helperText": "Escribe 3 caracteres para ver sugerencias. La busqueda por texto se ejecuta solo con el boton Buscar.",
+        "helperTextConfig": {
+          "tag": "span",
+          "classes": "catalogSwitchText"
+        },
+        "autocompleteOptions": {
+          "source": "var",
+          "path": "remote.pokemon.index.items",
+          "fallback": [
+            {
+              "value": "bulbasaur",
+              "label": "bulbasaur"
+            },
+            {
+              "value": "charmander",
+              "label": "charmander"
+            },
+            {
+              "value": "squirtle",
+              "label": "squirtle"
+            },
+            {
+              "value": "pikachu",
+              "label": "pikachu"
+            },
+            {
+              "value": "eevee",
+              "label": "eevee"
+            },
+            {
+              "value": "gengar",
+              "label": "gengar"
+            },
+            {
+              "value": "dragonite",
+              "label": "dragonite"
+            },
+            {
+              "value": "lucario",
+              "label": "lucario"
+            }
+          ]
+        },
+        "autocompleteMinLength": 3,
+        "autocompleteMatchMode": "startsWith",
+        "autocompleteMaxOptions": 20
+      }
+    },
+    {
+      "id": "autoSearchHint",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Modo actual: auto aplicar filtros solo afecta selectores. Buscar por texto usa siempre el boton Buscar.",
+        "classes": "catalogModeHint"
+      }
+    },
+    {
+      "id": "catalogApplyButton",
+      "type": "button",
+      "config": {
+        "type": "submit",
+        "label": "Buscar",
+        "icon": "search",
+        "iconPosition": "before",
+        "ariaLabel": "Aplicar busqueda y filtros",
+        "classes": "catalogApplyButton",
+        "iconClasses": "catalogApplyIcon"
+      }
+    },
+    {
+      "id": "nativeDraftDomainInput",
+      "type": "input",
+      "valueInstructions": "set:config.value,queryParamOr,draftDomain,pokeapi-demo.zoolandingpage.com.mx",
+      "config": {
+        "fieldId": "nativeDraftDomain",
+        "name": "draftDomain",
+        "controlType": "text",
+        "inputType": "text",
+        "value": "pokeapi-demo.zoolandingpage.com.mx",
+        "classes": "ank-d-none"
+      }
+    },
+    {
+      "id": "nativeDebugWorkspaceInput",
+      "type": "input",
+      "valueInstructions": "set:config.value,queryParamOr,debugWorkspace,false",
+      "config": {
+        "fieldId": "nativeDebugWorkspace",
+        "name": "debugWorkspace",
+        "controlType": "text",
+        "inputType": "text",
+        "value": "false",
+        "classes": "ank-d-none"
+      }
+    },
+    {
+      "id": "nativeSortInput",
+      "type": "input",
+      "valueInstructions": "set:config.value,queryParamOr,sort,number-asc",
+      "config": {
+        "fieldId": "nativeSort",
+        "name": "sort",
+        "controlType": "text",
+        "inputType": "text",
+        "value": "number-asc",
+        "classes": "ank-d-none"
+      }
+    },
+    {
+      "id": "nativePageSizeInput",
+      "type": "input",
+      "valueInstructions": "set:config.value,queryParamOr,pageSize,4",
+      "config": {
+        "fieldId": "nativePageSize",
+        "name": "pageSize",
+        "controlType": "text",
+        "inputType": "text",
+        "value": "4",
+        "classes": "ank-d-none"
+      }
+    },
+    {
+      "id": "nativeTypeInput",
+      "type": "input",
+      "valueInstructions": "set:config.value,queryParamOr,type",
+      "config": {
+        "fieldId": "nativeType",
+        "name": "type",
+        "controlType": "text",
+        "inputType": "text",
+        "value": "",
+        "classes": "ank-d-none"
+      }
+    },
+    {
+      "id": "nativeMoveInput",
+      "type": "input",
+      "valueInstructions": "set:config.value,queryParamOr,move",
+      "config": {
+        "fieldId": "nativeMove",
+        "name": "move",
+        "controlType": "text",
+        "inputType": "text",
+        "value": "",
+        "classes": "ank-d-none"
+      }
+    },
+    {
+      "id": "filterTypeInput",
+      "type": "input",
+      "eventInstructions": "setScopeValue:page,1",
+      "config": {
+        "classes": "catalogInput",
+        "labelClasses": "catalogInputLabel",
+        "inputClasses": "catalogSelectTrigger",
+        "dropdownTriggerClasses": "catalogSelectInner",
+        "dropdownIndicatorText": "▾",
+        "dropdownIndicatorClasses": "catalogSelectIndicator",
+        "dropdownConfig": {
+          "buttonClasses": "catalogSelectTrigger",
+          "menuContainerClasses": "catalogSelectPanel",
+          "menuListClasses": "catalogSelectMenu",
+          "itemLinkClasses": "catalogSelectItem",
+          "selectedItemClasses": "catalogSelectItemActive",
+          "renderMode": "overlay",
+          "closeOnSelect": true
+        },
+        "dropdownTriggerTextConfig": {
+          "tag": "span",
+          "classes": "catalogSelectText"
+        },
+        "fieldId": "type",
+        "controlType": "select",
+        "label": "Tipo",
+        "ariaLabel": "Filtrar por tipo",
+        "value": "all",
+        "options": [
+          {
+            "value": "all",
+            "label": "Todos"
+          },
+          {
+            "value": "normal",
+            "label": "Normal"
+          },
+          {
+            "value": "fighting",
+            "label": "Fighting"
+          },
+          {
+            "value": "flying",
+            "label": "Flying"
+          },
+          {
+            "value": "poison",
+            "label": "Poison"
+          },
+          {
+            "value": "ground",
+            "label": "Ground"
+          },
+          {
+            "value": "rock",
+            "label": "Rock"
+          },
+          {
+            "value": "bug",
+            "label": "Bug"
+          },
+          {
+            "value": "ghost",
+            "label": "Ghost"
+          },
+          {
+            "value": "steel",
+            "label": "Steel"
+          },
+          {
+            "value": "fire",
+            "label": "Fire"
+          },
+          {
+            "value": "water",
+            "label": "Water"
+          },
+          {
+            "value": "grass",
+            "label": "Grass"
+          },
+          {
+            "value": "electric",
+            "label": "Electric"
+          },
+          {
+            "value": "psychic",
+            "label": "Psychic"
+          },
+          {
+            "value": "ice",
+            "label": "Ice"
+          },
+          {
+            "value": "dragon",
+            "label": "Dragon"
+          },
+          {
+            "value": "dark",
+            "label": "Dark"
+          },
+          {
+            "value": "fairy",
+            "label": "Fairy"
+          }
+        ],
+        "fallbackOptions": [
+          {
+            "value": "all",
+            "label": "Todos"
+          },
+          {
+            "value": "normal",
+            "label": "Normal"
+          },
+          {
+            "value": "fighting",
+            "label": "Fighting"
+          },
+          {
+            "value": "flying",
+            "label": "Flying"
+          },
+          {
+            "value": "poison",
+            "label": "Poison"
+          },
+          {
+            "value": "ground",
+            "label": "Ground"
+          },
+          {
+            "value": "rock",
+            "label": "Rock"
+          },
+          {
+            "value": "bug",
+            "label": "Bug"
+          },
+          {
+            "value": "ghost",
+            "label": "Ghost"
+          },
+          {
+            "value": "steel",
+            "label": "Steel"
+          },
+          {
+            "value": "fire",
+            "label": "Fire"
+          },
+          {
+            "value": "water",
+            "label": "Water"
+          },
+          {
+            "value": "grass",
+            "label": "Grass"
+          },
+          {
+            "value": "electric",
+            "label": "Electric"
+          },
+          {
+            "value": "psychic",
+            "label": "Psychic"
+          },
+          {
+            "value": "ice",
+            "label": "Ice"
+          },
+          {
+            "value": "dragon",
+            "label": "Dragon"
+          },
+          {
+            "value": "dark",
+            "label": "Dark"
+          },
+          {
+            "value": "fairy",
+            "label": "Fairy"
+          }
+        ]
+      },
+      "valueInstructions": "set:config.options,varOr,remote.pokemon.typeOptions.items,config.fallbackOptions; set:config.value,queryParamOr,type,all"
+    },
+    {
+      "id": "filterMoveInput",
+      "type": "input",
+      "eventInstructions": "setScopeValue:page,1",
+      "config": {
+        "classes": "catalogInput",
+        "labelClasses": "catalogInputLabel",
+        "inputClasses": "catalogSelectTrigger",
+        "dropdownTriggerClasses": "catalogSelectInner",
+        "dropdownIndicatorText": "▾",
+        "dropdownIndicatorClasses": "catalogSelectIndicator",
+        "dropdownConfig": {
+          "buttonClasses": "catalogSelectTrigger",
+          "menuContainerClasses": "catalogSelectPanel",
+          "menuListClasses": "catalogSelectMenu",
+          "itemLinkClasses": "catalogSelectItem",
+          "selectedItemClasses": "catalogSelectItemActive",
+          "renderMode": "overlay",
+          "closeOnSelect": true
+        },
+        "dropdownTriggerTextConfig": {
+          "tag": "span",
+          "classes": "catalogSelectText"
+        },
+        "fieldId": "attack",
+        "controlType": "select",
+        "label": "Ataque",
+        "ariaLabel": "Filtrar por ataque",
+        "value": "all",
+        "options": {
+          "source": "var",
+          "path": "remote.pokemon.moveOptions.items",
+          "fallback": [
+            {
+              "value": "all",
+              "label": "Todos"
+            },
+            {
+              "value": "pound",
+              "label": "Pound"
+            },
+            {
+              "value": "karate-chop",
+              "label": "Karate Chop"
+            },
+            {
+              "value": "double-slap",
+              "label": "Double Slap"
+            },
+            {
+              "value": "comet-punch",
+              "label": "Comet Punch"
+            },
+            {
+              "value": "mega-punch",
+              "label": "Mega Punch"
+            },
+            {
+              "value": "pay-day",
+              "label": "Pay Day"
+            },
+            {
+              "value": "fire-punch",
+              "label": "Fire Punch"
+            },
+            {
+              "value": "ice-punch",
+              "label": "Ice Punch"
+            },
+            {
+              "value": "thunder-punch",
+              "label": "Thunder Punch"
+            },
+            {
+              "value": "scratch",
+              "label": "Scratch"
+            },
+            {
+              "value": "vice-grip",
+              "label": "Vice Grip"
+            },
+            {
+              "value": "guillotine",
+              "label": "Guillotine"
+            },
+            {
+              "value": "razor-wind",
+              "label": "Razor Wind"
+            },
+            {
+              "value": "swords-dance",
+              "label": "Swords Dance"
+            },
+            {
+              "value": "cut",
+              "label": "Cut"
+            },
+            {
+              "value": "gust",
+              "label": "Gust"
+            },
+            {
+              "value": "wing-attack",
+              "label": "Wing Attack"
+            },
+            {
+              "value": "whirlwind",
+              "label": "Whirlwind"
+            },
+            {
+              "value": "fly",
+              "label": "Fly"
+            },
+            {
+              "value": "bind",
+              "label": "Bind"
+            },
+            {
+              "value": "slam",
+              "label": "Slam"
+            },
+            {
+              "value": "vine-whip",
+              "label": "Vine Whip"
+            },
+            {
+              "value": "stomp",
+              "label": "Stomp"
+            },
+            {
+              "value": "double-kick",
+              "label": "Double Kick"
+            },
+            {
+              "value": "mega-kick",
+              "label": "Mega Kick"
+            },
+            {
+              "value": "jump-kick",
+              "label": "Jump Kick"
+            },
+            {
+              "value": "rolling-kick",
+              "label": "Rolling Kick"
+            },
+            {
+              "value": "sand-attack",
+              "label": "Sand Attack"
+            },
+            {
+              "value": "headbutt",
+              "label": "Headbutt"
+            },
+            {
+              "value": "horn-attack",
+              "label": "Horn Attack"
+            },
+            {
+              "value": "fury-attack",
+              "label": "Fury Attack"
+            },
+            {
+              "value": "horn-drill",
+              "label": "Horn Drill"
+            },
+            {
+              "value": "tackle",
+              "label": "Tackle"
+            },
+            {
+              "value": "body-slam",
+              "label": "Body Slam"
+            },
+            {
+              "value": "wrap",
+              "label": "Wrap"
+            },
+            {
+              "value": "take-down",
+              "label": "Take Down"
+            },
+            {
+              "value": "thrash",
+              "label": "Thrash"
+            },
+            {
+              "value": "double-edge",
+              "label": "Double Edge"
+            },
+            {
+              "value": "tail-whip",
+              "label": "Tail Whip"
+            },
+            {
+              "value": "poison-sting",
+              "label": "Poison Sting"
+            },
+            {
+              "value": "twineedle",
+              "label": "Twineedle"
+            },
+            {
+              "value": "pin-missile",
+              "label": "Pin Missile"
+            },
+            {
+              "value": "leer",
+              "label": "Leer"
+            },
+            {
+              "value": "bite",
+              "label": "Bite"
+            },
+            {
+              "value": "growl",
+              "label": "Growl"
+            },
+            {
+              "value": "roar",
+              "label": "Roar"
+            },
+            {
+              "value": "sing",
+              "label": "Sing"
+            },
+            {
+              "value": "supersonic",
+              "label": "Supersonic"
+            },
+            {
+              "value": "sonic-boom",
+              "label": "Sonic Boom"
+            },
+            {
+              "value": "disable",
+              "label": "Disable"
+            },
+            {
+              "value": "acid",
+              "label": "Acid"
+            },
+            {
+              "value": "ember",
+              "label": "Ember"
+            },
+            {
+              "value": "flamethrower",
+              "label": "Flamethrower"
+            },
+            {
+              "value": "mist",
+              "label": "Mist"
+            },
+            {
+              "value": "water-gun",
+              "label": "Water Gun"
+            },
+            {
+              "value": "hydro-pump",
+              "label": "Hydro Pump"
+            },
+            {
+              "value": "surf",
+              "label": "Surf"
+            },
+            {
+              "value": "ice-beam",
+              "label": "Ice Beam"
+            },
+            {
+              "value": "blizzard",
+              "label": "Blizzard"
+            },
+            {
+              "value": "psybeam",
+              "label": "Psybeam"
+            },
+            {
+              "value": "bubble-beam",
+              "label": "Bubble Beam"
+            },
+            {
+              "value": "aurora-beam",
+              "label": "Aurora Beam"
+            },
+            {
+              "value": "hyper-beam",
+              "label": "Hyper Beam"
+            },
+            {
+              "value": "peck",
+              "label": "Peck"
+            },
+            {
+              "value": "drill-peck",
+              "label": "Drill Peck"
+            },
+            {
+              "value": "submission",
+              "label": "Submission"
+            },
+            {
+              "value": "low-kick",
+              "label": "Low Kick"
+            },
+            {
+              "value": "counter",
+              "label": "Counter"
+            },
+            {
+              "value": "seismic-toss",
+              "label": "Seismic Toss"
+            },
+            {
+              "value": "strength",
+              "label": "Strength"
+            },
+            {
+              "value": "absorb",
+              "label": "Absorb"
+            },
+            {
+              "value": "mega-drain",
+              "label": "Mega Drain"
+            },
+            {
+              "value": "leech-seed",
+              "label": "Leech Seed"
+            },
+            {
+              "value": "growth",
+              "label": "Growth"
+            },
+            {
+              "value": "razor-leaf",
+              "label": "Razor Leaf"
+            },
+            {
+              "value": "solar-beam",
+              "label": "Solar Beam"
+            },
+            {
+              "value": "poison-powder",
+              "label": "Poison Powder"
+            },
+            {
+              "value": "stun-spore",
+              "label": "Stun Spore"
+            },
+            {
+              "value": "sleep-powder",
+              "label": "Sleep Powder"
+            },
+            {
+              "value": "petal-dance",
+              "label": "Petal Dance"
+            },
+            {
+              "value": "string-shot",
+              "label": "String Shot"
+            },
+            {
+              "value": "dragon-rage",
+              "label": "Dragon Rage"
+            },
+            {
+              "value": "fire-spin",
+              "label": "Fire Spin"
+            },
+            {
+              "value": "thunder-shock",
+              "label": "Thunder Shock"
+            },
+            {
+              "value": "thunderbolt",
+              "label": "Thunderbolt"
+            },
+            {
+              "value": "thunder-wave",
+              "label": "Thunder Wave"
+            },
+            {
+              "value": "thunder",
+              "label": "Thunder"
+            },
+            {
+              "value": "rock-throw",
+              "label": "Rock Throw"
+            },
+            {
+              "value": "earthquake",
+              "label": "Earthquake"
+            },
+            {
+              "value": "fissure",
+              "label": "Fissure"
+            },
+            {
+              "value": "dig",
+              "label": "Dig"
+            },
+            {
+              "value": "toxic",
+              "label": "Toxic"
+            },
+            {
+              "value": "confusion",
+              "label": "Confusion"
+            },
+            {
+              "value": "psychic",
+              "label": "Psychic"
+            },
+            {
+              "value": "hypnosis",
+              "label": "Hypnosis"
+            },
+            {
+              "value": "meditate",
+              "label": "Meditate"
+            },
+            {
+              "value": "agility",
+              "label": "Agility"
+            },
+            {
+              "value": "quick-attack",
+              "label": "Quick Attack"
+            },
+            {
+              "value": "rage",
+              "label": "Rage"
+            },
+            {
+              "value": "teleport",
+              "label": "Teleport"
+            },
+            {
+              "value": "night-shade",
+              "label": "Night Shade"
+            },
+            {
+              "value": "mimic",
+              "label": "Mimic"
+            },
+            {
+              "value": "screech",
+              "label": "Screech"
+            },
+            {
+              "value": "double-team",
+              "label": "Double Team"
+            },
+            {
+              "value": "recover",
+              "label": "Recover"
+            },
+            {
+              "value": "harden",
+              "label": "Harden"
+            },
+            {
+              "value": "minimize",
+              "label": "Minimize"
+            },
+            {
+              "value": "smokescreen",
+              "label": "Smokescreen"
+            },
+            {
+              "value": "confuse-ray",
+              "label": "Confuse Ray"
+            },
+            {
+              "value": "withdraw",
+              "label": "Withdraw"
+            },
+            {
+              "value": "defense-curl",
+              "label": "Defense Curl"
+            },
+            {
+              "value": "barrier",
+              "label": "Barrier"
+            },
+            {
+              "value": "light-screen",
+              "label": "Light Screen"
+            },
+            {
+              "value": "haze",
+              "label": "Haze"
+            },
+            {
+              "value": "reflect",
+              "label": "Reflect"
+            },
+            {
+              "value": "focus-energy",
+              "label": "Focus Energy"
+            },
+            {
+              "value": "bide",
+              "label": "Bide"
+            },
+            {
+              "value": "metronome",
+              "label": "Metronome"
+            },
+            {
+              "value": "mirror-move",
+              "label": "Mirror Move"
+            },
+            {
+              "value": "self-destruct",
+              "label": "Self Destruct"
+            },
+            {
+              "value": "egg-bomb",
+              "label": "Egg Bomb"
+            },
+            {
+              "value": "lick",
+              "label": "Lick"
+            },
+            {
+              "value": "smog",
+              "label": "Smog"
+            },
+            {
+              "value": "sludge",
+              "label": "Sludge"
+            },
+            {
+              "value": "bone-club",
+              "label": "Bone Club"
+            },
+            {
+              "value": "fire-blast",
+              "label": "Fire Blast"
+            },
+            {
+              "value": "waterfall",
+              "label": "Waterfall"
+            },
+            {
+              "value": "clamp",
+              "label": "Clamp"
+            },
+            {
+              "value": "swift",
+              "label": "Swift"
+            },
+            {
+              "value": "skull-bash",
+              "label": "Skull Bash"
+            },
+            {
+              "value": "spike-cannon",
+              "label": "Spike Cannon"
+            },
+            {
+              "value": "constrict",
+              "label": "Constrict"
+            },
+            {
+              "value": "amnesia",
+              "label": "Amnesia"
+            },
+            {
+              "value": "kinesis",
+              "label": "Kinesis"
+            },
+            {
+              "value": "soft-boiled",
+              "label": "Soft Boiled"
+            },
+            {
+              "value": "high-jump-kick",
+              "label": "High Jump Kick"
+            },
+            {
+              "value": "glare",
+              "label": "Glare"
+            },
+            {
+              "value": "dream-eater",
+              "label": "Dream Eater"
+            },
+            {
+              "value": "poison-gas",
+              "label": "Poison Gas"
+            },
+            {
+              "value": "barrage",
+              "label": "Barrage"
+            },
+            {
+              "value": "leech-life",
+              "label": "Leech Life"
+            },
+            {
+              "value": "lovely-kiss",
+              "label": "Lovely Kiss"
+            },
+            {
+              "value": "sky-attack",
+              "label": "Sky Attack"
+            },
+            {
+              "value": "transform",
+              "label": "Transform"
+            },
+            {
+              "value": "bubble",
+              "label": "Bubble"
+            },
+            {
+              "value": "dizzy-punch",
+              "label": "Dizzy Punch"
+            },
+            {
+              "value": "spore",
+              "label": "Spore"
+            },
+            {
+              "value": "flash",
+              "label": "Flash"
+            },
+            {
+              "value": "psywave",
+              "label": "Psywave"
+            },
+            {
+              "value": "splash",
+              "label": "Splash"
+            },
+            {
+              "value": "acid-armor",
+              "label": "Acid Armor"
+            },
+            {
+              "value": "crabhammer",
+              "label": "Crabhammer"
+            },
+            {
+              "value": "explosion",
+              "label": "Explosion"
+            },
+            {
+              "value": "fury-swipes",
+              "label": "Fury Swipes"
+            },
+            {
+              "value": "bonemerang",
+              "label": "Bonemerang"
+            },
+            {
+              "value": "rest",
+              "label": "Rest"
+            },
+            {
+              "value": "rock-slide",
+              "label": "Rock Slide"
+            },
+            {
+              "value": "hyper-fang",
+              "label": "Hyper Fang"
+            },
+            {
+              "value": "sharpen",
+              "label": "Sharpen"
+            },
+            {
+              "value": "conversion",
+              "label": "Conversion"
+            },
+            {
+              "value": "tri-attack",
+              "label": "Tri Attack"
+            },
+            {
+              "value": "super-fang",
+              "label": "Super Fang"
+            },
+            {
+              "value": "slash",
+              "label": "Slash"
+            },
+            {
+              "value": "substitute",
+              "label": "Substitute"
+            },
+            {
+              "value": "struggle",
+              "label": "Struggle"
+            },
+            {
+              "value": "sketch",
+              "label": "Sketch"
+            },
+            {
+              "value": "triple-kick",
+              "label": "Triple Kick"
+            },
+            {
+              "value": "thief",
+              "label": "Thief"
+            },
+            {
+              "value": "spider-web",
+              "label": "Spider Web"
+            },
+            {
+              "value": "mind-reader",
+              "label": "Mind Reader"
+            },
+            {
+              "value": "nightmare",
+              "label": "Nightmare"
+            },
+            {
+              "value": "flame-wheel",
+              "label": "Flame Wheel"
+            },
+            {
+              "value": "snore",
+              "label": "Snore"
+            },
+            {
+              "value": "curse",
+              "label": "Curse"
+            },
+            {
+              "value": "flail",
+              "label": "Flail"
+            },
+            {
+              "value": "conversion-2",
+              "label": "Conversion 2"
+            },
+            {
+              "value": "aeroblast",
+              "label": "Aeroblast"
+            },
+            {
+              "value": "cotton-spore",
+              "label": "Cotton Spore"
+            },
+            {
+              "value": "reversal",
+              "label": "Reversal"
+            },
+            {
+              "value": "spite",
+              "label": "Spite"
+            },
+            {
+              "value": "powder-snow",
+              "label": "Powder Snow"
+            },
+            {
+              "value": "protect",
+              "label": "Protect"
+            },
+            {
+              "value": "mach-punch",
+              "label": "Mach Punch"
+            },
+            {
+              "value": "scary-face",
+              "label": "Scary Face"
+            },
+            {
+              "value": "feint-attack",
+              "label": "Feint Attack"
+            },
+            {
+              "value": "sweet-kiss",
+              "label": "Sweet Kiss"
+            },
+            {
+              "value": "belly-drum",
+              "label": "Belly Drum"
+            },
+            {
+              "value": "sludge-bomb",
+              "label": "Sludge Bomb"
+            },
+            {
+              "value": "mud-slap",
+              "label": "Mud Slap"
+            },
+            {
+              "value": "octazooka",
+              "label": "Octazooka"
+            },
+            {
+              "value": "spikes",
+              "label": "Spikes"
+            },
+            {
+              "value": "zap-cannon",
+              "label": "Zap Cannon"
+            },
+            {
+              "value": "foresight",
+              "label": "Foresight"
+            },
+            {
+              "value": "destiny-bond",
+              "label": "Destiny Bond"
+            },
+            {
+              "value": "perish-song",
+              "label": "Perish Song"
+            },
+            {
+              "value": "icy-wind",
+              "label": "Icy Wind"
+            },
+            {
+              "value": "detect",
+              "label": "Detect"
+            },
+            {
+              "value": "bone-rush",
+              "label": "Bone Rush"
+            },
+            {
+              "value": "lock-on",
+              "label": "Lock On"
+            },
+            {
+              "value": "outrage",
+              "label": "Outrage"
+            },
+            {
+              "value": "sandstorm",
+              "label": "Sandstorm"
+            },
+            {
+              "value": "giga-drain",
+              "label": "Giga Drain"
+            },
+            {
+              "value": "endure",
+              "label": "Endure"
+            },
+            {
+              "value": "charm",
+              "label": "Charm"
+            },
+            {
+              "value": "rollout",
+              "label": "Rollout"
+            },
+            {
+              "value": "false-swipe",
+              "label": "False Swipe"
+            },
+            {
+              "value": "swagger",
+              "label": "Swagger"
+            },
+            {
+              "value": "milk-drink",
+              "label": "Milk Drink"
+            },
+            {
+              "value": "spark",
+              "label": "Spark"
+            },
+            {
+              "value": "fury-cutter",
+              "label": "Fury Cutter"
+            },
+            {
+              "value": "steel-wing",
+              "label": "Steel Wing"
+            },
+            {
+              "value": "mean-look",
+              "label": "Mean Look"
+            },
+            {
+              "value": "attract",
+              "label": "Attract"
+            },
+            {
+              "value": "sleep-talk",
+              "label": "Sleep Talk"
+            },
+            {
+              "value": "heal-bell",
+              "label": "Heal Bell"
+            },
+            {
+              "value": "return",
+              "label": "Return"
+            },
+            {
+              "value": "present",
+              "label": "Present"
+            },
+            {
+              "value": "frustration",
+              "label": "Frustration"
+            },
+            {
+              "value": "safeguard",
+              "label": "Safeguard"
+            },
+            {
+              "value": "pain-split",
+              "label": "Pain Split"
+            },
+            {
+              "value": "sacred-fire",
+              "label": "Sacred Fire"
+            },
+            {
+              "value": "magnitude",
+              "label": "Magnitude"
+            },
+            {
+              "value": "dynamic-punch",
+              "label": "Dynamic Punch"
+            },
+            {
+              "value": "megahorn",
+              "label": "Megahorn"
+            },
+            {
+              "value": "dragon-breath",
+              "label": "Dragon Breath"
+            },
+            {
+              "value": "baton-pass",
+              "label": "Baton Pass"
+            },
+            {
+              "value": "encore",
+              "label": "Encore"
+            },
+            {
+              "value": "pursuit",
+              "label": "Pursuit"
+            },
+            {
+              "value": "rapid-spin",
+              "label": "Rapid Spin"
+            },
+            {
+              "value": "sweet-scent",
+              "label": "Sweet Scent"
+            },
+            {
+              "value": "iron-tail",
+              "label": "Iron Tail"
+            },
+            {
+              "value": "metal-claw",
+              "label": "Metal Claw"
+            },
+            {
+              "value": "vital-throw",
+              "label": "Vital Throw"
+            },
+            {
+              "value": "morning-sun",
+              "label": "Morning Sun"
+            },
+            {
+              "value": "synthesis",
+              "label": "Synthesis"
+            },
+            {
+              "value": "moonlight",
+              "label": "Moonlight"
+            },
+            {
+              "value": "hidden-power",
+              "label": "Hidden Power"
+            },
+            {
+              "value": "cross-chop",
+              "label": "Cross Chop"
+            },
+            {
+              "value": "twister",
+              "label": "Twister"
+            },
+            {
+              "value": "rain-dance",
+              "label": "Rain Dance"
+            },
+            {
+              "value": "sunny-day",
+              "label": "Sunny Day"
+            },
+            {
+              "value": "crunch",
+              "label": "Crunch"
+            },
+            {
+              "value": "mirror-coat",
+              "label": "Mirror Coat"
+            },
+            {
+              "value": "psych-up",
+              "label": "Psych Up"
+            },
+            {
+              "value": "extreme-speed",
+              "label": "Extreme Speed"
+            },
+            {
+              "value": "ancient-power",
+              "label": "Ancient Power"
+            },
+            {
+              "value": "shadow-ball",
+              "label": "Shadow Ball"
+            },
+            {
+              "value": "future-sight",
+              "label": "Future Sight"
+            },
+            {
+              "value": "rock-smash",
+              "label": "Rock Smash"
+            },
+            {
+              "value": "whirlpool",
+              "label": "Whirlpool"
+            },
+            {
+              "value": "beat-up",
+              "label": "Beat Up"
+            },
+            {
+              "value": "fake-out",
+              "label": "Fake Out"
+            },
+            {
+              "value": "uproar",
+              "label": "Uproar"
+            },
+            {
+              "value": "stockpile",
+              "label": "Stockpile"
+            },
+            {
+              "value": "spit-up",
+              "label": "Spit Up"
+            },
+            {
+              "value": "swallow",
+              "label": "Swallow"
+            },
+            {
+              "value": "heat-wave",
+              "label": "Heat Wave"
+            },
+            {
+              "value": "hail",
+              "label": "Hail"
+            },
+            {
+              "value": "torment",
+              "label": "Torment"
+            },
+            {
+              "value": "flatter",
+              "label": "Flatter"
+            },
+            {
+              "value": "will-o-wisp",
+              "label": "Will O Wisp"
+            },
+            {
+              "value": "memento",
+              "label": "Memento"
+            },
+            {
+              "value": "facade",
+              "label": "Facade"
+            },
+            {
+              "value": "focus-punch",
+              "label": "Focus Punch"
+            },
+            {
+              "value": "smelling-salts",
+              "label": "Smelling Salts"
+            },
+            {
+              "value": "follow-me",
+              "label": "Follow Me"
+            },
+            {
+              "value": "nature-power",
+              "label": "Nature Power"
+            },
+            {
+              "value": "charge",
+              "label": "Charge"
+            },
+            {
+              "value": "taunt",
+              "label": "Taunt"
+            },
+            {
+              "value": "helping-hand",
+              "label": "Helping Hand"
+            },
+            {
+              "value": "trick",
+              "label": "Trick"
+            },
+            {
+              "value": "role-play",
+              "label": "Role Play"
+            },
+            {
+              "value": "wish",
+              "label": "Wish"
+            },
+            {
+              "value": "assist",
+              "label": "Assist"
+            },
+            {
+              "value": "ingrain",
+              "label": "Ingrain"
+            },
+            {
+              "value": "superpower",
+              "label": "Superpower"
+            },
+            {
+              "value": "magic-coat",
+              "label": "Magic Coat"
+            },
+            {
+              "value": "recycle",
+              "label": "Recycle"
+            },
+            {
+              "value": "revenge",
+              "label": "Revenge"
+            },
+            {
+              "value": "brick-break",
+              "label": "Brick Break"
+            },
+            {
+              "value": "yawn",
+              "label": "Yawn"
+            },
+            {
+              "value": "knock-off",
+              "label": "Knock Off"
+            },
+            {
+              "value": "endeavor",
+              "label": "Endeavor"
+            },
+            {
+              "value": "eruption",
+              "label": "Eruption"
+            },
+            {
+              "value": "skill-swap",
+              "label": "Skill Swap"
+            },
+            {
+              "value": "imprison",
+              "label": "Imprison"
+            },
+            {
+              "value": "refresh",
+              "label": "Refresh"
+            },
+            {
+              "value": "grudge",
+              "label": "Grudge"
+            },
+            {
+              "value": "snatch",
+              "label": "Snatch"
+            },
+            {
+              "value": "secret-power",
+              "label": "Secret Power"
+            },
+            {
+              "value": "dive",
+              "label": "Dive"
+            },
+            {
+              "value": "arm-thrust",
+              "label": "Arm Thrust"
+            },
+            {
+              "value": "camouflage",
+              "label": "Camouflage"
+            },
+            {
+              "value": "tail-glow",
+              "label": "Tail Glow"
+            },
+            {
+              "value": "luster-purge",
+              "label": "Luster Purge"
+            },
+            {
+              "value": "mist-ball",
+              "label": "Mist Ball"
+            },
+            {
+              "value": "feather-dance",
+              "label": "Feather Dance"
+            },
+            {
+              "value": "teeter-dance",
+              "label": "Teeter Dance"
+            },
+            {
+              "value": "blaze-kick",
+              "label": "Blaze Kick"
+            },
+            {
+              "value": "mud-sport",
+              "label": "Mud Sport"
+            },
+            {
+              "value": "ice-ball",
+              "label": "Ice Ball"
+            },
+            {
+              "value": "needle-arm",
+              "label": "Needle Arm"
+            },
+            {
+              "value": "slack-off",
+              "label": "Slack Off"
+            },
+            {
+              "value": "hyper-voice",
+              "label": "Hyper Voice"
+            },
+            {
+              "value": "poison-fang",
+              "label": "Poison Fang"
+            },
+            {
+              "value": "crush-claw",
+              "label": "Crush Claw"
+            },
+            {
+              "value": "blast-burn",
+              "label": "Blast Burn"
+            },
+            {
+              "value": "hydro-cannon",
+              "label": "Hydro Cannon"
+            },
+            {
+              "value": "meteor-mash",
+              "label": "Meteor Mash"
+            },
+            {
+              "value": "astonish",
+              "label": "Astonish"
+            },
+            {
+              "value": "weather-ball",
+              "label": "Weather Ball"
+            },
+            {
+              "value": "aromatherapy",
+              "label": "Aromatherapy"
+            },
+            {
+              "value": "fake-tears",
+              "label": "Fake Tears"
+            },
+            {
+              "value": "air-cutter",
+              "label": "Air Cutter"
+            },
+            {
+              "value": "overheat",
+              "label": "Overheat"
+            },
+            {
+              "value": "odor-sleuth",
+              "label": "Odor Sleuth"
+            },
+            {
+              "value": "rock-tomb",
+              "label": "Rock Tomb"
+            },
+            {
+              "value": "silver-wind",
+              "label": "Silver Wind"
+            },
+            {
+              "value": "metal-sound",
+              "label": "Metal Sound"
+            },
+            {
+              "value": "grass-whistle",
+              "label": "Grass Whistle"
+            },
+            {
+              "value": "tickle",
+              "label": "Tickle"
+            },
+            {
+              "value": "cosmic-power",
+              "label": "Cosmic Power"
+            },
+            {
+              "value": "water-spout",
+              "label": "Water Spout"
+            },
+            {
+              "value": "signal-beam",
+              "label": "Signal Beam"
+            },
+            {
+              "value": "shadow-punch",
+              "label": "Shadow Punch"
+            },
+            {
+              "value": "extrasensory",
+              "label": "Extrasensory"
+            },
+            {
+              "value": "sky-uppercut",
+              "label": "Sky Uppercut"
+            },
+            {
+              "value": "sand-tomb",
+              "label": "Sand Tomb"
+            },
+            {
+              "value": "sheer-cold",
+              "label": "Sheer Cold"
+            },
+            {
+              "value": "muddy-water",
+              "label": "Muddy Water"
+            },
+            {
+              "value": "bullet-seed",
+              "label": "Bullet Seed"
+            },
+            {
+              "value": "aerial-ace",
+              "label": "Aerial Ace"
+            },
+            {
+              "value": "icicle-spear",
+              "label": "Icicle Spear"
+            },
+            {
+              "value": "iron-defense",
+              "label": "Iron Defense"
+            },
+            {
+              "value": "block",
+              "label": "Block"
+            },
+            {
+              "value": "howl",
+              "label": "Howl"
+            },
+            {
+              "value": "dragon-claw",
+              "label": "Dragon Claw"
+            },
+            {
+              "value": "frenzy-plant",
+              "label": "Frenzy Plant"
+            },
+            {
+              "value": "bulk-up",
+              "label": "Bulk Up"
+            },
+            {
+              "value": "bounce",
+              "label": "Bounce"
+            },
+            {
+              "value": "mud-shot",
+              "label": "Mud Shot"
+            },
+            {
+              "value": "poison-tail",
+              "label": "Poison Tail"
+            },
+            {
+              "value": "covet",
+              "label": "Covet"
+            },
+            {
+              "value": "volt-tackle",
+              "label": "Volt Tackle"
+            },
+            {
+              "value": "magical-leaf",
+              "label": "Magical Leaf"
+            },
+            {
+              "value": "water-sport",
+              "label": "Water Sport"
+            },
+            {
+              "value": "calm-mind",
+              "label": "Calm Mind"
+            },
+            {
+              "value": "leaf-blade",
+              "label": "Leaf Blade"
+            },
+            {
+              "value": "dragon-dance",
+              "label": "Dragon Dance"
+            },
+            {
+              "value": "rock-blast",
+              "label": "Rock Blast"
+            },
+            {
+              "value": "shock-wave",
+              "label": "Shock Wave"
+            },
+            {
+              "value": "water-pulse",
+              "label": "Water Pulse"
+            },
+            {
+              "value": "doom-desire",
+              "label": "Doom Desire"
+            },
+            {
+              "value": "psycho-boost",
+              "label": "Psycho Boost"
+            },
+            {
+              "value": "roost",
+              "label": "Roost"
+            },
+            {
+              "value": "gravity",
+              "label": "Gravity"
+            },
+            {
+              "value": "miracle-eye",
+              "label": "Miracle Eye"
+            },
+            {
+              "value": "wake-up-slap",
+              "label": "Wake Up Slap"
+            },
+            {
+              "value": "hammer-arm",
+              "label": "Hammer Arm"
+            },
+            {
+              "value": "gyro-ball",
+              "label": "Gyro Ball"
+            },
+            {
+              "value": "healing-wish",
+              "label": "Healing Wish"
+            },
+            {
+              "value": "brine",
+              "label": "Brine"
+            },
+            {
+              "value": "natural-gift",
+              "label": "Natural Gift"
+            },
+            {
+              "value": "feint",
+              "label": "Feint"
+            },
+            {
+              "value": "pluck",
+              "label": "Pluck"
+            },
+            {
+              "value": "tailwind",
+              "label": "Tailwind"
+            },
+            {
+              "value": "acupressure",
+              "label": "Acupressure"
+            },
+            {
+              "value": "metal-burst",
+              "label": "Metal Burst"
+            },
+            {
+              "value": "u-turn",
+              "label": "U Turn"
+            },
+            {
+              "value": "close-combat",
+              "label": "Close Combat"
+            },
+            {
+              "value": "payback",
+              "label": "Payback"
+            },
+            {
+              "value": "assurance",
+              "label": "Assurance"
+            },
+            {
+              "value": "embargo",
+              "label": "Embargo"
+            },
+            {
+              "value": "fling",
+              "label": "Fling"
+            },
+            {
+              "value": "psycho-shift",
+              "label": "Psycho Shift"
+            },
+            {
+              "value": "trump-card",
+              "label": "Trump Card"
+            },
+            {
+              "value": "heal-block",
+              "label": "Heal Block"
+            },
+            {
+              "value": "wring-out",
+              "label": "Wring Out"
+            },
+            {
+              "value": "power-trick",
+              "label": "Power Trick"
+            },
+            {
+              "value": "gastro-acid",
+              "label": "Gastro Acid"
+            },
+            {
+              "value": "lucky-chant",
+              "label": "Lucky Chant"
+            },
+            {
+              "value": "me-first",
+              "label": "Me First"
+            },
+            {
+              "value": "copycat",
+              "label": "Copycat"
+            },
+            {
+              "value": "power-swap",
+              "label": "Power Swap"
+            },
+            {
+              "value": "guard-swap",
+              "label": "Guard Swap"
+            },
+            {
+              "value": "punishment",
+              "label": "Punishment"
+            },
+            {
+              "value": "last-resort",
+              "label": "Last Resort"
+            },
+            {
+              "value": "worry-seed",
+              "label": "Worry Seed"
+            },
+            {
+              "value": "sucker-punch",
+              "label": "Sucker Punch"
+            },
+            {
+              "value": "toxic-spikes",
+              "label": "Toxic Spikes"
+            },
+            {
+              "value": "heart-swap",
+              "label": "Heart Swap"
+            },
+            {
+              "value": "aqua-ring",
+              "label": "Aqua Ring"
+            },
+            {
+              "value": "magnet-rise",
+              "label": "Magnet Rise"
+            },
+            {
+              "value": "flare-blitz",
+              "label": "Flare Blitz"
+            },
+            {
+              "value": "force-palm",
+              "label": "Force Palm"
+            },
+            {
+              "value": "aura-sphere",
+              "label": "Aura Sphere"
+            },
+            {
+              "value": "rock-polish",
+              "label": "Rock Polish"
+            },
+            {
+              "value": "poison-jab",
+              "label": "Poison Jab"
+            },
+            {
+              "value": "dark-pulse",
+              "label": "Dark Pulse"
+            },
+            {
+              "value": "night-slash",
+              "label": "Night Slash"
+            },
+            {
+              "value": "aqua-tail",
+              "label": "Aqua Tail"
+            },
+            {
+              "value": "seed-bomb",
+              "label": "Seed Bomb"
+            },
+            {
+              "value": "air-slash",
+              "label": "Air Slash"
+            },
+            {
+              "value": "x-scissor",
+              "label": "X Scissor"
+            },
+            {
+              "value": "bug-buzz",
+              "label": "Bug Buzz"
+            },
+            {
+              "value": "dragon-pulse",
+              "label": "Dragon Pulse"
+            },
+            {
+              "value": "dragon-rush",
+              "label": "Dragon Rush"
+            },
+            {
+              "value": "power-gem",
+              "label": "Power Gem"
+            },
+            {
+              "value": "drain-punch",
+              "label": "Drain Punch"
+            },
+            {
+              "value": "vacuum-wave",
+              "label": "Vacuum Wave"
+            },
+            {
+              "value": "focus-blast",
+              "label": "Focus Blast"
+            },
+            {
+              "value": "energy-ball",
+              "label": "Energy Ball"
+            },
+            {
+              "value": "brave-bird",
+              "label": "Brave Bird"
+            },
+            {
+              "value": "earth-power",
+              "label": "Earth Power"
+            },
+            {
+              "value": "switcheroo",
+              "label": "Switcheroo"
+            },
+            {
+              "value": "giga-impact",
+              "label": "Giga Impact"
+            },
+            {
+              "value": "nasty-plot",
+              "label": "Nasty Plot"
+            },
+            {
+              "value": "bullet-punch",
+              "label": "Bullet Punch"
+            },
+            {
+              "value": "avalanche",
+              "label": "Avalanche"
+            },
+            {
+              "value": "ice-shard",
+              "label": "Ice Shard"
+            },
+            {
+              "value": "shadow-claw",
+              "label": "Shadow Claw"
+            },
+            {
+              "value": "thunder-fang",
+              "label": "Thunder Fang"
+            },
+            {
+              "value": "ice-fang",
+              "label": "Ice Fang"
+            },
+            {
+              "value": "fire-fang",
+              "label": "Fire Fang"
+            },
+            {
+              "value": "shadow-sneak",
+              "label": "Shadow Sneak"
+            },
+            {
+              "value": "mud-bomb",
+              "label": "Mud Bomb"
+            },
+            {
+              "value": "psycho-cut",
+              "label": "Psycho Cut"
+            },
+            {
+              "value": "zen-headbutt",
+              "label": "Zen Headbutt"
+            },
+            {
+              "value": "mirror-shot",
+              "label": "Mirror Shot"
+            },
+            {
+              "value": "flash-cannon",
+              "label": "Flash Cannon"
+            },
+            {
+              "value": "rock-climb",
+              "label": "Rock Climb"
+            },
+            {
+              "value": "defog",
+              "label": "Defog"
+            },
+            {
+              "value": "trick-room",
+              "label": "Trick Room"
+            },
+            {
+              "value": "draco-meteor",
+              "label": "Draco Meteor"
+            },
+            {
+              "value": "discharge",
+              "label": "Discharge"
+            },
+            {
+              "value": "lava-plume",
+              "label": "Lava Plume"
+            },
+            {
+              "value": "leaf-storm",
+              "label": "Leaf Storm"
+            },
+            {
+              "value": "power-whip",
+              "label": "Power Whip"
+            },
+            {
+              "value": "rock-wrecker",
+              "label": "Rock Wrecker"
+            },
+            {
+              "value": "cross-poison",
+              "label": "Cross Poison"
+            },
+            {
+              "value": "gunk-shot",
+              "label": "Gunk Shot"
+            },
+            {
+              "value": "iron-head",
+              "label": "Iron Head"
+            },
+            {
+              "value": "magnet-bomb",
+              "label": "Magnet Bomb"
+            },
+            {
+              "value": "stone-edge",
+              "label": "Stone Edge"
+            },
+            {
+              "value": "captivate",
+              "label": "Captivate"
+            },
+            {
+              "value": "stealth-rock",
+              "label": "Stealth Rock"
+            },
+            {
+              "value": "grass-knot",
+              "label": "Grass Knot"
+            },
+            {
+              "value": "chatter",
+              "label": "Chatter"
+            },
+            {
+              "value": "judgment",
+              "label": "Judgment"
+            },
+            {
+              "value": "bug-bite",
+              "label": "Bug Bite"
+            },
+            {
+              "value": "charge-beam",
+              "label": "Charge Beam"
+            },
+            {
+              "value": "wood-hammer",
+              "label": "Wood Hammer"
+            },
+            {
+              "value": "aqua-jet",
+              "label": "Aqua Jet"
+            },
+            {
+              "value": "attack-order",
+              "label": "Attack Order"
+            },
+            {
+              "value": "defend-order",
+              "label": "Defend Order"
+            },
+            {
+              "value": "heal-order",
+              "label": "Heal Order"
+            },
+            {
+              "value": "head-smash",
+              "label": "Head Smash"
+            },
+            {
+              "value": "double-hit",
+              "label": "Double Hit"
+            },
+            {
+              "value": "roar-of-time",
+              "label": "Roar Of Time"
+            },
+            {
+              "value": "spacial-rend",
+              "label": "Spacial Rend"
+            },
+            {
+              "value": "lunar-dance",
+              "label": "Lunar Dance"
+            },
+            {
+              "value": "crush-grip",
+              "label": "Crush Grip"
+            },
+            {
+              "value": "magma-storm",
+              "label": "Magma Storm"
+            },
+            {
+              "value": "dark-void",
+              "label": "Dark Void"
+            },
+            {
+              "value": "seed-flare",
+              "label": "Seed Flare"
+            },
+            {
+              "value": "ominous-wind",
+              "label": "Ominous Wind"
+            },
+            {
+              "value": "shadow-force",
+              "label": "Shadow Force"
+            },
+            {
+              "value": "hone-claws",
+              "label": "Hone Claws"
+            },
+            {
+              "value": "wide-guard",
+              "label": "Wide Guard"
+            },
+            {
+              "value": "guard-split",
+              "label": "Guard Split"
+            },
+            {
+              "value": "power-split",
+              "label": "Power Split"
+            },
+            {
+              "value": "wonder-room",
+              "label": "Wonder Room"
+            },
+            {
+              "value": "psyshock",
+              "label": "Psyshock"
+            },
+            {
+              "value": "venoshock",
+              "label": "Venoshock"
+            },
+            {
+              "value": "autotomize",
+              "label": "Autotomize"
+            },
+            {
+              "value": "rage-powder",
+              "label": "Rage Powder"
+            },
+            {
+              "value": "telekinesis",
+              "label": "Telekinesis"
+            },
+            {
+              "value": "magic-room",
+              "label": "Magic Room"
+            },
+            {
+              "value": "smack-down",
+              "label": "Smack Down"
+            },
+            {
+              "value": "storm-throw",
+              "label": "Storm Throw"
+            },
+            {
+              "value": "flame-burst",
+              "label": "Flame Burst"
+            },
+            {
+              "value": "sludge-wave",
+              "label": "Sludge Wave"
+            },
+            {
+              "value": "quiver-dance",
+              "label": "Quiver Dance"
+            },
+            {
+              "value": "heavy-slam",
+              "label": "Heavy Slam"
+            },
+            {
+              "value": "synchronoise",
+              "label": "Synchronoise"
+            },
+            {
+              "value": "electro-ball",
+              "label": "Electro Ball"
+            },
+            {
+              "value": "soak",
+              "label": "Soak"
+            },
+            {
+              "value": "flame-charge",
+              "label": "Flame Charge"
+            },
+            {
+              "value": "coil",
+              "label": "Coil"
+            },
+            {
+              "value": "low-sweep",
+              "label": "Low Sweep"
+            },
+            {
+              "value": "acid-spray",
+              "label": "Acid Spray"
+            },
+            {
+              "value": "foul-play",
+              "label": "Foul Play"
+            },
+            {
+              "value": "simple-beam",
+              "label": "Simple Beam"
+            },
+            {
+              "value": "entrainment",
+              "label": "Entrainment"
+            },
+            {
+              "value": "after-you",
+              "label": "After You"
+            },
+            {
+              "value": "round",
+              "label": "Round"
+            },
+            {
+              "value": "echoed-voice",
+              "label": "Echoed Voice"
+            },
+            {
+              "value": "chip-away",
+              "label": "Chip Away"
+            },
+            {
+              "value": "clear-smog",
+              "label": "Clear Smog"
+            },
+            {
+              "value": "stored-power",
+              "label": "Stored Power"
+            },
+            {
+              "value": "quick-guard",
+              "label": "Quick Guard"
+            },
+            {
+              "value": "ally-switch",
+              "label": "Ally Switch"
+            },
+            {
+              "value": "scald",
+              "label": "Scald"
+            },
+            {
+              "value": "shell-smash",
+              "label": "Shell Smash"
+            },
+            {
+              "value": "heal-pulse",
+              "label": "Heal Pulse"
+            },
+            {
+              "value": "hex",
+              "label": "Hex"
+            },
+            {
+              "value": "sky-drop",
+              "label": "Sky Drop"
+            },
+            {
+              "value": "shift-gear",
+              "label": "Shift Gear"
+            },
+            {
+              "value": "circle-throw",
+              "label": "Circle Throw"
+            },
+            {
+              "value": "incinerate",
+              "label": "Incinerate"
+            },
+            {
+              "value": "quash",
+              "label": "Quash"
+            },
+            {
+              "value": "acrobatics",
+              "label": "Acrobatics"
+            },
+            {
+              "value": "reflect-type",
+              "label": "Reflect Type"
+            },
+            {
+              "value": "retaliate",
+              "label": "Retaliate"
+            },
+            {
+              "value": "final-gambit",
+              "label": "Final Gambit"
+            },
+            {
+              "value": "bestow",
+              "label": "Bestow"
+            },
+            {
+              "value": "inferno",
+              "label": "Inferno"
+            },
+            {
+              "value": "water-pledge",
+              "label": "Water Pledge"
+            },
+            {
+              "value": "fire-pledge",
+              "label": "Fire Pledge"
+            },
+            {
+              "value": "grass-pledge",
+              "label": "Grass Pledge"
+            },
+            {
+              "value": "volt-switch",
+              "label": "Volt Switch"
+            },
+            {
+              "value": "struggle-bug",
+              "label": "Struggle Bug"
+            },
+            {
+              "value": "bulldoze",
+              "label": "Bulldoze"
+            },
+            {
+              "value": "frost-breath",
+              "label": "Frost Breath"
+            },
+            {
+              "value": "dragon-tail",
+              "label": "Dragon Tail"
+            },
+            {
+              "value": "work-up",
+              "label": "Work Up"
+            },
+            {
+              "value": "electroweb",
+              "label": "Electroweb"
+            },
+            {
+              "value": "wild-charge",
+              "label": "Wild Charge"
+            },
+            {
+              "value": "drill-run",
+              "label": "Drill Run"
+            },
+            {
+              "value": "dual-chop",
+              "label": "Dual Chop"
+            },
+            {
+              "value": "heart-stamp",
+              "label": "Heart Stamp"
+            },
+            {
+              "value": "horn-leech",
+              "label": "Horn Leech"
+            },
+            {
+              "value": "sacred-sword",
+              "label": "Sacred Sword"
+            },
+            {
+              "value": "razor-shell",
+              "label": "Razor Shell"
+            },
+            {
+              "value": "heat-crash",
+              "label": "Heat Crash"
+            },
+            {
+              "value": "leaf-tornado",
+              "label": "Leaf Tornado"
+            },
+            {
+              "value": "steamroller",
+              "label": "Steamroller"
+            },
+            {
+              "value": "cotton-guard",
+              "label": "Cotton Guard"
+            },
+            {
+              "value": "night-daze",
+              "label": "Night Daze"
+            },
+            {
+              "value": "psystrike",
+              "label": "Psystrike"
+            },
+            {
+              "value": "tail-slap",
+              "label": "Tail Slap"
+            },
+            {
+              "value": "hurricane",
+              "label": "Hurricane"
+            },
+            {
+              "value": "head-charge",
+              "label": "Head Charge"
+            },
+            {
+              "value": "gear-grind",
+              "label": "Gear Grind"
+            },
+            {
+              "value": "searing-shot",
+              "label": "Searing Shot"
+            },
+            {
+              "value": "techno-blast",
+              "label": "Techno Blast"
+            },
+            {
+              "value": "relic-song",
+              "label": "Relic Song"
+            },
+            {
+              "value": "secret-sword",
+              "label": "Secret Sword"
+            },
+            {
+              "value": "glaciate",
+              "label": "Glaciate"
+            },
+            {
+              "value": "bolt-strike",
+              "label": "Bolt Strike"
+            },
+            {
+              "value": "blue-flare",
+              "label": "Blue Flare"
+            },
+            {
+              "value": "fiery-dance",
+              "label": "Fiery Dance"
+            },
+            {
+              "value": "freeze-shock",
+              "label": "Freeze Shock"
+            },
+            {
+              "value": "ice-burn",
+              "label": "Ice Burn"
+            },
+            {
+              "value": "snarl",
+              "label": "Snarl"
+            },
+            {
+              "value": "icicle-crash",
+              "label": "Icicle Crash"
+            },
+            {
+              "value": "v-create",
+              "label": "V Create"
+            },
+            {
+              "value": "fusion-flare",
+              "label": "Fusion Flare"
+            },
+            {
+              "value": "fusion-bolt",
+              "label": "Fusion Bolt"
+            },
+            {
+              "value": "flying-press",
+              "label": "Flying Press"
+            },
+            {
+              "value": "mat-block",
+              "label": "Mat Block"
+            },
+            {
+              "value": "belch",
+              "label": "Belch"
+            },
+            {
+              "value": "rototiller",
+              "label": "Rototiller"
+            },
+            {
+              "value": "sticky-web",
+              "label": "Sticky Web"
+            },
+            {
+              "value": "fell-stinger",
+              "label": "Fell Stinger"
+            },
+            {
+              "value": "phantom-force",
+              "label": "Phantom Force"
+            },
+            {
+              "value": "trick-or-treat",
+              "label": "Trick Or Treat"
+            },
+            {
+              "value": "noble-roar",
+              "label": "Noble Roar"
+            },
+            {
+              "value": "ion-deluge",
+              "label": "Ion Deluge"
+            },
+            {
+              "value": "parabolic-charge",
+              "label": "Parabolic Charge"
+            },
+            {
+              "value": "forests-curse",
+              "label": "Forests Curse"
+            },
+            {
+              "value": "petal-blizzard",
+              "label": "Petal Blizzard"
+            },
+            {
+              "value": "freeze-dry",
+              "label": "Freeze Dry"
+            },
+            {
+              "value": "disarming-voice",
+              "label": "Disarming Voice"
+            },
+            {
+              "value": "parting-shot",
+              "label": "Parting Shot"
+            },
+            {
+              "value": "topsy-turvy",
+              "label": "Topsy Turvy"
+            },
+            {
+              "value": "draining-kiss",
+              "label": "Draining Kiss"
+            },
+            {
+              "value": "crafty-shield",
+              "label": "Crafty Shield"
+            },
+            {
+              "value": "flower-shield",
+              "label": "Flower Shield"
+            },
+            {
+              "value": "grassy-terrain",
+              "label": "Grassy Terrain"
+            },
+            {
+              "value": "misty-terrain",
+              "label": "Misty Terrain"
+            },
+            {
+              "value": "electrify",
+              "label": "Electrify"
+            },
+            {
+              "value": "play-rough",
+              "label": "Play Rough"
+            },
+            {
+              "value": "fairy-wind",
+              "label": "Fairy Wind"
+            },
+            {
+              "value": "moonblast",
+              "label": "Moonblast"
+            },
+            {
+              "value": "boomburst",
+              "label": "Boomburst"
+            },
+            {
+              "value": "fairy-lock",
+              "label": "Fairy Lock"
+            },
+            {
+              "value": "kings-shield",
+              "label": "Kings Shield"
+            },
+            {
+              "value": "play-nice",
+              "label": "Play Nice"
+            },
+            {
+              "value": "confide",
+              "label": "Confide"
+            },
+            {
+              "value": "diamond-storm",
+              "label": "Diamond Storm"
+            },
+            {
+              "value": "steam-eruption",
+              "label": "Steam Eruption"
+            },
+            {
+              "value": "hyperspace-hole",
+              "label": "Hyperspace Hole"
+            },
+            {
+              "value": "water-shuriken",
+              "label": "Water Shuriken"
+            },
+            {
+              "value": "mystical-fire",
+              "label": "Mystical Fire"
+            },
+            {
+              "value": "spiky-shield",
+              "label": "Spiky Shield"
+            },
+            {
+              "value": "aromatic-mist",
+              "label": "Aromatic Mist"
+            },
+            {
+              "value": "eerie-impulse",
+              "label": "Eerie Impulse"
+            },
+            {
+              "value": "venom-drench",
+              "label": "Venom Drench"
+            },
+            {
+              "value": "powder",
+              "label": "Powder"
+            },
+            {
+              "value": "geomancy",
+              "label": "Geomancy"
+            },
+            {
+              "value": "magnetic-flux",
+              "label": "Magnetic Flux"
+            },
+            {
+              "value": "happy-hour",
+              "label": "Happy Hour"
+            },
+            {
+              "value": "electric-terrain",
+              "label": "Electric Terrain"
+            },
+            {
+              "value": "dazzling-gleam",
+              "label": "Dazzling Gleam"
+            },
+            {
+              "value": "celebrate",
+              "label": "Celebrate"
+            },
+            {
+              "value": "hold-hands",
+              "label": "Hold Hands"
+            },
+            {
+              "value": "baby-doll-eyes",
+              "label": "Baby Doll Eyes"
+            },
+            {
+              "value": "nuzzle",
+              "label": "Nuzzle"
+            },
+            {
+              "value": "hold-back",
+              "label": "Hold Back"
+            },
+            {
+              "value": "infestation",
+              "label": "Infestation"
+            },
+            {
+              "value": "power-up-punch",
+              "label": "Power Up Punch"
+            },
+            {
+              "value": "oblivion-wing",
+              "label": "Oblivion Wing"
+            },
+            {
+              "value": "thousand-arrows",
+              "label": "Thousand Arrows"
+            },
+            {
+              "value": "thousand-waves",
+              "label": "Thousand Waves"
+            },
+            {
+              "value": "lands-wrath",
+              "label": "Lands Wrath"
+            },
+            {
+              "value": "light-of-ruin",
+              "label": "Light Of Ruin"
+            },
+            {
+              "value": "origin-pulse",
+              "label": "Origin Pulse"
+            },
+            {
+              "value": "precipice-blades",
+              "label": "Precipice Blades"
+            },
+            {
+              "value": "dragon-ascent",
+              "label": "Dragon Ascent"
+            },
+            {
+              "value": "hyperspace-fury",
+              "label": "Hyperspace Fury"
+            },
+            {
+              "value": "breakneck-blitz--physical",
+              "label": "Breakneck Blitz Physical"
+            },
+            {
+              "value": "breakneck-blitz--special",
+              "label": "Breakneck Blitz Special"
+            },
+            {
+              "value": "all-out-pummeling--physical",
+              "label": "All Out Pummeling Physical"
+            },
+            {
+              "value": "all-out-pummeling--special",
+              "label": "All Out Pummeling Special"
+            },
+            {
+              "value": "supersonic-skystrike--physical",
+              "label": "Supersonic Skystrike Physical"
+            },
+            {
+              "value": "supersonic-skystrike--special",
+              "label": "Supersonic Skystrike Special"
+            },
+            {
+              "value": "acid-downpour--physical",
+              "label": "Acid Downpour Physical"
+            },
+            {
+              "value": "acid-downpour--special",
+              "label": "Acid Downpour Special"
+            },
+            {
+              "value": "tectonic-rage--physical",
+              "label": "Tectonic Rage Physical"
+            },
+            {
+              "value": "tectonic-rage--special",
+              "label": "Tectonic Rage Special"
+            },
+            {
+              "value": "continental-crush--physical",
+              "label": "Continental Crush Physical"
+            },
+            {
+              "value": "continental-crush--special",
+              "label": "Continental Crush Special"
+            },
+            {
+              "value": "savage-spin-out--physical",
+              "label": "Savage Spin Out Physical"
+            },
+            {
+              "value": "savage-spin-out--special",
+              "label": "Savage Spin Out Special"
+            },
+            {
+              "value": "never-ending-nightmare--physical",
+              "label": "Never Ending Nightmare Physical"
+            },
+            {
+              "value": "never-ending-nightmare--special",
+              "label": "Never Ending Nightmare Special"
+            },
+            {
+              "value": "corkscrew-crash--physical",
+              "label": "Corkscrew Crash Physical"
+            },
+            {
+              "value": "corkscrew-crash--special",
+              "label": "Corkscrew Crash Special"
+            },
+            {
+              "value": "inferno-overdrive--physical",
+              "label": "Inferno Overdrive Physical"
+            },
+            {
+              "value": "inferno-overdrive--special",
+              "label": "Inferno Overdrive Special"
+            },
+            {
+              "value": "hydro-vortex--physical",
+              "label": "Hydro Vortex Physical"
+            },
+            {
+              "value": "hydro-vortex--special",
+              "label": "Hydro Vortex Special"
+            },
+            {
+              "value": "bloom-doom--physical",
+              "label": "Bloom Doom Physical"
+            },
+            {
+              "value": "bloom-doom--special",
+              "label": "Bloom Doom Special"
+            },
+            {
+              "value": "gigavolt-havoc--physical",
+              "label": "Gigavolt Havoc Physical"
+            },
+            {
+              "value": "gigavolt-havoc--special",
+              "label": "Gigavolt Havoc Special"
+            },
+            {
+              "value": "shattered-psyche--physical",
+              "label": "Shattered Psyche Physical"
+            },
+            {
+              "value": "shattered-psyche--special",
+              "label": "Shattered Psyche Special"
+            },
+            {
+              "value": "subzero-slammer--physical",
+              "label": "Subzero Slammer Physical"
+            },
+            {
+              "value": "subzero-slammer--special",
+              "label": "Subzero Slammer Special"
+            },
+            {
+              "value": "devastating-drake--physical",
+              "label": "Devastating Drake Physical"
+            },
+            {
+              "value": "devastating-drake--special",
+              "label": "Devastating Drake Special"
+            },
+            {
+              "value": "black-hole-eclipse--physical",
+              "label": "Black Hole Eclipse Physical"
+            },
+            {
+              "value": "black-hole-eclipse--special",
+              "label": "Black Hole Eclipse Special"
+            },
+            {
+              "value": "twinkle-tackle--physical",
+              "label": "Twinkle Tackle Physical"
+            },
+            {
+              "value": "twinkle-tackle--special",
+              "label": "Twinkle Tackle Special"
+            },
+            {
+              "value": "catastropika",
+              "label": "Catastropika"
+            },
+            {
+              "value": "shore-up",
+              "label": "Shore Up"
+            },
+            {
+              "value": "first-impression",
+              "label": "First Impression"
+            },
+            {
+              "value": "baneful-bunker",
+              "label": "Baneful Bunker"
+            },
+            {
+              "value": "spirit-shackle",
+              "label": "Spirit Shackle"
+            },
+            {
+              "value": "darkest-lariat",
+              "label": "Darkest Lariat"
+            },
+            {
+              "value": "sparkling-aria",
+              "label": "Sparkling Aria"
+            },
+            {
+              "value": "ice-hammer",
+              "label": "Ice Hammer"
+            },
+            {
+              "value": "floral-healing",
+              "label": "Floral Healing"
+            },
+            {
+              "value": "high-horsepower",
+              "label": "High Horsepower"
+            },
+            {
+              "value": "strength-sap",
+              "label": "Strength Sap"
+            },
+            {
+              "value": "solar-blade",
+              "label": "Solar Blade"
+            },
+            {
+              "value": "leafage",
+              "label": "Leafage"
+            },
+            {
+              "value": "spotlight",
+              "label": "Spotlight"
+            },
+            {
+              "value": "toxic-thread",
+              "label": "Toxic Thread"
+            },
+            {
+              "value": "laser-focus",
+              "label": "Laser Focus"
+            },
+            {
+              "value": "gear-up",
+              "label": "Gear Up"
+            },
+            {
+              "value": "throat-chop",
+              "label": "Throat Chop"
+            },
+            {
+              "value": "pollen-puff",
+              "label": "Pollen Puff"
+            },
+            {
+              "value": "anchor-shot",
+              "label": "Anchor Shot"
+            },
+            {
+              "value": "psychic-terrain",
+              "label": "Psychic Terrain"
+            },
+            {
+              "value": "lunge",
+              "label": "Lunge"
+            },
+            {
+              "value": "fire-lash",
+              "label": "Fire Lash"
+            },
+            {
+              "value": "power-trip",
+              "label": "Power Trip"
+            },
+            {
+              "value": "burn-up",
+              "label": "Burn Up"
+            },
+            {
+              "value": "speed-swap",
+              "label": "Speed Swap"
+            },
+            {
+              "value": "smart-strike",
+              "label": "Smart Strike"
+            },
+            {
+              "value": "purify",
+              "label": "Purify"
+            },
+            {
+              "value": "revelation-dance",
+              "label": "Revelation Dance"
+            },
+            {
+              "value": "core-enforcer",
+              "label": "Core Enforcer"
+            },
+            {
+              "value": "trop-kick",
+              "label": "Trop Kick"
+            },
+            {
+              "value": "instruct",
+              "label": "Instruct"
+            },
+            {
+              "value": "beak-blast",
+              "label": "Beak Blast"
+            },
+            {
+              "value": "clanging-scales",
+              "label": "Clanging Scales"
+            },
+            {
+              "value": "dragon-hammer",
+              "label": "Dragon Hammer"
+            },
+            {
+              "value": "brutal-swing",
+              "label": "Brutal Swing"
+            },
+            {
+              "value": "aurora-veil",
+              "label": "Aurora Veil"
+            },
+            {
+              "value": "sinister-arrow-raid",
+              "label": "Sinister Arrow Raid"
+            },
+            {
+              "value": "malicious-moonsault",
+              "label": "Malicious Moonsault"
+            },
+            {
+              "value": "oceanic-operetta",
+              "label": "Oceanic Operetta"
+            },
+            {
+              "value": "guardian-of-alola",
+              "label": "Guardian Of Alola"
+            },
+            {
+              "value": "soul-stealing-7-star-strike",
+              "label": "Soul Stealing 7 Star Strike"
+            },
+            {
+              "value": "stoked-sparksurfer",
+              "label": "Stoked Sparksurfer"
+            },
+            {
+              "value": "pulverizing-pancake",
+              "label": "Pulverizing Pancake"
+            },
+            {
+              "value": "extreme-evoboost",
+              "label": "Extreme Evoboost"
+            },
+            {
+              "value": "genesis-supernova",
+              "label": "Genesis Supernova"
+            },
+            {
+              "value": "shell-trap",
+              "label": "Shell Trap"
+            },
+            {
+              "value": "fleur-cannon",
+              "label": "Fleur Cannon"
+            },
+            {
+              "value": "psychic-fangs",
+              "label": "Psychic Fangs"
+            },
+            {
+              "value": "stomping-tantrum",
+              "label": "Stomping Tantrum"
+            },
+            {
+              "value": "shadow-bone",
+              "label": "Shadow Bone"
+            },
+            {
+              "value": "accelerock",
+              "label": "Accelerock"
+            },
+            {
+              "value": "liquidation",
+              "label": "Liquidation"
+            },
+            {
+              "value": "prismatic-laser",
+              "label": "Prismatic Laser"
+            },
+            {
+              "value": "spectral-thief",
+              "label": "Spectral Thief"
+            },
+            {
+              "value": "sunsteel-strike",
+              "label": "Sunsteel Strike"
+            },
+            {
+              "value": "moongeist-beam",
+              "label": "Moongeist Beam"
+            },
+            {
+              "value": "tearful-look",
+              "label": "Tearful Look"
+            },
+            {
+              "value": "zing-zap",
+              "label": "Zing Zap"
+            },
+            {
+              "value": "natures-madness",
+              "label": "Natures Madness"
+            },
+            {
+              "value": "multi-attack",
+              "label": "Multi Attack"
+            },
+            {
+              "value": "10-000-000-volt-thunderbolt",
+              "label": "10 000 000 Volt Thunderbolt"
+            },
+            {
+              "value": "mind-blown",
+              "label": "Mind Blown"
+            },
+            {
+              "value": "plasma-fists",
+              "label": "Plasma Fists"
+            },
+            {
+              "value": "photon-geyser",
+              "label": "Photon Geyser"
+            },
+            {
+              "value": "light-that-burns-the-sky",
+              "label": "Light That Burns The Sky"
+            },
+            {
+              "value": "searing-sunraze-smash",
+              "label": "Searing Sunraze Smash"
+            },
+            {
+              "value": "menacing-moonraze-maelstrom",
+              "label": "Menacing Moonraze Maelstrom"
+            },
+            {
+              "value": "lets-snuggle-forever",
+              "label": "Lets Snuggle Forever"
+            },
+            {
+              "value": "splintered-stormshards",
+              "label": "Splintered Stormshards"
+            },
+            {
+              "value": "clangorous-soulblaze",
+              "label": "Clangorous Soulblaze"
+            },
+            {
+              "value": "zippy-zap",
+              "label": "Zippy Zap"
+            },
+            {
+              "value": "splishy-splash",
+              "label": "Splishy Splash"
+            },
+            {
+              "value": "floaty-fall",
+              "label": "Floaty Fall"
+            },
+            {
+              "value": "pika-papow",
+              "label": "Pika Papow"
+            },
+            {
+              "value": "bouncy-bubble",
+              "label": "Bouncy Bubble"
+            },
+            {
+              "value": "buzzy-buzz",
+              "label": "Buzzy Buzz"
+            },
+            {
+              "value": "sizzly-slide",
+              "label": "Sizzly Slide"
+            },
+            {
+              "value": "glitzy-glow",
+              "label": "Glitzy Glow"
+            },
+            {
+              "value": "baddy-bad",
+              "label": "Baddy Bad"
+            },
+            {
+              "value": "sappy-seed",
+              "label": "Sappy Seed"
+            },
+            {
+              "value": "freezy-frost",
+              "label": "Freezy Frost"
+            },
+            {
+              "value": "sparkly-swirl",
+              "label": "Sparkly Swirl"
+            },
+            {
+              "value": "veevee-volley",
+              "label": "Veevee Volley"
+            },
+            {
+              "value": "double-iron-bash",
+              "label": "Double Iron Bash"
+            },
+            {
+              "value": "max-guard",
+              "label": "Max Guard"
+            },
+            {
+              "value": "dynamax-cannon",
+              "label": "Dynamax Cannon"
+            },
+            {
+              "value": "snipe-shot",
+              "label": "Snipe Shot"
+            },
+            {
+              "value": "jaw-lock",
+              "label": "Jaw Lock"
+            },
+            {
+              "value": "stuff-cheeks",
+              "label": "Stuff Cheeks"
+            },
+            {
+              "value": "no-retreat",
+              "label": "No Retreat"
+            },
+            {
+              "value": "tar-shot",
+              "label": "Tar Shot"
+            },
+            {
+              "value": "magic-powder",
+              "label": "Magic Powder"
+            },
+            {
+              "value": "dragon-darts",
+              "label": "Dragon Darts"
+            },
+            {
+              "value": "teatime",
+              "label": "Teatime"
+            },
+            {
+              "value": "octolock",
+              "label": "Octolock"
+            },
+            {
+              "value": "bolt-beak",
+              "label": "Bolt Beak"
+            },
+            {
+              "value": "fishious-rend",
+              "label": "Fishious Rend"
+            },
+            {
+              "value": "court-change",
+              "label": "Court Change"
+            },
+            {
+              "value": "max-flare",
+              "label": "Max Flare"
+            },
+            {
+              "value": "max-flutterby",
+              "label": "Max Flutterby"
+            },
+            {
+              "value": "max-lightning",
+              "label": "Max Lightning"
+            },
+            {
+              "value": "max-strike",
+              "label": "Max Strike"
+            },
+            {
+              "value": "max-knuckle",
+              "label": "Max Knuckle"
+            },
+            {
+              "value": "max-phantasm",
+              "label": "Max Phantasm"
+            },
+            {
+              "value": "max-hailstorm",
+              "label": "Max Hailstorm"
+            },
+            {
+              "value": "max-ooze",
+              "label": "Max Ooze"
+            },
+            {
+              "value": "max-geyser",
+              "label": "Max Geyser"
+            },
+            {
+              "value": "max-airstream",
+              "label": "Max Airstream"
+            },
+            {
+              "value": "max-starfall",
+              "label": "Max Starfall"
+            },
+            {
+              "value": "max-wyrmwind",
+              "label": "Max Wyrmwind"
+            },
+            {
+              "value": "max-mindstorm",
+              "label": "Max Mindstorm"
+            },
+            {
+              "value": "max-rockfall",
+              "label": "Max Rockfall"
+            },
+            {
+              "value": "max-quake",
+              "label": "Max Quake"
+            },
+            {
+              "value": "max-darkness",
+              "label": "Max Darkness"
+            },
+            {
+              "value": "max-overgrowth",
+              "label": "Max Overgrowth"
+            },
+            {
+              "value": "max-steelspike",
+              "label": "Max Steelspike"
+            },
+            {
+              "value": "clangorous-soul",
+              "label": "Clangorous Soul"
+            },
+            {
+              "value": "body-press",
+              "label": "Body Press"
+            },
+            {
+              "value": "decorate",
+              "label": "Decorate"
+            },
+            {
+              "value": "drum-beating",
+              "label": "Drum Beating"
+            },
+            {
+              "value": "snap-trap",
+              "label": "Snap Trap"
+            },
+            {
+              "value": "pyro-ball",
+              "label": "Pyro Ball"
+            },
+            {
+              "value": "behemoth-blade",
+              "label": "Behemoth Blade"
+            },
+            {
+              "value": "behemoth-bash",
+              "label": "Behemoth Bash"
+            },
+            {
+              "value": "aura-wheel",
+              "label": "Aura Wheel"
+            },
+            {
+              "value": "breaking-swipe",
+              "label": "Breaking Swipe"
+            },
+            {
+              "value": "branch-poke",
+              "label": "Branch Poke"
+            },
+            {
+              "value": "overdrive",
+              "label": "Overdrive"
+            },
+            {
+              "value": "apple-acid",
+              "label": "Apple Acid"
+            },
+            {
+              "value": "grav-apple",
+              "label": "Grav Apple"
+            },
+            {
+              "value": "spirit-break",
+              "label": "Spirit Break"
+            },
+            {
+              "value": "strange-steam",
+              "label": "Strange Steam"
+            },
+            {
+              "value": "life-dew",
+              "label": "Life Dew"
+            },
+            {
+              "value": "obstruct",
+              "label": "Obstruct"
+            },
+            {
+              "value": "false-surrender",
+              "label": "False Surrender"
+            },
+            {
+              "value": "meteor-assault",
+              "label": "Meteor Assault"
+            },
+            {
+              "value": "eternabeam",
+              "label": "Eternabeam"
+            },
+            {
+              "value": "steel-beam",
+              "label": "Steel Beam"
+            },
+            {
+              "value": "expanding-force",
+              "label": "Expanding Force"
+            },
+            {
+              "value": "steel-roller",
+              "label": "Steel Roller"
+            },
+            {
+              "value": "scale-shot",
+              "label": "Scale Shot"
+            },
+            {
+              "value": "meteor-beam",
+              "label": "Meteor Beam"
+            },
+            {
+              "value": "shell-side-arm",
+              "label": "Shell Side Arm"
+            },
+            {
+              "value": "misty-explosion",
+              "label": "Misty Explosion"
+            },
+            {
+              "value": "grassy-glide",
+              "label": "Grassy Glide"
+            },
+            {
+              "value": "rising-voltage",
+              "label": "Rising Voltage"
+            },
+            {
+              "value": "terrain-pulse",
+              "label": "Terrain Pulse"
+            },
+            {
+              "value": "skitter-smack",
+              "label": "Skitter Smack"
+            },
+            {
+              "value": "burning-jealousy",
+              "label": "Burning Jealousy"
+            },
+            {
+              "value": "lash-out",
+              "label": "Lash Out"
+            },
+            {
+              "value": "poltergeist",
+              "label": "Poltergeist"
+            },
+            {
+              "value": "corrosive-gas",
+              "label": "Corrosive Gas"
+            },
+            {
+              "value": "coaching",
+              "label": "Coaching"
+            },
+            {
+              "value": "flip-turn",
+              "label": "Flip Turn"
+            },
+            {
+              "value": "triple-axel",
+              "label": "Triple Axel"
+            },
+            {
+              "value": "dual-wingbeat",
+              "label": "Dual Wingbeat"
+            },
+            {
+              "value": "scorching-sands",
+              "label": "Scorching Sands"
+            },
+            {
+              "value": "jungle-healing",
+              "label": "Jungle Healing"
+            },
+            {
+              "value": "wicked-blow",
+              "label": "Wicked Blow"
+            },
+            {
+              "value": "surging-strikes",
+              "label": "Surging Strikes"
+            },
+            {
+              "value": "thunder-cage",
+              "label": "Thunder Cage"
+            },
+            {
+              "value": "dragon-energy",
+              "label": "Dragon Energy"
+            },
+            {
+              "value": "freezing-glare",
+              "label": "Freezing Glare"
+            },
+            {
+              "value": "fiery-wrath",
+              "label": "Fiery Wrath"
+            },
+            {
+              "value": "thunderous-kick",
+              "label": "Thunderous Kick"
+            },
+            {
+              "value": "glacial-lance",
+              "label": "Glacial Lance"
+            },
+            {
+              "value": "astral-barrage",
+              "label": "Astral Barrage"
+            },
+            {
+              "value": "eerie-spell",
+              "label": "Eerie Spell"
+            },
+            {
+              "value": "dire-claw",
+              "label": "Dire Claw"
+            },
+            {
+              "value": "psyshield-bash",
+              "label": "Psyshield Bash"
+            },
+            {
+              "value": "power-shift",
+              "label": "Power Shift"
+            },
+            {
+              "value": "stone-axe",
+              "label": "Stone Axe"
+            },
+            {
+              "value": "springtide-storm",
+              "label": "Springtide Storm"
+            },
+            {
+              "value": "mystical-power",
+              "label": "Mystical Power"
+            },
+            {
+              "value": "raging-fury",
+              "label": "Raging Fury"
+            },
+            {
+              "value": "wave-crash",
+              "label": "Wave Crash"
+            },
+            {
+              "value": "chloroblast",
+              "label": "Chloroblast"
+            },
+            {
+              "value": "mountain-gale",
+              "label": "Mountain Gale"
+            },
+            {
+              "value": "victory-dance",
+              "label": "Victory Dance"
+            },
+            {
+              "value": "headlong-rush",
+              "label": "Headlong Rush"
+            },
+            {
+              "value": "barb-barrage",
+              "label": "Barb Barrage"
+            },
+            {
+              "value": "esper-wing",
+              "label": "Esper Wing"
+            },
+            {
+              "value": "bitter-malice",
+              "label": "Bitter Malice"
+            },
+            {
+              "value": "shelter",
+              "label": "Shelter"
+            },
+            {
+              "value": "triple-arrows",
+              "label": "Triple Arrows"
+            },
+            {
+              "value": "infernal-parade",
+              "label": "Infernal Parade"
+            },
+            {
+              "value": "ceaseless-edge",
+              "label": "Ceaseless Edge"
+            },
+            {
+              "value": "bleakwind-storm",
+              "label": "Bleakwind Storm"
+            },
+            {
+              "value": "wildbolt-storm",
+              "label": "Wildbolt Storm"
+            },
+            {
+              "value": "sandsear-storm",
+              "label": "Sandsear Storm"
+            },
+            {
+              "value": "lunar-blessing",
+              "label": "Lunar Blessing"
+            },
+            {
+              "value": "take-heart",
+              "label": "Take Heart"
+            },
+            {
+              "value": "tera-blast",
+              "label": "Tera Blast"
+            },
+            {
+              "value": "silk-trap",
+              "label": "Silk Trap"
+            },
+            {
+              "value": "axe-kick",
+              "label": "Axe Kick"
+            },
+            {
+              "value": "last-respects",
+              "label": "Last Respects"
+            },
+            {
+              "value": "lumina-crash",
+              "label": "Lumina Crash"
+            },
+            {
+              "value": "order-up",
+              "label": "Order Up"
+            },
+            {
+              "value": "jet-punch",
+              "label": "Jet Punch"
+            },
+            {
+              "value": "spicy-extract",
+              "label": "Spicy Extract"
+            },
+            {
+              "value": "spin-out",
+              "label": "Spin Out"
+            },
+            {
+              "value": "population-bomb",
+              "label": "Population Bomb"
+            },
+            {
+              "value": "ice-spinner",
+              "label": "Ice Spinner"
+            },
+            {
+              "value": "glaive-rush",
+              "label": "Glaive Rush"
+            },
+            {
+              "value": "revival-blessing",
+              "label": "Revival Blessing"
+            },
+            {
+              "value": "salt-cure",
+              "label": "Salt Cure"
+            },
+            {
+              "value": "triple-dive",
+              "label": "Triple Dive"
+            },
+            {
+              "value": "mortal-spin",
+              "label": "Mortal Spin"
+            },
+            {
+              "value": "doodle",
+              "label": "Doodle"
+            },
+            {
+              "value": "fillet-away",
+              "label": "Fillet Away"
+            },
+            {
+              "value": "kowtow-cleave",
+              "label": "Kowtow Cleave"
+            },
+            {
+              "value": "flower-trick",
+              "label": "Flower Trick"
+            },
+            {
+              "value": "torch-song",
+              "label": "Torch Song"
+            },
+            {
+              "value": "aqua-step",
+              "label": "Aqua Step"
+            },
+            {
+              "value": "raging-bull",
+              "label": "Raging Bull"
+            },
+            {
+              "value": "make-it-rain",
+              "label": "Make It Rain"
+            },
+            {
+              "value": "psyblade",
+              "label": "Psyblade"
+            },
+            {
+              "value": "hydro-steam",
+              "label": "Hydro Steam"
+            },
+            {
+              "value": "ruination",
+              "label": "Ruination"
+            },
+            {
+              "value": "collision-course",
+              "label": "Collision Course"
+            },
+            {
+              "value": "electro-drift",
+              "label": "Electro Drift"
+            },
+            {
+              "value": "shed-tail",
+              "label": "Shed Tail"
+            },
+            {
+              "value": "chilly-reception",
+              "label": "Chilly Reception"
+            },
+            {
+              "value": "tidy-up",
+              "label": "Tidy Up"
+            },
+            {
+              "value": "snowscape",
+              "label": "Snowscape"
+            },
+            {
+              "value": "pounce",
+              "label": "Pounce"
+            },
+            {
+              "value": "trailblaze",
+              "label": "Trailblaze"
+            },
+            {
+              "value": "chilling-water",
+              "label": "Chilling Water"
+            },
+            {
+              "value": "hyper-drill",
+              "label": "Hyper Drill"
+            },
+            {
+              "value": "twin-beam",
+              "label": "Twin Beam"
+            },
+            {
+              "value": "rage-fist",
+              "label": "Rage Fist"
+            },
+            {
+              "value": "armor-cannon",
+              "label": "Armor Cannon"
+            },
+            {
+              "value": "bitter-blade",
+              "label": "Bitter Blade"
+            },
+            {
+              "value": "double-shock",
+              "label": "Double Shock"
+            },
+            {
+              "value": "gigaton-hammer",
+              "label": "Gigaton Hammer"
+            },
+            {
+              "value": "comeuppance",
+              "label": "Comeuppance"
+            },
+            {
+              "value": "aqua-cutter",
+              "label": "Aqua Cutter"
+            },
+            {
+              "value": "blazing-torque",
+              "label": "Blazing Torque"
+            },
+            {
+              "value": "wicked-torque",
+              "label": "Wicked Torque"
+            },
+            {
+              "value": "noxious-torque",
+              "label": "Noxious Torque"
+            },
+            {
+              "value": "combat-torque",
+              "label": "Combat Torque"
+            },
+            {
+              "value": "magical-torque",
+              "label": "Magical Torque"
+            },
+            {
+              "value": "blood-moon",
+              "label": "Blood Moon"
+            },
+            {
+              "value": "matcha-gotcha",
+              "label": "Matcha Gotcha"
+            },
+            {
+              "value": "syrup-bomb",
+              "label": "Syrup Bomb"
+            },
+            {
+              "value": "ivy-cudgel",
+              "label": "Ivy Cudgel"
+            },
+            {
+              "value": "electro-shot",
+              "label": "Electro Shot"
+            },
+            {
+              "value": "tera-starstorm",
+              "label": "Tera Starstorm"
+            },
+            {
+              "value": "fickle-beam",
+              "label": "Fickle Beam"
+            },
+            {
+              "value": "burning-bulwark",
+              "label": "Burning Bulwark"
+            },
+            {
+              "value": "thunderclap",
+              "label": "Thunderclap"
+            },
+            {
+              "value": "mighty-cleave",
+              "label": "Mighty Cleave"
+            },
+            {
+              "value": "tachyon-cutter",
+              "label": "Tachyon Cutter"
+            },
+            {
+              "value": "hard-press",
+              "label": "Hard Press"
+            },
+            {
+              "value": "dragon-cheer",
+              "label": "Dragon Cheer"
+            },
+            {
+              "value": "alluring-voice",
+              "label": "Alluring Voice"
+            },
+            {
+              "value": "temper-flare",
+              "label": "Temper Flare"
+            },
+            {
+              "value": "supercell-slam",
+              "label": "Supercell Slam"
+            },
+            {
+              "value": "psychic-noise",
+              "label": "Psychic Noise"
+            },
+            {
+              "value": "upper-hand",
+              "label": "Upper Hand"
+            },
+            {
+              "value": "malignant-chain",
+              "label": "Malignant Chain"
+            },
+            {
+              "value": "shadow-rush",
+              "label": "Shadow Rush"
+            },
+            {
+              "value": "shadow-blast",
+              "label": "Shadow Blast"
+            },
+            {
+              "value": "shadow-blitz",
+              "label": "Shadow Blitz"
+            },
+            {
+              "value": "shadow-bolt",
+              "label": "Shadow Bolt"
+            },
+            {
+              "value": "shadow-break",
+              "label": "Shadow Break"
+            },
+            {
+              "value": "shadow-chill",
+              "label": "Shadow Chill"
+            },
+            {
+              "value": "shadow-end",
+              "label": "Shadow End"
+            },
+            {
+              "value": "shadow-fire",
+              "label": "Shadow Fire"
+            },
+            {
+              "value": "shadow-rave",
+              "label": "Shadow Rave"
+            },
+            {
+              "value": "shadow-storm",
+              "label": "Shadow Storm"
+            },
+            {
+              "value": "shadow-wave",
+              "label": "Shadow Wave"
+            },
+            {
+              "value": "shadow-down",
+              "label": "Shadow Down"
+            },
+            {
+              "value": "shadow-half",
+              "label": "Shadow Half"
+            },
+            {
+              "value": "shadow-hold",
+              "label": "Shadow Hold"
+            },
+            {
+              "value": "shadow-mist",
+              "label": "Shadow Mist"
+            },
+            {
+              "value": "shadow-panic",
+              "label": "Shadow Panic"
+            },
+            {
+              "value": "shadow-shed",
+              "label": "Shadow Shed"
+            },
+            {
+              "value": "shadow-sky",
+              "label": "Shadow Sky"
+            }
+          ]
+        }
+      },
+      "valueInstructions": "set:config.value,queryParamOr,move,all"
+    },
+    {
+      "id": "sortInput",
+      "type": "input",
+      "eventInstructions": "setScopeValue:page,1",
+      "config": {
+        "classes": "catalogInput",
+        "labelClasses": "catalogInputLabel",
+        "inputClasses": "catalogSelectTrigger",
+        "dropdownTriggerClasses": "catalogSelectInner",
+        "dropdownIndicatorText": "▾",
+        "dropdownIndicatorClasses": "catalogSelectIndicator",
+        "dropdownConfig": {
+          "buttonClasses": "catalogSelectTrigger",
+          "menuContainerClasses": "catalogSelectPanel",
+          "menuListClasses": "catalogSelectMenu",
+          "itemLinkClasses": "catalogSelectItem",
+          "selectedItemClasses": "catalogSelectItemActive",
+          "renderMode": "overlay",
+          "closeOnSelect": true
+        },
+        "dropdownTriggerTextConfig": {
+          "tag": "span",
+          "classes": "catalogSelectText"
+        },
+        "fieldId": "sort",
+        "controlType": "select",
+        "label": "Orden",
+        "ariaLabel": "Ordenar catalogo",
+        "value": "number-asc",
+        "options": [
+          {
+            "value": "number-asc",
+            "label": "Numero asc"
+          },
+          {
+            "value": "number-desc",
+            "label": "Numero desc"
+          },
+          {
+            "value": "name-asc",
+            "label": "Nombre A-Z"
+          },
+          {
+            "value": "type-asc",
+            "label": "Tipo A-Z"
+          },
+          {
+            "value": "moves-desc",
+            "label": "Mas ataques"
+          }
+        ]
+      },
+      "valueInstructions": "set:config.value,queryParamOr,sort,number-asc"
+    },
+    {
+      "id": "pageSizeInput",
+      "type": "input",
+      "valueInstructions": "set:config.value,queryParamOr,pageSize,4",
+      "eventInstructions": "setScopeValue:page,1",
+      "config": {
+        "fieldId": "pageSize",
+        "controlType": "select",
+        "label": "Por pagina",
+        "ariaLabel": "Seleccionar cantidad de Pokemon por pagina",
+        "value": "4",
+        "classes": "catalogInput",
+        "labelClasses": "catalogInputLabel",
+        "inputClasses": "catalogSelectTrigger",
+        "dropdownTriggerClasses": "catalogSelectInner",
+        "dropdownIndicatorText": "▾",
+        "dropdownIndicatorClasses": "catalogSelectIndicator",
+        "dropdownConfig": {
+          "buttonClasses": "catalogSelectTrigger",
+          "menuContainerClasses": "catalogSelectPanel",
+          "menuListClasses": "catalogSelectMenu",
+          "itemLinkClasses": "catalogSelectItem",
+          "selectedItemClasses": "catalogSelectItemActive",
+          "renderMode": "overlay",
+          "closeOnSelect": true
+        },
+        "dropdownTriggerTextConfig": {
+          "tag": "span",
+          "classes": "catalogSelectText"
+        },
+        "options": [
+          {
+            "value": "4",
+            "label": "4"
+          },
+          {
+            "value": "8",
+            "label": "8"
+          },
+          {
+            "value": "16",
+            "label": "16"
+          },
+          {
+            "value": "32",
+            "label": "32"
+          },
+          {
+            "value": "64",
+            "label": "64"
+          }
+        ]
+      }
+    },
+    {
+      "id": "autoSearchSwitch",
+      "type": "input",
+      "valueInstructions": "set:config.value,queryParamOr,autoSearch,true",
+      "config": {
+        "fieldId": "autoSearch",
+        "controlType": "switch",
+        "label": "Auto aplicar filtros",
+        "helperText": "Aplica tipo, ataque, orden y por pagina al cambiar. Buscar por texto nunca se ejecuta automaticamente; usa el boton Buscar.",
+        "ariaLabel": "Activar auto aplicar filtros al cambiar selectores",
+        "value": true,
+        "classes": "catalogInput catalogAutoSearch",
+        "labelClasses": "catalogInputLabel",
+        "fieldClasses": "catalogSwitchField",
+        "inputClasses": "catalogSwitchInput",
+        "switchTrackClasses": "catalogSwitchTrack",
+        "switchTrackActiveClasses": "catalogSwitchTrackActive",
+        "switchThumbClasses": "catalogSwitchThumb",
+        "switchThumbActiveClasses": "catalogSwitchThumbActive",
+        "helperTextConfig": {
+          "tag": "span",
+          "classes": "catalogSwitchText"
+        }
+      }
+    },
+    {
+      "id": "pokemonGrid",
+      "type": "container",
+      "loopConfig": {
+        "source": "var",
+        "path": "remote.pokemon.catalog.items",
+        "templateId": "pokemonCardTemplate",
+        "idPrefix": "pokemonCard",
+        "view": {
+          "filters": [
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "scope",
+                "path": "values.search"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "queryParam",
+                "key": "pokemon"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "types.type.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.type"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "equals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "moves.move.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.attack"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "equals": "__no_move_query__"
+              }
+            },
+            {
+              "path": "matchesTypeFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "notEquals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "matchesMoveFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "notEquals": "__no_move_query__"
+              }
+            }
+          ],
+          "sort": {
+            "by": {
+              "source": "queryParam",
+              "key": "sort",
+              "fallback": "number-asc"
+            },
+            "options": {
+              "number-asc": {
+                "path": "id",
+                "direction": "asc",
+                "type": "number"
+              },
+              "number-desc": {
+                "path": "id",
+                "direction": "desc",
+                "type": "number"
+              },
+              "name-asc": {
+                "path": "name",
+                "direction": "asc",
+                "type": "text"
+              },
+              "type-asc": {
+                "path": "primaryType",
+                "direction": "asc",
+                "type": "text"
+              },
+              "moves-desc": {
+                "path": "moveCount",
+                "direction": "desc",
+                "type": "number"
+              }
+            }
+          },
+          "pagination": {
+            "page": {
+              "source": "queryParam",
+              "key": "page",
+              "fallback": 1
+            },
+            "pageSize": {
+              "source": "queryParam",
+              "key": "pageSize",
+              "fallback": 4
+            },
+            "applyWhenAnyQueryParam": [
+              "pokemon",
+              "type",
+              "move"
+            ]
+          }
+        },
+        "bindings": [
+          {
+            "to": "config.styles",
+            "sources": [
+              "typeThemeSurfaceStyles"
+            ],
+            "fallback": {}
+          }
+        ]
+      },
+      "config": {
+        "tag": "div",
+        "classes": "pokemonGrid",
+        "components": []
+      },
+      "condition": "not:varEq,remoteStatus.pokemon.hero.state,loading; not:varEq,remoteStatus.pokemon.catalog.index.state,loading; not:varEq,remoteStatus.pokemon.catalog.search.state,loading; not:varEq,remoteStatus.pokemon.catalog.type.state,loading; not:varEq,remoteStatus.pokemon.catalog.move.state,loading"
+    },
+    {
+      "id": "pokemonCardTemplate",
+      "type": "container",
+      "config": {
+        "tag": "article",
+        "classes": "pokemonCard",
+        "components": [
+          "pokemonCardTop__{{index}}",
+          "pokemonImage__{{index}}",
+          "pokemonTitle__{{index}}",
+          "pokemonCardMeta__{{index}}",
+          "pokemonLink__{{index}}"
+        ]
+      }
+    },
+    {
+      "id": "pokemonImageTemplate",
+      "type": "media",
+      "loopConfig": {
+        "source": "var",
+        "path": "remote.pokemon.catalog.items",
+        "templateId": "pokemonImageTemplate",
+        "idPrefix": "pokemonImage",
+        "view": {
+          "filters": [
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "scope",
+                "path": "values.search"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "queryParam",
+                "key": "pokemon"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "types.type.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.type"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "equals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "moves.move.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.attack"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "equals": "__no_move_query__"
+              }
+            },
+            {
+              "path": "matchesTypeFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "notEquals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "matchesMoveFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "notEquals": "__no_move_query__"
+              }
+            }
+          ],
+          "sort": {
+            "by": {
+              "source": "queryParam",
+              "key": "sort",
+              "fallback": "number-asc"
+            },
+            "options": {
+              "number-asc": {
+                "path": "id",
+                "direction": "asc",
+                "type": "number"
+              },
+              "number-desc": {
+                "path": "id",
+                "direction": "desc",
+                "type": "number"
+              },
+              "name-asc": {
+                "path": "name",
+                "direction": "asc",
+                "type": "text"
+              },
+              "type-asc": {
+                "path": "primaryType",
+                "direction": "asc",
+                "type": "text"
+              },
+              "moves-desc": {
+                "path": "moveCount",
+                "direction": "desc",
+                "type": "number"
+              }
+            }
+          },
+          "pagination": {
+            "page": {
+              "source": "queryParam",
+              "key": "page",
+              "fallback": 1
+            },
+            "pageSize": {
+              "source": "queryParam",
+              "key": "pageSize",
+              "fallback": 4
+            },
+            "applyWhenAnyQueryParam": [
+              "pokemon",
+              "type",
+              "move"
+            ]
+          }
+        },
+        "bindings": [
+          {
+            "to": "config.src",
+            "sources": [
+              "image"
+            ],
+            "fallback": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+          },
+          {
+            "to": "config.alt",
+            "sources": [
+              "name"
+            ],
+            "fallback": "Pokemon"
+          }
+        ]
+      },
+      "config": {
+        "tag": "image",
+        "src": "",
+        "alt": "Pokemon",
+        "width": 475,
+        "height": 475,
+        "loading": "lazy",
+        "decoding": "async",
+        "fetchPriority": "auto",
+        "sizes": "(min-width: 1024px) 260px, 82vw",
+        "classes": "pokePokemonCardImage"
+      }
+    },
+    {
+      "id": "pokemonNumberTemplate",
+      "type": "text",
+      "loopConfig": {
+        "source": "var",
+        "path": "remote.pokemon.catalog.items",
+        "templateId": "pokemonNumberTemplate",
+        "idPrefix": "pokemonNumber",
+        "view": {
+          "filters": [
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "scope",
+                "path": "values.search"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "queryParam",
+                "key": "pokemon"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "types.type.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.type"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "equals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "moves.move.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.attack"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "equals": "__no_move_query__"
+              }
+            },
+            {
+              "path": "matchesTypeFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "notEquals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "matchesMoveFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "notEquals": "__no_move_query__"
+              }
+            }
+          ],
+          "sort": {
+            "by": {
+              "source": "queryParam",
+              "key": "sort",
+              "fallback": "number-asc"
+            },
+            "options": {
+              "number-asc": {
+                "path": "id",
+                "direction": "asc",
+                "type": "number"
+              },
+              "number-desc": {
+                "path": "id",
+                "direction": "desc",
+                "type": "number"
+              },
+              "name-asc": {
+                "path": "name",
+                "direction": "asc",
+                "type": "text"
+              },
+              "type-asc": {
+                "path": "primaryType",
+                "direction": "asc",
+                "type": "text"
+              },
+              "moves-desc": {
+                "path": "moveCount",
+                "direction": "desc",
+                "type": "number"
+              }
+            }
+          },
+          "pagination": {
+            "page": {
+              "source": "queryParam",
+              "key": "page",
+              "fallback": 1
+            },
+            "pageSize": {
+              "source": "queryParam",
+              "key": "pageSize",
+              "fallback": 4
+            },
+            "applyWhenAnyQueryParam": [
+              "pokemon",
+              "type",
+              "move"
+            ]
+          }
+        },
+        "bindings": [
+          {
+            "to": "config.text",
+            "sources": [
+              "number"
+            ],
+            "fallback": "#000"
+          },
+          {
+            "to": "config.styles",
+            "sources": [
+              "typeThemeAccentTextStyles"
+            ],
+            "fallback": {}
+          }
+        ]
+      },
+      "config": {
+        "tag": "p",
+        "text": "#000",
+        "classes": "pokemonCardNumber"
+      }
+    },
+    {
+      "id": "pokemonTitleTemplate",
+      "type": "text",
+      "loopConfig": {
+        "source": "var",
+        "path": "remote.pokemon.catalog.items",
+        "templateId": "pokemonTitleTemplate",
+        "idPrefix": "pokemonTitle",
+        "view": {
+          "filters": [
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "scope",
+                "path": "values.search"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "queryParam",
+                "key": "pokemon"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "types.type.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.type"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "equals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "moves.move.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.attack"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "equals": "__no_move_query__"
+              }
+            },
+            {
+              "path": "matchesTypeFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "notEquals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "matchesMoveFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "notEquals": "__no_move_query__"
+              }
+            }
+          ],
+          "sort": {
+            "by": {
+              "source": "queryParam",
+              "key": "sort",
+              "fallback": "number-asc"
+            },
+            "options": {
+              "number-asc": {
+                "path": "id",
+                "direction": "asc",
+                "type": "number"
+              },
+              "number-desc": {
+                "path": "id",
+                "direction": "desc",
+                "type": "number"
+              },
+              "name-asc": {
+                "path": "name",
+                "direction": "asc",
+                "type": "text"
+              },
+              "type-asc": {
+                "path": "primaryType",
+                "direction": "asc",
+                "type": "text"
+              },
+              "moves-desc": {
+                "path": "moveCount",
+                "direction": "desc",
+                "type": "number"
+              }
+            }
+          },
+          "pagination": {
+            "page": {
+              "source": "queryParam",
+              "key": "page",
+              "fallback": 1
+            },
+            "pageSize": {
+              "source": "queryParam",
+              "key": "pageSize",
+              "fallback": 4
+            },
+            "applyWhenAnyQueryParam": [
+              "pokemon",
+              "type",
+              "move"
+            ]
+          }
+        },
+        "bindings": [
+          {
+            "to": "config.text",
+            "sources": [
+              "name"
+            ],
+            "fallback": "Pokemon"
+          }
+        ]
+      },
+      "config": {
+        "tag": "h3",
+        "text": "Pokemon",
+        "classes": "pokemonCardTitle"
+      }
+    },
+    {
+      "id": "pokemonTypeTemplate",
+      "type": "text",
+      "loopConfig": {
+        "source": "var",
+        "path": "remote.pokemon.catalog.items",
+        "templateId": "pokemonTypeTemplate",
+        "idPrefix": "pokemonType",
+        "view": {
+          "filters": [
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "scope",
+                "path": "values.search"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "queryParam",
+                "key": "pokemon"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "types.type.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.type"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "equals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "moves.move.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.attack"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "equals": "__no_move_query__"
+              }
+            },
+            {
+              "path": "matchesTypeFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "notEquals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "matchesMoveFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "notEquals": "__no_move_query__"
+              }
+            }
+          ],
+          "sort": {
+            "by": {
+              "source": "queryParam",
+              "key": "sort",
+              "fallback": "number-asc"
+            },
+            "options": {
+              "number-asc": {
+                "path": "id",
+                "direction": "asc",
+                "type": "number"
+              },
+              "number-desc": {
+                "path": "id",
+                "direction": "desc",
+                "type": "number"
+              },
+              "name-asc": {
+                "path": "name",
+                "direction": "asc",
+                "type": "text"
+              },
+              "type-asc": {
+                "path": "primaryType",
+                "direction": "asc",
+                "type": "text"
+              },
+              "moves-desc": {
+                "path": "moveCount",
+                "direction": "desc",
+                "type": "number"
+              }
+            }
+          },
+          "pagination": {
+            "page": {
+              "source": "queryParam",
+              "key": "page",
+              "fallback": 1
+            },
+            "pageSize": {
+              "source": "queryParam",
+              "key": "pageSize",
+              "fallback": 4
+            },
+            "applyWhenAnyQueryParam": [
+              "pokemon",
+              "type",
+              "move"
+            ]
+          }
+        },
+        "bindings": [
+          {
+            "to": "config.text",
+            "sources": [
+              "primaryTypeLabel",
+              "primaryType",
+              "type"
+            ],
+            "fallback": "PokeAPI"
+          },
+          {
+            "to": "config.styles",
+            "sources": [
+              "typeThemeBadgeStyles"
+            ],
+            "fallback": {}
+          }
+        ]
+      },
+      "config": {
+        "tag": "p",
+        "text": "PokeAPI",
+        "classes": "pokemonCardType"
+      }
+    },
+    {
+      "id": "pokemonMoveTemplate",
+      "type": "link",
+      "loopConfig": {
+        "source": "var",
+        "path": "remote.pokemon.catalog.items",
+        "templateId": "pokemonMoveTemplate",
+        "idPrefix": "pokemonMove",
+        "view": {
+          "filters": [
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "scope",
+                "path": "values.search"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "queryParam",
+                "key": "pokemon"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "types.type.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.type"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "equals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "moves.move.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.attack"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "equals": "__no_move_query__"
+              }
+            },
+            {
+              "path": "matchesTypeFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "notEquals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "matchesMoveFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "notEquals": "__no_move_query__"
+              }
+            }
+          ],
+          "sort": {
+            "by": {
+              "source": "queryParam",
+              "key": "sort",
+              "fallback": "number-asc"
+            },
+            "options": {
+              "number-asc": {
+                "path": "id",
+                "direction": "asc",
+                "type": "number"
+              },
+              "number-desc": {
+                "path": "id",
+                "direction": "desc",
+                "type": "number"
+              },
+              "name-asc": {
+                "path": "name",
+                "direction": "asc",
+                "type": "text"
+              },
+              "type-asc": {
+                "path": "primaryType",
+                "direction": "asc",
+                "type": "text"
+              },
+              "moves-desc": {
+                "path": "moveCount",
+                "direction": "desc",
+                "type": "number"
+              }
+            }
+          },
+          "pagination": {
+            "page": {
+              "source": "queryParam",
+              "key": "page",
+              "fallback": 1
+            },
+            "pageSize": {
+              "source": "queryParam",
+              "key": "pageSize",
+              "fallback": 4
+            },
+            "applyWhenAnyQueryParam": [
+              "pokemon",
+              "type",
+              "move"
+            ]
+          }
+        },
+        "bindings": [
+          {
+            "to": "config.text",
+            "sources": [
+              "moves.0.move.name"
+            ],
+            "fallback": "Ver ataques"
+          },
+          {
+            "to": "config.href",
+            "sources": [
+              {
+                "from": "moves.0.move.name",
+                "transform": "uriComponent"
+              }
+            ],
+            "prefix": "/?draftDomain=pokeapi-demo.zoolandingpage.com.mx&debugWorkspace=false&move=",
+            "suffix": "#pokemon-grid",
+            "fallback": "#pokemon-grid"
+          },
+          {
+            "to": "config.styles",
+            "sources": [
+              "typeThemeOutlineStyles"
+            ],
+            "fallback": {}
+          }
+        ]
+      },
+      "config": {
+        "href": "/?draftDomain=pokeapi-demo.zoolandingpage.com.mx&debugWorkspace=false&move=move#pokemon-grid",
+        "text": "Ver ataques",
+        "classes": "pokemonMoveTag"
+      }
+    },
+    {
+      "id": "pokemonLinkTemplate",
+      "type": "link",
+      "loopConfig": {
+        "source": "var",
+        "path": "remote.pokemon.catalog.items",
+        "templateId": "pokemonLinkTemplate",
+        "idPrefix": "pokemonLink",
+        "view": {
+          "filters": [
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "scope",
+                "path": "values.search"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "queryParam",
+                "key": "pokemon"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "types.type.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.type"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "equals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "moves.move.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.attack"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "equals": "__no_move_query__"
+              }
+            },
+            {
+              "path": "matchesTypeFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "notEquals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "matchesMoveFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "notEquals": "__no_move_query__"
+              }
+            }
+          ],
+          "sort": {
+            "by": {
+              "source": "queryParam",
+              "key": "sort",
+              "fallback": "number-asc"
+            },
+            "options": {
+              "number-asc": {
+                "path": "id",
+                "direction": "asc",
+                "type": "number"
+              },
+              "number-desc": {
+                "path": "id",
+                "direction": "desc",
+                "type": "number"
+              },
+              "name-asc": {
+                "path": "name",
+                "direction": "asc",
+                "type": "text"
+              },
+              "type-asc": {
+                "path": "primaryType",
+                "direction": "asc",
+                "type": "text"
+              },
+              "moves-desc": {
+                "path": "moveCount",
+                "direction": "desc",
+                "type": "number"
+              }
+            }
+          },
+          "pagination": {
+            "page": {
+              "source": "queryParam",
+              "key": "page",
+              "fallback": 1
+            },
+            "pageSize": {
+              "source": "queryParam",
+              "key": "pageSize",
+              "fallback": 4
+            },
+            "applyWhenAnyQueryParam": [
+              "pokemon",
+              "type",
+              "move"
+            ]
+          }
+        },
+        "bindings": [
+          {
+            "to": "config.href",
+            "sources": [
+              "href"
+            ],
+            "fallback": "/pokemon?name=pikachu"
+          },
+          {
+            "to": "config.styles",
+            "sources": [
+              "typeThemeActionStyles"
+            ],
+            "fallback": {}
+          }
+        ]
+      },
+      "config": {
+        "href": "/pokemon?name=pikachu",
+        "text": "Ver detalle",
+        "classes": "pokemonCardLink",
+        "scrollRestoration": {
+          "mode": "top"
+        }
+      }
+    },
+    {
+      "id": "pokemonPagination",
+      "type": "input",
+      "config": {
+        "fieldId": "page",
+        "controlType": "number",
+        "label": "Pagina",
+        "ariaLabel": "Seleccionar pagina del catalogo",
+        "value": 1,
+        "min": 1,
+        "step": 1,
+        "classes": "catalogInput catalogPagination",
+        "labelClasses": "catalogInputLabel",
+        "inputClasses": "pokemonSearchInput catalogPageNumber",
+        "max": 338,
+        "placeholder": "1-338",
+        "helperText": "1-338",
+        "helperTextClasses": "catalogInputHint"
+      },
+      "valueInstructions": "set:config.value,queryParamOr,page,1"
+    },
+    {
+      "id": "pokemonResultPagination",
+      "type": "pagination",
+      "config": {
+        "id": "pokemon-result-pagination",
+        "ariaLabel": "Navegar paginas de Pokemon",
+        "collectionPath": "remote.pokemon.catalog.items",
+        "totalItemsPath": "remote.pokemon.catalog.count",
+        "totalItemsPathWhenNoQueryParams": [
+          "pokemon",
+          "type",
+          "move"
+        ],
+        "view": {
+          "filters": [
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "scope",
+                "path": "values.search"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "queryParam",
+                "key": "pokemon"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "types.type.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.type"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "equals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "moves.move.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.attack"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "equals": "__no_move_query__"
+              }
+            },
+            {
+              "path": "matchesTypeFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "notEquals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "matchesMoveFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "notEquals": "__no_move_query__"
+              }
+            }
+          ],
+          "sort": {
+            "by": {
+              "source": "queryParam",
+              "key": "sort",
+              "fallback": "number-asc"
+            },
+            "options": {
+              "number-asc": {
+                "path": "id",
+                "direction": "asc",
+                "type": "number"
+              },
+              "number-desc": {
+                "path": "id",
+                "direction": "desc",
+                "type": "number"
+              },
+              "name-asc": {
+                "path": "name",
+                "direction": "asc",
+                "type": "text"
+              },
+              "type-asc": {
+                "path": "primaryType",
+                "direction": "asc",
+                "type": "text"
+              },
+              "moves-desc": {
+                "path": "moveCount",
+                "direction": "desc",
+                "type": "number"
+              }
+            }
+          }
+        },
+        "pageParam": "page",
+        "pageSizeParam": "pageSize",
+        "defaultPage": 1,
+        "defaultPageSize": 4,
+        "pageIndexBase": 1,
+        "maxNumericLinks": 7,
+        "fragment": "pokemon-grid",
+        "showBoundaryLinks": true,
+        "hideWhenEmpty": false,
+        "hideWhenSinglePage": false,
+        "previousLabel": "Anterior",
+        "nextLabel": "Siguiente",
+        "summaryTemplate": "Pagina {page} de {pageCount} · {totalItems} resultados",
+        "classes": "pokemonPaginationNav",
+        "listClasses": "pokemonPaginationList",
+        "linkClasses": "pokemonPaginationLink",
+        "activeLinkClasses": "pokemonPaginationLinkActive",
+        "disabledLinkClasses": "pokemonPaginationLinkDisabled",
+        "ellipsisClasses": "pokemonPaginationEllipsis",
+        "summaryClasses": "pokemonPaginationSummary"
+      },
+      "condition": "not:varEq,remoteStatus.pokemon.hero.state,loading; not:varEq,remoteStatus.pokemon.catalog.index.state,loading; not:varEq,remoteStatus.pokemon.catalog.search.state,loading; not:varEq,remoteStatus.pokemon.catalog.type.state,loading; not:varEq,remoteStatus.pokemon.catalog.move.state,loading"
+    },
+    {
+      "id": "moveMatchLinkTemplate",
+      "type": "link",
+      "config": {
+        "href": "/pokemon?name=pikachu",
+        "text": "Pokemon",
+        "classes": "moveMatchLink"
+      }
+    },
+    {
+      "id": "runtimeProofSection",
+      "type": "container",
+      "config": {
+        "id": "runtime-proof",
+        "tag": "section",
+        "classes": "pokeSection",
+        "components": [
+          "runtimeProofInner"
+        ]
+      }
+    },
+    {
+      "id": "runtimeProofInner",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "pokeSectionInner",
+        "components": [
+          "runtimeProofEyebrow",
+          "runtimeProofTitle",
+          "runtimeProofText",
+          "runtimeStatusStrip"
+        ]
+      }
+    },
+    {
+      "id": "runtimeProofEyebrow",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Controlado por draft",
+        "classes": "pokeSectionEyebrow"
+      }
+    },
+    {
+      "id": "runtimeProofTitle",
+      "type": "text",
+      "config": {
+        "tag": "h2",
+        "text": "La vista cambia sin tocar el frontend",
+        "classes": "pokeSectionTitle"
+      }
+    },
+    {
+      "id": "runtimeProofText",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Este mismo patron permite mostrar albumes, articulos, productos o listados externos con filtros de seguridad en servidor.",
+        "classes": "pokeSectionText"
+      }
+    },
+    {
+      "id": "runtimeStatusStrip",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "statusStrip",
+        "components": [
+          "runtimeStatusSource",
+          "runtimeStatusSafety",
+          "runtimeStatusFallback"
+        ]
+      }
+    },
+    {
+      "id": "runtimeStatusSource",
+      "type": "container",
+      "config": {
+        "tag": "article",
+        "classes": "statusItem",
+        "components": [
+          "runtimeStatusSourceLabel",
+          "runtimeStatusSourceText"
+        ]
+      }
+    },
+    {
+      "id": "runtimeStatusSourceLabel",
+      "type": "text",
+      "config": {
+        "tag": "h3",
+        "text": "7 fuentes",
+        "classes": "statusLabel"
+      }
+    },
+    {
+      "id": "runtimeStatusSourceText",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Un draft puede consumir multiples APIs o endpoints en la misma pagina.",
+        "classes": "statusText"
+      }
+    },
+    {
+      "id": "runtimeStatusSafety",
+      "type": "container",
+      "config": {
+        "tag": "article",
+        "classes": "statusItem",
+        "components": [
+          "runtimeStatusSafetyLabel",
+          "runtimeStatusSafetyText"
+        ]
+      }
+    },
+    {
+      "id": "runtimeStatusSafetyLabel",
+      "type": "text",
+      "config": {
+        "tag": "h3",
+        "text": "Proxy server-side",
+        "classes": "statusLabel"
+      }
+    },
+    {
+      "id": "runtimeStatusSafetyText",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "La politica server-only decide que URL y campos llegan al browser.",
+        "classes": "statusText"
+      }
+    },
+    {
+      "id": "runtimeStatusFallback",
+      "type": "container",
+      "config": {
+        "tag": "article",
+        "classes": "statusItem",
+        "components": [
+          "runtimeStatusFallbackLabel",
+          "runtimeStatusFallbackText"
+        ]
+      }
+    },
+    {
+      "id": "runtimeStatusFallbackLabel",
+      "type": "text",
+      "config": {
+        "tag": "h3",
+        "text": "Fallback incluido",
+        "classes": "statusLabel"
+      }
+    },
+    {
+      "id": "runtimeStatusFallbackText",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "La pagina sigue presentable aunque una API externa no responda.",
+        "classes": "statusText"
+      }
+    },
+    {
+      "id": "demoFooter",
+      "type": "container",
+      "config": {
+        "tag": "footer",
+        "classes": "footerBand",
+        "components": [
+          "demoFooterInner"
+        ]
+      }
+    },
+    {
+      "id": "demoFooterInner",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "footerInner",
+        "components": [
+          "demoFooterText",
+          "demoFooterLink"
+        ]
+      }
+    },
+    {
+      "id": "demoFooterText",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Demo de Zoolandingpage con datos publicos de PokeAPI.",
+        "classes": "footerText"
+      }
+    },
+    {
+      "id": "demoFooterLink",
+      "type": "link",
+      "config": {
+        "href": "https://pokeapi.co/",
+        "text": "pokeapi.co",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "classes": "footerLink"
+      }
+    },
+    {
+      "id": "pokemonCatalogSkeleton",
+      "type": "container",
+      "condition": "any:varEq,remoteStatus.pokemon.hero.state,loading; any:varEq,remoteStatus.pokemon.catalog.index.state,loading; any:varEq,remoteStatus.pokemon.catalog.search.state,loading; any:varEq,remoteStatus.pokemon.catalog.type.state,loading; any:varEq,remoteStatus.pokemon.catalog.move.state,loading",
+      "loopConfig": {
+        "source": "repeat",
+        "count": 4,
+        "templateId": "pokemonSkeletonCardTemplate",
+        "idPrefix": "pokemonSkeletonCard"
+      },
+      "config": {
+        "tag": "div",
+        "classes": "pokemonGrid pokemonSkeletonGrid",
+        "components": []
+      }
+    },
+    {
+      "id": "pokemonSkeletonCardTemplate",
+      "type": "container",
+      "config": {
+        "tag": "article",
+        "classes": "pokemonCard pokemonSkeletonCard",
+        "components": [
+          "pokemonSkeletonImage__{{index}}",
+          "pokemonSkeletonLineWide__{{index}}",
+          "pokemonSkeletonLineShort__{{index}}",
+          "pokemonSkeletonPill__{{index}}",
+          "pokemonSkeletonButton__{{index}}"
+        ]
+      }
+    },
+    {
+      "id": "pokemonSkeletonImageTemplate",
+      "type": "container",
+      "loopConfig": {
+        "source": "repeat",
+        "count": 4,
+        "templateId": "pokemonSkeletonImageTemplate",
+        "idPrefix": "pokemonSkeletonImage"
+      },
+      "config": {
+        "tag": "div",
+        "classes": "skeletonBlock skeletonImageBlock",
+        "components": []
+      }
+    },
+    {
+      "id": "pokemonSkeletonLineWideTemplate",
+      "type": "container",
+      "loopConfig": {
+        "source": "repeat",
+        "count": 4,
+        "templateId": "pokemonSkeletonLineWideTemplate",
+        "idPrefix": "pokemonSkeletonLineWide"
+      },
+      "config": {
+        "tag": "div",
+        "classes": "skeletonBlock skeletonLineWide",
+        "components": []
+      }
+    },
+    {
+      "id": "pokemonSkeletonLineShortTemplate",
+      "type": "container",
+      "loopConfig": {
+        "source": "repeat",
+        "count": 4,
+        "templateId": "pokemonSkeletonLineShortTemplate",
+        "idPrefix": "pokemonSkeletonLineShort"
+      },
+      "config": {
+        "tag": "div",
+        "classes": "skeletonBlock skeletonLineShort",
+        "components": []
+      }
+    },
+    {
+      "id": "pokemonSkeletonPillTemplate",
+      "type": "container",
+      "loopConfig": {
+        "source": "repeat",
+        "count": 4,
+        "templateId": "pokemonSkeletonPillTemplate",
+        "idPrefix": "pokemonSkeletonPill"
+      },
+      "config": {
+        "tag": "div",
+        "classes": "skeletonBlock skeletonPill",
+        "components": []
+      }
+    },
+    {
+      "id": "pokemonSkeletonButtonTemplate",
+      "type": "container",
+      "loopConfig": {
+        "source": "repeat",
+        "count": 4,
+        "templateId": "pokemonSkeletonButtonTemplate",
+        "idPrefix": "pokemonSkeletonButton"
+      },
+      "config": {
+        "tag": "div",
+        "classes": "skeletonBlock skeletonButton",
+        "components": []
+      }
+    },
+    {
+      "id": "pokemonCardTopTemplate",
+      "type": "container",
+      "loopConfig": {
+        "source": "var",
+        "path": "remote.pokemon.catalog.items",
+        "templateId": "pokemonCardTopTemplate",
+        "idPrefix": "pokemonCardTop",
+        "view": {
+          "filters": [
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "scope",
+                "path": "values.search"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "queryParam",
+                "key": "pokemon"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "types.type.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.type"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "equals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "moves.move.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.attack"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "equals": "__no_move_query__"
+              }
+            },
+            {
+              "path": "matchesTypeFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "notEquals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "matchesMoveFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "notEquals": "__no_move_query__"
+              }
+            }
+          ],
+          "sort": {
+            "by": {
+              "source": "queryParam",
+              "key": "sort",
+              "fallback": "number-asc"
+            },
+            "options": {
+              "number-asc": {
+                "path": "id",
+                "direction": "asc",
+                "type": "number"
+              },
+              "number-desc": {
+                "path": "id",
+                "direction": "desc",
+                "type": "number"
+              },
+              "name-asc": {
+                "path": "name",
+                "direction": "asc",
+                "type": "text"
+              },
+              "type-asc": {
+                "path": "primaryType",
+                "direction": "asc",
+                "type": "text"
+              },
+              "moves-desc": {
+                "path": "moveCount",
+                "direction": "desc",
+                "type": "number"
+              }
+            }
+          },
+          "pagination": {
+            "page": {
+              "source": "queryParam",
+              "key": "page",
+              "fallback": 1
+            },
+            "pageSize": {
+              "source": "queryParam",
+              "key": "pageSize",
+              "fallback": 4
+            },
+            "applyWhenAnyQueryParam": [
+              "pokemon",
+              "type",
+              "move"
+            ]
+          }
+        },
+        "bindings": []
+      },
+      "config": {
+        "tag": "div",
+        "classes": "pokemonCardTop",
+        "components": [
+          "pokemonNumber__{{index}}",
+          "pokemonSource__{{index}}"
+        ]
+      }
+    },
+    {
+      "id": "pokemonCardMetaTemplate",
+      "type": "container",
+      "loopConfig": {
+        "source": "var",
+        "path": "remote.pokemon.catalog.items",
+        "templateId": "pokemonCardMetaTemplate",
+        "idPrefix": "pokemonCardMeta",
+        "view": {
+          "filters": [
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "scope",
+                "path": "values.search"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "queryParam",
+                "key": "pokemon"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "types.type.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.type"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "equals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "moves.move.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.attack"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "equals": "__no_move_query__"
+              }
+            },
+            {
+              "path": "matchesTypeFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "notEquals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "matchesMoveFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "notEquals": "__no_move_query__"
+              }
+            }
+          ],
+          "sort": {
+            "by": {
+              "source": "queryParam",
+              "key": "sort",
+              "fallback": "number-asc"
+            },
+            "options": {
+              "number-asc": {
+                "path": "id",
+                "direction": "asc",
+                "type": "number"
+              },
+              "number-desc": {
+                "path": "id",
+                "direction": "desc",
+                "type": "number"
+              },
+              "name-asc": {
+                "path": "name",
+                "direction": "asc",
+                "type": "text"
+              },
+              "type-asc": {
+                "path": "primaryType",
+                "direction": "asc",
+                "type": "text"
+              },
+              "moves-desc": {
+                "path": "moveCount",
+                "direction": "desc",
+                "type": "number"
+              }
+            }
+          },
+          "pagination": {
+            "page": {
+              "source": "queryParam",
+              "key": "page",
+              "fallback": 1
+            },
+            "pageSize": {
+              "source": "queryParam",
+              "key": "pageSize",
+              "fallback": 4
+            },
+            "applyWhenAnyQueryParam": [
+              "pokemon",
+              "type",
+              "move"
+            ]
+          }
+        },
+        "bindings": []
+      },
+      "config": {
+        "tag": "div",
+        "classes": "pokemonCardMeta",
+        "components": [
+          "pokemonType__{{index}}",
+          "pokemonMoveCount__{{index}}"
+        ]
+      }
+    },
+    {
+      "id": "pokemonSourceTemplate",
+      "type": "text",
+      "loopConfig": {
+        "source": "var",
+        "path": "remote.pokemon.catalog.items",
+        "templateId": "pokemonSourceTemplate",
+        "idPrefix": "pokemonSource",
+        "view": {
+          "filters": [
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "scope",
+                "path": "values.search"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "queryParam",
+                "key": "pokemon"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "types.type.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.type"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "equals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "moves.move.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.attack"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "equals": "__no_move_query__"
+              }
+            },
+            {
+              "path": "matchesTypeFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "notEquals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "matchesMoveFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "notEquals": "__no_move_query__"
+              }
+            }
+          ],
+          "sort": {
+            "by": {
+              "source": "queryParam",
+              "key": "sort",
+              "fallback": "number-asc"
+            },
+            "options": {
+              "number-asc": {
+                "path": "id",
+                "direction": "asc",
+                "type": "number"
+              },
+              "number-desc": {
+                "path": "id",
+                "direction": "desc",
+                "type": "number"
+              },
+              "name-asc": {
+                "path": "name",
+                "direction": "asc",
+                "type": "text"
+              },
+              "type-asc": {
+                "path": "primaryType",
+                "direction": "asc",
+                "type": "text"
+              },
+              "moves-desc": {
+                "path": "moveCount",
+                "direction": "desc",
+                "type": "number"
+              }
+            }
+          },
+          "pagination": {
+            "page": {
+              "source": "queryParam",
+              "key": "page",
+              "fallback": 1
+            },
+            "pageSize": {
+              "source": "queryParam",
+              "key": "pageSize",
+              "fallback": 4
+            },
+            "applyWhenAnyQueryParam": [
+              "pokemon",
+              "type",
+              "move"
+            ]
+          }
+        },
+        "bindings": [
+          {
+            "to": "config.text",
+            "sources": [
+              "catalogSourceLabel"
+            ],
+            "fallback": "API"
+          },
+          {
+            "to": "config.styles",
+            "sources": [
+              "typeThemeOutlineStyles"
+            ],
+            "fallback": {}
+          }
+        ]
+      },
+      "config": {
+        "tag": "p",
+        "text": "API",
+        "classes": "pokemonCardSource"
+      }
+    },
+    {
+      "id": "pokemonMoveCountTemplate",
+      "type": "text",
+      "loopConfig": {
+        "source": "var",
+        "path": "remote.pokemon.catalog.items",
+        "templateId": "pokemonMoveCountTemplate",
+        "idPrefix": "pokemonMoveCount",
+        "view": {
+          "filters": [
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "scope",
+                "path": "values.search"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "name",
+              "op": "contains",
+              "value": {
+                "source": "queryParam",
+                "key": "pokemon"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ]
+            },
+            {
+              "path": "types.type.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.type"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "equals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "moves.move.name",
+              "op": "includes",
+              "value": {
+                "source": "scope",
+                "path": "values.attack"
+              },
+              "ignoreValues": [
+                "",
+                "all"
+              ],
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "equals": "__no_move_query__"
+              }
+            },
+            {
+              "path": "matchesTypeFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "type",
+                  "fallback": "__no_type_query__"
+                },
+                "notEquals": "__no_type_query__"
+              }
+            },
+            {
+              "path": "matchesMoveFilter",
+              "op": "exists",
+              "activeWhen": {
+                "source": {
+                  "source": "queryParam",
+                  "key": "move",
+                  "fallback": "__no_move_query__"
+                },
+                "notEquals": "__no_move_query__"
+              }
+            }
+          ],
+          "sort": {
+            "by": {
+              "source": "queryParam",
+              "key": "sort",
+              "fallback": "number-asc"
+            },
+            "options": {
+              "number-asc": {
+                "path": "id",
+                "direction": "asc",
+                "type": "number"
+              },
+              "number-desc": {
+                "path": "id",
+                "direction": "desc",
+                "type": "number"
+              },
+              "name-asc": {
+                "path": "name",
+                "direction": "asc",
+                "type": "text"
+              },
+              "type-asc": {
+                "path": "primaryType",
+                "direction": "asc",
+                "type": "text"
+              },
+              "moves-desc": {
+                "path": "moveCount",
+                "direction": "desc",
+                "type": "number"
+              }
+            }
+          },
+          "pagination": {
+            "page": {
+              "source": "queryParam",
+              "key": "page",
+              "fallback": 1
+            },
+            "pageSize": {
+              "source": "queryParam",
+              "key": "pageSize",
+              "fallback": 4
+            },
+            "applyWhenAnyQueryParam": [
+              "pokemon",
+              "type",
+              "move"
+            ]
+          }
+        },
+        "bindings": [
+          {
+            "to": "config.text",
+            "sources": [
+              "moveCountLabel"
+            ],
+            "fallback": "Detalle en ficha"
+          },
+          {
+            "to": "config.styles",
+            "sources": [
+              "typeThemeSurfaceStyles"
+            ],
+            "fallback": {}
+          }
+        ]
+      },
+      "config": {
+        "tag": "p",
+        "text": "Detalle en ficha",
+        "classes": "pokemonMoveCount"
+      }
+    }
+  ]
+}

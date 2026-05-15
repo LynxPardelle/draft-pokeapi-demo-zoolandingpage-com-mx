@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "pageId": "default",
+  "domain": "pokeapi-demo.zoolandingpage.com.mx",
+  "rootIds": [
+    "skipToMainLink",
+    "demoPage"
+  ],
+  "modalRootIds": [],
+  "metadata": {
+    "status": "demo",
+    "source": "Codex generated PokeAPI runtime API proxy demonstration",
+    "versionTag": "v1.0.0",
+    "owner": "Zoolandingpage"
+  },
+  "seo": {
+    "title": "PokeAPI Runtime Demo | Drafts API Dinamicos de Zoolandingpage",
+    "description": "Demo indexable de Zoolandingpage que muestra paginacion, filtros, rutas dinamicas y datos vivos de PokeAPI a traves del API proxy.",
+    "keywords": [
+      "Zoolandingpage",
+      "PokeAPI",
+      "drafts dinamicos",
+      "runtime API proxy",
+      "SEO dinamico",
+      "SSR"
+    ],
+    "robots": "index,follow,max-image-preview:large",
+    "openGraph": {
+      "title": "PokeAPI Runtime Demo | Drafts API Dinamicos de Zoolandingpage",
+      "description": "Demo indexable de Zoolandingpage que muestra paginacion, filtros, rutas dinamicas y datos vivos de PokeAPI a traves del API proxy.",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+      "url": "https://pokeapi-demo.zoolandingpage.com.mx",
+      "type": "website"
+    },
+    "twitter": {
+      "title": "PokeAPI Runtime Demo | Drafts API Dinamicos de Zoolandingpage",
+      "description": "Demo indexable de Zoolandingpage que muestra paginacion, filtros, rutas dinamicas y datos vivos de PokeAPI a traves del API proxy.",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+      "card": "summary_large_image"
+    },
+    "canonical": "https://pokeapi-demo.zoolandingpage.com.mx"
+  },
+  "structuredData": {
+    "entries": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "PokeAPI Runtime Demo",
+        "url": "https://pokeapi-demo.zoolandingpage.com.mx",
+        "applicationCategory": "DeveloperApplication",
+        "description": "Demo visual de drafts API-driven de Zoolandingpage con datos vivos de PokeAPI.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "MXN"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://pokeapi-demo.zoolandingpage.com.mx/?pokemon={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "PokeAPI Runtime Demo",
+        "url": "https://pokeapi-demo.zoolandingpage.com.mx",
+        "description": "Demo indexable de Zoolandingpage para datos externos en drafts.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://pokeapi-demo.zoolandingpage.com.mx/?pokemon={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  },
+  "analytics": {
+    "sectionIds": [
+      "hero",
+      "pokemon-grid",
+      "runtime-proof"
+    ],
+    "scrollMilestones": [
+      25,
+      50,
+      75,
+      100
+    ]
+  }
+}

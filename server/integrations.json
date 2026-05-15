@@ -1,0 +1,430 @@
+{
+  "version": 1,
+  "domain": "pokeapi-demo.zoolandingpage.com.mx",
+  "sources": [
+    {
+      "id": "pokeapiPikachu",
+      "method": "GET",
+      "url": "https://pokeapi.co/api/v2/pokemon/pikachu",
+      "allowedInputFields": [],
+      "response": {
+        "singleItem": true,
+        "allowedFields": [
+          "id",
+          "name",
+          "sprites.other.official-artwork.front_default",
+          "types.type.name",
+          "abilities.ability.name",
+          "moves.move.name"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "pokeapiEevee",
+      "method": "GET",
+      "url": "https://pokeapi.co/api/v2/pokemon/eevee",
+      "allowedInputFields": [],
+      "response": {
+        "singleItem": true,
+        "allowedFields": [
+          "id",
+          "name",
+          "sprites.other.official-artwork.front_default",
+          "types.type.name",
+          "abilities.ability.name",
+          "moves.move.name"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "pokeapiCharizard",
+      "method": "GET",
+      "url": "https://pokeapi.co/api/v2/pokemon/charizard",
+      "allowedInputFields": [],
+      "response": {
+        "singleItem": true,
+        "allowedFields": [
+          "id",
+          "name",
+          "sprites.other.official-artwork.front_default",
+          "types.type.name",
+          "abilities.ability.name",
+          "moves.move.name"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "pokeapiGengar",
+      "method": "GET",
+      "url": "https://pokeapi.co/api/v2/pokemon/gengar",
+      "allowedInputFields": [],
+      "response": {
+        "singleItem": true,
+        "allowedFields": [
+          "id",
+          "name",
+          "sprites.other.official-artwork.front_default",
+          "types.type.name",
+          "abilities.ability.name",
+          "moves.move.name"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "pokeapiBulbasaur",
+      "method": "GET",
+      "url": "https://pokeapi.co/api/v2/pokemon/bulbasaur",
+      "allowedInputFields": [],
+      "response": {
+        "singleItem": true,
+        "allowedFields": [
+          "id",
+          "name",
+          "sprites.other.official-artwork.front_default",
+          "types.type.name",
+          "abilities.ability.name",
+          "moves.move.name"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "pokeapiSquirtle",
+      "method": "GET",
+      "url": "https://pokeapi.co/api/v2/pokemon/squirtle",
+      "allowedInputFields": [],
+      "response": {
+        "singleItem": true,
+        "allowedFields": [
+          "id",
+          "name",
+          "sprites.other.official-artwork.front_default",
+          "types.type.name",
+          "abilities.ability.name",
+          "moves.move.name"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "pokeapiDragonite",
+      "method": "GET",
+      "url": "https://pokeapi.co/api/v2/pokemon/dragonite",
+      "allowedInputFields": [],
+      "response": {
+        "singleItem": true,
+        "allowedFields": [
+          "id",
+          "name",
+          "sprites.other.official-artwork.front_default",
+          "types.type.name",
+          "abilities.ability.name",
+          "moves.move.name"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "pokeapiLucario",
+      "method": "GET",
+      "url": "https://pokeapi.co/api/v2/pokemon/lucario",
+      "allowedInputFields": [],
+      "response": {
+        "singleItem": true,
+        "allowedFields": [
+          "id",
+          "name",
+          "sprites.other.official-artwork.front_default",
+          "types.type.name",
+          "abilities.ability.name",
+          "moves.move.name"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "pokeapiPokemonIndex",
+      "method": "GET",
+      "url": "https://pokeapi.co/api/v2/pokemon",
+      "allowedInputFields": [
+        "limit",
+        "offset"
+      ],
+      "response": {
+        "allowedFields": [
+          "count",
+          "results.name",
+          "results.url"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "pokeapiPokemonDetail",
+      "method": "GET",
+      "urlTemplate": "https://pokeapi.co/api/v2/pokemon/{pokemonName}",
+      "allowedInputFields": [
+        "pokemonName"
+      ],
+      "response": {
+        "singleItem": true,
+        "allowedFields": [
+          "id",
+          "name",
+          "base_experience",
+          "height",
+          "weight",
+          "sprites.other.official-artwork.front_default",
+          "types.type.name",
+          "abilities.ability.name",
+          "stats.base_stat",
+          "stats.stat.name",
+          "moves.move.name"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "pokeapiPokemonSpeciesDetail",
+      "method": "GET",
+      "urlTemplate": "https://pokeapi.co/api/v2/pokemon-species/{pokemonName}",
+      "allowedInputFields": [
+        "pokemonName"
+      ],
+      "response": {
+        "singleItem": true,
+        "allowedFields": [
+          "name",
+          "evolves_from_species.name",
+          "generation.name",
+          "color.name"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "pokeapiMovePokemon",
+      "method": "GET",
+      "urlTemplate": "https://pokeapi.co/api/v2/move/{moveName}",
+      "allowedInputFields": [
+        "moveName"
+      ],
+      "response": {
+        "allowedFields": [
+          "id",
+          "name",
+          "learned_by_pokemon.name",
+          "learned_by_pokemon.url"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "pokeapiTypes",
+      "method": "GET",
+      "url": "https://pokeapi.co/api/v2/type",
+      "allowedInputFields": [
+        "limit",
+        "offset"
+      ],
+      "response": {
+        "allowedFields": [
+          "count",
+          "results.name",
+          "results.url"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "pokeapiMoves",
+      "method": "GET",
+      "url": "https://pokeapi.co/api/v2/move",
+      "allowedInputFields": [
+        "limit",
+        "offset"
+      ],
+      "response": {
+        "allowedFields": [
+          "count",
+          "results.name",
+          "results.url"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "pokeapiTypePokemon",
+      "method": "GET",
+      "urlTemplate": "https://pokeapi.co/api/v2/type/{typeName}",
+      "allowedInputFields": [
+        "typeName"
+      ],
+      "response": {
+        "allowedFields": [
+          "id",
+          "name",
+          "pokemon.pokemon.name",
+          "pokemon.pokemon.url"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "pokeapiBulbasaurSpecies",
+      "method": "GET",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/bulbasaur",
+      "allowedInputFields": [],
+      "response": {
+        "singleItem": true,
+        "allowedFields": [
+          "name",
+          "evolves_from_species.name",
+          "generation.name",
+          "color.name"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "pokeapiCharizardSpecies",
+      "method": "GET",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/charizard",
+      "allowedInputFields": [],
+      "response": {
+        "singleItem": true,
+        "allowedFields": [
+          "name",
+          "evolves_from_species.name",
+          "generation.name",
+          "color.name"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "pokeapiSquirtleSpecies",
+      "method": "GET",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/squirtle",
+      "allowedInputFields": [],
+      "response": {
+        "singleItem": true,
+        "allowedFields": [
+          "name",
+          "evolves_from_species.name",
+          "generation.name",
+          "color.name"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "pokeapiPikachuSpecies",
+      "method": "GET",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/pikachu",
+      "allowedInputFields": [],
+      "response": {
+        "singleItem": true,
+        "allowedFields": [
+          "name",
+          "evolves_from_species.name",
+          "generation.name",
+          "color.name"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "pokeapiGengarSpecies",
+      "method": "GET",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/gengar",
+      "allowedInputFields": [],
+      "response": {
+        "singleItem": true,
+        "allowedFields": [
+          "name",
+          "evolves_from_species.name",
+          "generation.name",
+          "color.name"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "pokeapiEeveeSpecies",
+      "method": "GET",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/eevee",
+      "allowedInputFields": [],
+      "response": {
+        "singleItem": true,
+        "allowedFields": [
+          "name",
+          "evolves_from_species.name",
+          "generation.name",
+          "color.name"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "pokeapiDragoniteSpecies",
+      "method": "GET",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/dragonite",
+      "allowedInputFields": [],
+      "response": {
+        "singleItem": true,
+        "allowedFields": [
+          "name",
+          "evolves_from_species.name",
+          "generation.name",
+          "color.name"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "pokeapiLucarioSpecies",
+      "method": "GET",
+      "url": "https://pokeapi.co/api/v2/pokemon-species/lucario",
+      "allowedInputFields": [],
+      "response": {
+        "singleItem": true,
+        "allowedFields": [
+          "name",
+          "evolves_from_species.name",
+          "generation.name",
+          "color.name"
+        ],
+        "maxBytes": 524288
+      },
+      "timeoutMs": 5000
+    }
+  ],
+  "actions": []
+}

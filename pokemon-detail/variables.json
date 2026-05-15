@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "pageId": "pokemon-detail",
+  "domain": "pokeapi-demo.zoolandingpage.com.mx",
+  "variables": {
+    "remote": {
+      "pokemon": {
+        "index": {
+          "items": [
+            {
+              "id": "pikachu",
+              "label": "pikachu",
+              "description": "Ficha dinamica de pikachu",
+              "href": "/pokemon?name=pikachu"
+            },
+            {
+              "id": "eevee",
+              "label": "eevee",
+              "description": "Ficha dinamica de eevee",
+              "href": "/pokemon?name=eevee"
+            },
+            {
+              "id": "charizard",
+              "label": "charizard",
+              "description": "Ficha dinamica de charizard",
+              "href": "/pokemon?name=charizard"
+            },
+            {
+              "id": "gengar",
+              "label": "gengar",
+              "description": "Ficha dinamica de gengar",
+              "href": "/pokemon?name=gengar"
+            },
+            {
+              "id": "bulbasaur",
+              "label": "bulbasaur",
+              "description": "Ficha dinamica de bulbasaur",
+              "href": "/pokemon?name=bulbasaur"
+            },
+            {
+              "id": "squirtle",
+              "label": "squirtle",
+              "description": "Ficha dinamica de squirtle",
+              "href": "/pokemon?name=squirtle"
+            },
+            {
+              "id": "dragonite",
+              "label": "dragonite",
+              "description": "Ficha dinamica de dragonite",
+              "href": "/pokemon?name=dragonite"
+            },
+            {
+              "id": "lucario",
+              "label": "lucario",
+              "description": "Ficha dinamica de lucario",
+              "href": "/pokemon?name=lucario"
+            }
+          ]
+        },
+        "selected": {
+          "items": [
+            {
+              "id": 25,
+              "name": "pikachu",
+              "number": "#25",
+              "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+              "primaryType": "electric",
+              "ability": "static",
+              "height": "4 dm",
+              "weight": "60 hg",
+              "baseExperience": "112 XP",
+              "hp": "35 HP",
+              "attack": "55 ATK",
+              "defense": "40 DEF",
+              "speed": "90 SPD",
+              "apiHref": "https://pokeapi.co/api/v2/pokemon/pikachu/",
+              "moves": [
+                {
+                  "move": {
+                    "name": "thunder-shock"
+                  }
+                },
+                {
+                  "move": {
+                    "name": "quick-attack"
+                  }
+                },
+                {
+                  "move": {
+                    "name": "iron-tail"
+                  }
+                },
+                {
+                  "move": {
+                    "name": "electro-ball"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "remoteStatus": {
+      "pokemon": {
+        "index": {
+          "state": "idle"
+        },
+        "selected": {
+          "state": "idle"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1255 @@
+{
+  "version": 1,
+  "domain": "pokeapi-demo.zoolandingpage.com.mx",
+  "pageId": "pokemon-detail",
+  "components": [
+    {
+      "id": "skipToMainLink",
+      "type": "link",
+      "eventInstructions": "skipToMain:pokemon-detail-main",
+      "config": {
+        "id": "skipToMainLink",
+        "href": "#pokemon-detail-main",
+        "text": "Saltar al contenido principal",
+        "ariaLabel": "Saltar al contenido principal",
+        "classes": "ank-d-none"
+      }
+    },
+    {
+      "id": "detailPage",
+      "type": "container",
+      "config": {
+        "id": "pokemon-detail-main",
+        "tag": "main",
+        "classes": "demoPage detailPage",
+        "components": [
+          "detailTopBar",
+          "detailSkeletonSection",
+          "detailHeroSection",
+          "detailStatsSection",
+          "detailMovesSection",
+          "detailRuntimeSection",
+          "demoFooter"
+        ]
+      },
+      "valueInstructions": "set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeVars"
+    },
+    {
+      "id": "detailTopBar",
+      "type": "container",
+      "config": {
+        "tag": "nav",
+        "ariaLabel": "Navegacion de la demo",
+        "classes": "detailTopBar",
+        "components": [
+          "detailBackLink",
+          "detailTopSearch",
+          "detailThemeToggle"
+        ]
+      },
+      "valueInstructions": "set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeSurfaceStyles,__missing__"
+    },
+    {
+      "id": "detailBackLink",
+      "type": "link",
+      "config": {
+        "href": "/",
+        "text": "Volver al catalogo",
+        "classes": "secondaryAction"
+      },
+      "valueInstructions": "set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeOutlineStyles,__missing__"
+    },
+    {
+      "id": "detailTopSearch",
+      "type": "search-box",
+      "valueInstructions": "set:config.suggestions,varOr,remote.pokemon.index.items,config.suggestions",
+      "eventInstructions": "navigateToUrl:event.eventData.href,_self,top",
+      "config": {
+        "minLength": 1,
+        "debounceMs": 80,
+        "ariaLabel": "Buscar otro Pokemon",
+        "placeholder": "Buscar otro Pokemon",
+        "classes": "detailSearch",
+        "inputClasses": "pokemonSearchInput",
+        "resultsClasses": "pokemonSearchResults",
+        "resultItemClasses": "pokemonSearchResult",
+        "statusItemClasses": "pokemonSearchStatus",
+        "maxResults": 8,
+        "suggestions": [
+          {
+            "id": "pikachu",
+            "label": "pikachu",
+            "description": "Ficha dinamica de pikachu",
+            "href": "/pokemon?name=pikachu"
+          },
+          {
+            "id": "eevee",
+            "label": "eevee",
+            "description": "Ficha dinamica de eevee",
+            "href": "/pokemon?name=eevee"
+          },
+          {
+            "id": "charizard",
+            "label": "charizard",
+            "description": "Ficha dinamica de charizard",
+            "href": "/pokemon?name=charizard"
+          },
+          {
+            "id": "gengar",
+            "label": "gengar",
+            "description": "Ficha dinamica de gengar",
+            "href": "/pokemon?name=gengar"
+          },
+          {
+            "id": "bulbasaur",
+            "label": "bulbasaur",
+            "description": "Ficha dinamica de bulbasaur",
+            "href": "/pokemon?name=bulbasaur"
+          },
+          {
+            "id": "squirtle",
+            "label": "squirtle",
+            "description": "Ficha dinamica de squirtle",
+            "href": "/pokemon?name=squirtle"
+          },
+          {
+            "id": "dragonite",
+            "label": "dragonite",
+            "description": "Ficha dinamica de dragonite",
+            "href": "/pokemon?name=dragonite"
+          },
+          {
+            "id": "lucario",
+            "label": "lucario",
+            "description": "Ficha dinamica de lucario",
+            "href": "/pokemon?name=lucario"
+          }
+        ]
+      }
+    },
+    {
+      "id": "detailThemeToggle",
+      "type": "button",
+      "eventInstructions": "toggleTheme",
+      "config": {
+        "type": "button",
+        "label": "Tema",
+        "icon": "dark_mode",
+        "iconPosition": "before",
+        "ariaLabel": "Alternar tema claro y oscuro",
+        "classes": "themeAction"
+      },
+      "valueInstructions": "set:config.icon,themePick,dark_mode,light_mode; set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeOutlineStyles,__missing__"
+    },
+    {
+      "id": "detailHeroSection",
+      "type": "container",
+      "config": {
+        "id": "detail-hero",
+        "tag": "section",
+        "classes": "detailHeroBand",
+        "components": [
+          "pokeDetailHeroInner"
+        ]
+      },
+      "condition": "all:varEq,remoteStatus.pokemon.selected.state,success; all:varLenGt,remote.pokemon.selected.items,0",
+      "valueInstructions": "set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeSurfaceStyles,__missing__"
+    },
+    {
+      "id": "pokeDetailHeroInner",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "pokeDetailHeroInner",
+        "components": [
+          "detailHeroCopy",
+          "pokeDetailHeroVisual"
+        ]
+      }
+    },
+    {
+      "id": "detailHeroCopy",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "detailHeroCopy",
+        "components": [
+          "detailKicker",
+          "detailTitle",
+          "detailIntro",
+          "detailTypeRow",
+          "detailPrimaryAction"
+        ]
+      }
+    },
+    {
+      "id": "detailKicker",
+      "type": "text",
+      "valueInstructions": "set:config.text,varOr,remote.pokemon.selected.items.0.number,#25; set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeOutlineStyles,__missing__",
+      "config": {
+        "tag": "p",
+        "text": "#25",
+        "classes": "heroKicker"
+      }
+    },
+    {
+      "id": "detailTitle",
+      "type": "text",
+      "valueInstructions": "set:config.text,varOr,remote.pokemon.selected.items.0.name,pikachu",
+      "config": {
+        "tag": "h1",
+        "text": "pikachu",
+        "classes": "detailTitle"
+      }
+    },
+    {
+      "id": "detailIntro",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Esta ficha usa una ruta parametrizada y consulta PokeAPI con el nombre recibido en la URL. El draft define la plantilla visual, el proxy controla la URL real y los campos permitidos.",
+        "classes": "heroText"
+      }
+    },
+    {
+      "id": "detailTypeRow",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "detailTypeRow",
+        "components": [
+          "detailTypeChip",
+          "detailAbilityChip"
+        ]
+      }
+    },
+    {
+      "id": "detailTypeChip",
+      "type": "text",
+      "valueInstructions": "set:config.text,varOr,remote.pokemon.selected.items.0.primaryTypeLabel,Electric; set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeBadgeStyles,__missing__",
+      "config": {
+        "tag": "p",
+        "text": "electric",
+        "classes": "heroChip"
+      }
+    },
+    {
+      "id": "detailAbilityChip",
+      "type": "text",
+      "valueInstructions": "set:config.text,varOr,remote.pokemon.selected.items.0.abilityLabel,Static; set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeOutlineStyles,__missing__",
+      "config": {
+        "tag": "p",
+        "text": "static",
+        "classes": "detailAbilityChip"
+      }
+    },
+    {
+      "id": "detailPrimaryAction",
+      "type": "link",
+      "valueInstructions": "set:config.href,varOr,remote.pokemon.selected.items.0.apiHref,https://pokeapi.co/api/v2/pokemon/pikachu/; set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeActionStyles,__missing__",
+      "config": {
+        "href": "https://pokeapi.co/api/v2/pokemon/pikachu/",
+        "text": "Ver respuesta original",
+        "target": "_blank",
+        "rel": "noopener noreferrer",
+        "classes": "primaryAction"
+      }
+    },
+    {
+      "id": "pokeDetailHeroVisual",
+      "type": "container",
+      "config": {
+        "tag": "aside",
+        "ariaLabel": "Arte oficial del Pokemon seleccionado",
+        "classes": "pokeDetailHeroVisual",
+        "components": [
+          "detailPokemonImage",
+          "detailImageCaption"
+        ]
+      }
+    },
+    {
+      "id": "detailPokemonImage",
+      "type": "media",
+      "valueInstructions": "set:config.src,varOr,remote.pokemon.selected.items.0.image,https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png; set:config.alt,varOr,remote.pokemon.selected.items.0.name,pikachu",
+      "config": {
+        "tag": "image",
+        "src": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+        "alt": "pikachu",
+        "width": 475,
+        "height": 475,
+        "loading": "eager",
+        "fetchPriority": "high",
+        "decoding": "async",
+        "sizes": "(min-width: 1024px) 380px, 82vw",
+        "classes": "pokeDetailImage"
+      }
+    },
+    {
+      "id": "detailImageCaption",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Arte oficial desde PokeAPI",
+        "classes": "pokeDetailStatusPill"
+      }
+    },
+    {
+      "id": "detailStatsSection",
+      "type": "container",
+      "config": {
+        "id": "detail-stats",
+        "tag": "section",
+        "classes": "pokeSection",
+        "components": [
+          "detailStatsInner"
+        ]
+      },
+      "condition": "all:varEq,remoteStatus.pokemon.selected.state,success; all:varLenGt,remote.pokemon.selected.items,0"
+    },
+    {
+      "id": "detailStatsInner",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "pokeSectionInner",
+        "components": [
+          "detailStatsEyebrow",
+          "detailStatsTitle",
+          "detailProfileGrid",
+          "detailStatsGrid"
+        ]
+      }
+    },
+    {
+      "id": "detailStatsEyebrow",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Datos filtrados",
+        "classes": "pokeSectionEyebrow"
+      }
+    },
+    {
+      "id": "detailStatsTitle",
+      "type": "text",
+      "config": {
+        "tag": "h2",
+        "text": "Campos seguros para una ficha dinamica",
+        "classes": "pokeSectionTitle"
+      }
+    },
+    {
+      "id": "detailStatsGrid",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "detailStatsGrid",
+        "components": [
+          "metricHeight",
+          "metricWeight",
+          "metricExperience",
+          "metricMoveTotal",
+          "metricHp",
+          "metricAttack",
+          "metricDefense",
+          "metricSpecialAttack",
+          "metricSpecialDefense",
+          "metricSpeed"
+        ]
+      }
+    },
+    {
+      "id": "metricHeight",
+      "type": "container",
+      "config": {
+        "tag": "article",
+        "classes": "detailMetricCard",
+        "components": [
+          "metricHeightLabel",
+          "metricHeightValue"
+        ]
+      },
+      "valueInstructions": "set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeSurfaceStyles,__missing__"
+    },
+    {
+      "id": "metricHeightLabel",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Altura",
+        "classes": "detailMetricLabel"
+      }
+    },
+    {
+      "id": "metricHeightValue",
+      "type": "text",
+      "valueInstructions": "set:config.text,varOr,remote.pokemon.selected.items.0.height,Sin dato",
+      "config": {
+        "tag": "p",
+        "text": "Sin dato",
+        "classes": "detailMetricValue"
+      }
+    },
+    {
+      "id": "metricWeight",
+      "type": "container",
+      "config": {
+        "tag": "article",
+        "classes": "detailMetricCard",
+        "components": [
+          "metricWeightLabel",
+          "metricWeightValue"
+        ]
+      },
+      "valueInstructions": "set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeSurfaceStyles,__missing__"
+    },
+    {
+      "id": "metricWeightLabel",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Peso",
+        "classes": "detailMetricLabel"
+      }
+    },
+    {
+      "id": "metricWeightValue",
+      "type": "text",
+      "valueInstructions": "set:config.text,varOr,remote.pokemon.selected.items.0.weight,Sin dato",
+      "config": {
+        "tag": "p",
+        "text": "Sin dato",
+        "classes": "detailMetricValue"
+      }
+    },
+    {
+      "id": "metricExperience",
+      "type": "container",
+      "config": {
+        "tag": "article",
+        "classes": "detailMetricCard",
+        "components": [
+          "metricExperienceLabel",
+          "metricExperienceValue"
+        ]
+      },
+      "valueInstructions": "set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeSurfaceStyles,__missing__"
+    },
+    {
+      "id": "metricExperienceLabel",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Experiencia",
+        "classes": "detailMetricLabel"
+      }
+    },
+    {
+      "id": "metricExperienceValue",
+      "type": "text",
+      "valueInstructions": "set:config.text,varOr,remote.pokemon.selected.items.0.baseExperience,Sin dato",
+      "config": {
+        "tag": "p",
+        "text": "Sin dato",
+        "classes": "detailMetricValue"
+      }
+    },
+    {
+      "id": "metricHp",
+      "type": "container",
+      "config": {
+        "tag": "article",
+        "classes": "detailMetricCard",
+        "components": [
+          "metricHpLabel",
+          "metricHpValue"
+        ]
+      },
+      "valueInstructions": "set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeSurfaceStyles,__missing__"
+    },
+    {
+      "id": "metricHpLabel",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "HP",
+        "classes": "detailMetricLabel"
+      }
+    },
+    {
+      "id": "metricHpValue",
+      "type": "text",
+      "valueInstructions": "set:config.text,varOr,remote.pokemon.selected.items.0.hp,Sin dato",
+      "config": {
+        "tag": "p",
+        "text": "Sin dato",
+        "classes": "detailMetricValue"
+      }
+    },
+    {
+      "id": "metricAttack",
+      "type": "container",
+      "config": {
+        "tag": "article",
+        "classes": "detailMetricCard",
+        "components": [
+          "metricAttackLabel",
+          "metricAttackValue"
+        ]
+      },
+      "valueInstructions": "set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeSurfaceStyles,__missing__"
+    },
+    {
+      "id": "metricAttackLabel",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Ataque",
+        "classes": "detailMetricLabel"
+      }
+    },
+    {
+      "id": "metricAttackValue",
+      "type": "text",
+      "valueInstructions": "set:config.text,varOr,remote.pokemon.selected.items.0.attack,Sin dato",
+      "config": {
+        "tag": "p",
+        "text": "Sin dato",
+        "classes": "detailMetricValue"
+      }
+    },
+    {
+      "id": "metricDefense",
+      "type": "container",
+      "config": {
+        "tag": "article",
+        "classes": "detailMetricCard",
+        "components": [
+          "metricDefenseLabel",
+          "metricDefenseValue"
+        ]
+      },
+      "valueInstructions": "set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeSurfaceStyles,__missing__"
+    },
+    {
+      "id": "metricDefenseLabel",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Defensa",
+        "classes": "detailMetricLabel"
+      }
+    },
+    {
+      "id": "metricDefenseValue",
+      "type": "text",
+      "valueInstructions": "set:config.text,varOr,remote.pokemon.selected.items.0.defense,Sin dato",
+      "config": {
+        "tag": "p",
+        "text": "Sin dato",
+        "classes": "detailMetricValue"
+      }
+    },
+    {
+      "id": "metricSpeed",
+      "type": "container",
+      "config": {
+        "tag": "article",
+        "classes": "detailMetricCard",
+        "components": [
+          "metricSpeedLabel",
+          "metricSpeedValue"
+        ]
+      },
+      "valueInstructions": "set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeSurfaceStyles,__missing__"
+    },
+    {
+      "id": "metricSpeedLabel",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Velocidad",
+        "classes": "detailMetricLabel"
+      }
+    },
+    {
+      "id": "metricSpeedValue",
+      "type": "text",
+      "valueInstructions": "set:config.text,varOr,remote.pokemon.selected.items.0.speed,Sin dato",
+      "config": {
+        "tag": "p",
+        "text": "Sin dato",
+        "classes": "detailMetricValue"
+      }
+    },
+    {
+      "id": "detailRuntimeSection",
+      "type": "container",
+      "config": {
+        "id": "detail-runtime",
+        "tag": "section",
+        "classes": "pokeSection",
+        "components": [
+          "detailRuntimeInner"
+        ]
+      }
+    },
+    {
+      "id": "detailRuntimeInner",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "pokeSectionInner",
+        "components": [
+          "detailRuntimeEyebrow",
+          "detailRuntimeTitle",
+          "detailRuntimeText",
+          "detailRuntimeStrip"
+        ]
+      }
+    },
+    {
+      "id": "detailRuntimeEyebrow",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Plantilla reutilizable",
+        "classes": "pokeSectionEyebrow"
+      }
+    },
+    {
+      "id": "detailRuntimeTitle",
+      "type": "text",
+      "config": {
+        "tag": "h2",
+        "text": "El mismo patron sirve para blogs, catalogos y productos",
+        "classes": "pokeSectionTitle"
+      }
+    },
+    {
+      "id": "detailRuntimeText",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "En otro proyecto, el parametro podria ser un slug de articulo, un SKU o un ID publico. La configuracion del draft mantiene la vista editable y el proxy conserva los controles de seguridad.",
+        "classes": "pokeSectionText"
+      }
+    },
+    {
+      "id": "detailRuntimeStrip",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "statusStrip",
+        "components": [
+          "detailRuntimeParam",
+          "detailRuntimeProxy",
+          "detailRuntimeFallback"
+        ]
+      }
+    },
+    {
+      "id": "detailRuntimeParam",
+      "type": "container",
+      "config": {
+        "tag": "article",
+        "classes": "statusItem",
+        "components": [
+          "detailRuntimeParamLabel",
+          "detailRuntimeParamText"
+        ]
+      }
+    },
+    {
+      "id": "detailRuntimeParamLabel",
+      "type": "text",
+      "config": {
+        "tag": "h3",
+        "text": "Query param",
+        "classes": "statusLabel"
+      }
+    },
+    {
+      "id": "detailRuntimeParamText",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "El nombre se lee desde ?name= y se transforma antes de llamar al proxy.",
+        "classes": "statusText"
+      }
+    },
+    {
+      "id": "detailRuntimeProxy",
+      "type": "container",
+      "config": {
+        "tag": "article",
+        "classes": "statusItem",
+        "components": [
+          "detailRuntimeProxyLabel",
+          "detailRuntimeProxyText"
+        ]
+      }
+    },
+    {
+      "id": "detailRuntimeProxyLabel",
+      "type": "text",
+      "config": {
+        "tag": "h3",
+        "text": "urlTemplate",
+        "classes": "statusLabel"
+      }
+    },
+    {
+      "id": "detailRuntimeProxyText",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "La URL final vive solo en server/integrations.json y no se expone como input arbitrario.",
+        "classes": "statusText"
+      }
+    },
+    {
+      "id": "detailRuntimeFallback",
+      "type": "container",
+      "config": {
+        "tag": "article",
+        "classes": "statusItem",
+        "components": [
+          "detailRuntimeFallbackLabel",
+          "detailRuntimeFallbackText"
+        ]
+      }
+    },
+    {
+      "id": "detailRuntimeFallbackLabel",
+      "type": "text",
+      "config": {
+        "tag": "h3",
+        "text": "Fallback",
+        "classes": "statusLabel"
+      }
+    },
+    {
+      "id": "detailRuntimeFallbackText",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Si la API falla, el draft conserva una ficha base y comunica el estado.",
+        "classes": "statusText"
+      }
+    },
+    {
+      "id": "demoFooter",
+      "type": "container",
+      "config": {
+        "tag": "footer",
+        "classes": "footerBand",
+        "components": [
+          "demoFooterInner"
+        ]
+      }
+    },
+    {
+      "id": "demoFooterInner",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "footerInner",
+        "components": [
+          "demoFooterText",
+          "demoFooterLink"
+        ]
+      }
+    },
+    {
+      "id": "demoFooterText",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Demo de Zoolandingpage con datos publicos de PokeAPI.",
+        "classes": "footerText"
+      }
+    },
+    {
+      "id": "demoFooterLink",
+      "type": "link",
+      "config": {
+        "href": "/",
+        "text": "Volver al inicio",
+        "classes": "footerLink"
+      }
+    },
+    {
+      "id": "detailMovesSection",
+      "type": "container",
+      "config": {
+        "id": "detail-moves",
+        "tag": "section",
+        "classes": "pokeSection",
+        "components": [
+          "detailMovesInner"
+        ]
+      },
+      "condition": "all:varEq,remoteStatus.pokemon.selected.state,success; all:varLenGt,remote.pokemon.selected.items,0"
+    },
+    {
+      "id": "detailMovesInner",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "pokeSectionInner",
+        "components": [
+          "detailMovesEyebrow",
+          "detailMovesTitle",
+          "detailMovesText",
+          "detailMovesGrid"
+        ]
+      }
+    },
+    {
+      "id": "detailMovesEyebrow",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Ataques",
+        "classes": "pokeSectionEyebrow"
+      }
+    },
+    {
+      "id": "detailMovesTitle",
+      "type": "text",
+      "config": {
+        "tag": "h2",
+        "text": "Movimientos disponibles desde la API",
+        "classes": "pokeSectionTitle"
+      }
+    },
+    {
+      "id": "detailMovesText",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "La ficha reutiliza el arreglo de movimientos permitido por el proxy. En un blog o catalogo, esta misma zona podria listar etiquetas, categorias o atributos relacionados.",
+        "classes": "pokeSectionText"
+      }
+    },
+    {
+      "id": "detailMovesGrid",
+      "type": "container",
+      "loopConfig": {
+        "source": "var",
+        "path": "remote.pokemon.selected.items.0.moves",
+        "templateId": "detailMoveTemplate",
+        "idPrefix": "detailMove",
+        "view": {
+          "pagination": {
+            "pageSize": 24
+          }
+        },
+        "bindings": [
+          {
+            "to": "config.text",
+            "sources": [
+              "move.name"
+            ],
+            "fallback": "Move"
+          },
+          {
+            "to": "config.href",
+            "sources": [
+              {
+                "from": "move.name",
+                "transform": "uriComponent"
+              }
+            ],
+            "prefix": "/?draftDomain=pokeapi-demo.zoolandingpage.com.mx&debugWorkspace=false&move=",
+            "suffix": "#pokemon-grid",
+            "fallback": "#pokemon-grid"
+          }
+        ]
+      },
+      "config": {
+        "tag": "div",
+        "classes": "detailMovesGrid",
+        "components": []
+      }
+    },
+    {
+      "id": "detailMoveTemplate",
+      "type": "link",
+      "config": {
+        "href": "/?draftDomain=pokeapi-demo.zoolandingpage.com.mx&debugWorkspace=false&move=move#pokemon-grid",
+        "text": "move",
+        "classes": "detailMoveChip"
+      },
+      "valueInstructions": "set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeOutlineStyles,__missing__"
+    },
+    {
+      "id": "detailSkeletonSection",
+      "type": "container",
+      "condition": "any:varNeq,remoteStatus.pokemon.selected.state,success; any:varLenEq,remote.pokemon.selected.items,0",
+      "config": {
+        "id": "detail-loading",
+        "tag": "section",
+        "classes": "detailHeroBand",
+        "components": [
+          "detailSkeletonInner"
+        ]
+      }
+    },
+    {
+      "id": "detailSkeletonInner",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "pokeDetailHeroInner",
+        "components": [
+          "detailSkeletonCopy",
+          "detailSkeletonVisual"
+        ]
+      }
+    },
+    {
+      "id": "detailSkeletonCopy",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "detailHeroCopy",
+        "components": [
+          "detailSkeletonKicker",
+          "detailSkeletonTitle",
+          "detailSkeletonTextOne",
+          "detailSkeletonTextTwo",
+          "detailSkeletonChips",
+          "detailSkeletonAction"
+        ]
+      }
+    },
+    {
+      "id": "detailSkeletonKicker",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "skeletonBlock detailSkeletonKicker",
+        "components": []
+      }
+    },
+    {
+      "id": "detailSkeletonTitle",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "skeletonBlock detailSkeletonTitleBlock",
+        "components": []
+      }
+    },
+    {
+      "id": "detailSkeletonTextOne",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "skeletonBlock detailSkeletonTextBlock",
+        "components": []
+      }
+    },
+    {
+      "id": "detailSkeletonTextTwo",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "skeletonBlock detailSkeletonTextShort",
+        "components": []
+      }
+    },
+    {
+      "id": "detailSkeletonChips",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "detailTypeRow",
+        "components": [
+          "detailSkeletonChipOne",
+          "detailSkeletonChipTwo"
+        ]
+      }
+    },
+    {
+      "id": "detailSkeletonChipOne",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "skeletonBlock detailSkeletonChip",
+        "components": []
+      }
+    },
+    {
+      "id": "detailSkeletonChipTwo",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "skeletonBlock detailSkeletonChip",
+        "components": []
+      }
+    },
+    {
+      "id": "detailSkeletonAction",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "skeletonBlock detailSkeletonAction",
+        "components": []
+      }
+    },
+    {
+      "id": "detailSkeletonVisual",
+      "type": "container",
+      "config": {
+        "tag": "aside",
+        "classes": "pokeDetailHeroVisual detailSkeletonVisual",
+        "components": [
+          "detailSkeletonImage",
+          "detailSkeletonCaption"
+        ]
+      }
+    },
+    {
+      "id": "detailSkeletonImage",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "skeletonBlock detailSkeletonImageBlock",
+        "components": []
+      }
+    },
+    {
+      "id": "detailSkeletonCaption",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "skeletonBlock detailSkeletonCaption",
+        "components": []
+      }
+    },
+    {
+      "id": "detailProfileGrid",
+      "type": "container",
+      "config": {
+        "tag": "div",
+        "classes": "detailProfileGrid",
+        "components": [
+          "detailTypesPanel",
+          "detailAbilitiesPanel"
+        ]
+      }
+    },
+    {
+      "id": "detailTypesPanel",
+      "type": "container",
+      "config": {
+        "tag": "article",
+        "classes": "detailProfilePanel",
+        "components": [
+          "detailTypesPanelLabel",
+          "detailTypesList"
+        ]
+      },
+      "valueInstructions": "set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeSurfaceStyles,__missing__"
+    },
+    {
+      "id": "detailTypesPanelLabel",
+      "type": "text",
+      "config": {
+        "tag": "h3",
+        "text": "Tipos detectados",
+        "classes": "detailProfileTitle"
+      }
+    },
+    {
+      "id": "detailTypesList",
+      "type": "container",
+      "loopConfig": {
+        "source": "var",
+        "path": "remote.pokemon.selected.items.0.types",
+        "templateId": "detailTypeItemTemplate",
+        "idPrefix": "detailTypeItem",
+        "bindings": [
+          {
+            "to": "config.text",
+            "sources": [
+              "type.name"
+            ],
+            "fallback": "Tipo"
+          }
+        ]
+      },
+      "config": {
+        "tag": "div",
+        "classes": "detailTagList",
+        "components": []
+      }
+    },
+    {
+      "id": "detailTypeItemTemplate",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Tipo",
+        "classes": "heroChip detailTagChip"
+      },
+      "valueInstructions": "set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeBadgeStyles,__missing__"
+    },
+    {
+      "id": "detailAbilitiesPanel",
+      "type": "container",
+      "config": {
+        "tag": "article",
+        "classes": "detailProfilePanel",
+        "components": [
+          "detailAbilitiesPanelLabel",
+          "detailAbilitiesList"
+        ]
+      },
+      "valueInstructions": "set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeSurfaceStyles,__missing__"
+    },
+    {
+      "id": "detailAbilitiesPanelLabel",
+      "type": "text",
+      "config": {
+        "tag": "h3",
+        "text": "Habilidades",
+        "classes": "detailProfileTitle"
+      }
+    },
+    {
+      "id": "detailAbilitiesList",
+      "type": "container",
+      "loopConfig": {
+        "source": "var",
+        "path": "remote.pokemon.selected.items.0.abilities",
+        "templateId": "detailAbilityItemTemplate",
+        "idPrefix": "detailAbilityItem",
+        "bindings": [
+          {
+            "to": "config.text",
+            "sources": [
+              "ability.name"
+            ],
+            "fallback": "Habilidad"
+          }
+        ]
+      },
+      "config": {
+        "tag": "div",
+        "classes": "detailTagList",
+        "components": []
+      }
+    },
+    {
+      "id": "detailAbilityItemTemplate",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Habilidad",
+        "classes": "detailAbilityChip detailTagChip"
+      },
+      "valueInstructions": "set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeOutlineStyles,__missing__"
+    },
+    {
+      "id": "metricMoveTotal",
+      "type": "container",
+      "config": {
+        "tag": "article",
+        "classes": "detailMetricCard",
+        "components": [
+          "metricMoveTotalLabel",
+          "metricMoveTotalValue"
+        ]
+      },
+      "valueInstructions": "set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeSurfaceStyles,__missing__"
+    },
+    {
+      "id": "metricMoveTotalLabel",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Movimientos",
+        "classes": "detailMetricLabel"
+      }
+    },
+    {
+      "id": "metricMoveTotalValue",
+      "type": "text",
+      "valueInstructions": "set:config.text,varOr,remote.pokemon.selected.items.0.moveCountLabel,Sin dato",
+      "config": {
+        "tag": "p",
+        "text": "Sin dato",
+        "classes": "detailMetricValue"
+      }
+    },
+    {
+      "id": "metricSpecialAttack",
+      "type": "container",
+      "config": {
+        "tag": "article",
+        "classes": "detailMetricCard",
+        "components": [
+          "metricSpecialAttackLabel",
+          "metricSpecialAttackValue"
+        ]
+      },
+      "valueInstructions": "set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeSurfaceStyles,__missing__"
+    },
+    {
+      "id": "metricSpecialAttackLabel",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Ataque esp.",
+        "classes": "detailMetricLabel"
+      }
+    },
+    {
+      "id": "metricSpecialAttackValue",
+      "type": "text",
+      "valueInstructions": "set:config.text,varOr,remote.pokemon.selected.items.0.specialAttack,Sin dato",
+      "config": {
+        "tag": "p",
+        "text": "Sin dato",
+        "classes": "detailMetricValue"
+      }
+    },
+    {
+      "id": "metricSpecialDefense",
+      "type": "container",
+      "config": {
+        "tag": "article",
+        "classes": "detailMetricCard",
+        "components": [
+          "metricSpecialDefenseLabel",
+          "metricSpecialDefenseValue"
+        ]
+      },
+      "valueInstructions": "set:config.styles,varOr,remote.pokemon.selected.items.0.typeThemeSurfaceStyles,__missing__"
+    },
+    {
+      "id": "metricSpecialDefenseLabel",
+      "type": "text",
+      "config": {
+        "tag": "p",
+        "text": "Defensa esp.",
+        "classes": "detailMetricLabel"
+      }
+    },
+    {
+      "id": "metricSpecialDefenseValue",
+      "type": "text",
+      "valueInstructions": "set:config.text,varOr,remote.pokemon.selected.items.0.specialDefense,Sin dato",
+      "config": {
+        "tag": "p",
+        "text": "Sin dato",
+        "classes": "detailMetricValue"
+      }
+    }
+  ]
+}
