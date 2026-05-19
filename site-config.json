@@ -12,6 +12,11 @@
       "path": "/pokemon",
       "pageId": "pokemon-detail",
       "label": "Detalle"
+    },
+    {
+      "path": "/404",
+      "pageId": "not-found",
+      "label": "Página no encontrada"
     }
   ],
   "site": {
@@ -102,7 +107,8 @@
   },
   "sitemap": {
     "excludePaths": [
-      "/pokemon"
+      "/pokemon",
+      "/404"
     ],
     "urls": [
       "/",
@@ -4719,5 +4725,6 @@
         "test.pokeapi-demo.zoolandingpage.com.mx"
       ]
     }
-  }
+  },
+  "notFoundPageId": "not-found"
 }

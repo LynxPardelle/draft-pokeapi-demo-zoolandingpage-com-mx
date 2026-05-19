@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "pageId": "not-found",
+  "domain": "pokeapi-demo.zoolandingpage.com.mx",
+  "rootIds": [
+    "skipToMainLink",
+    "notFoundPage"
+  ],
+  "modalRootIds": [],
+  "metadata": {
+    "status": "local-draft",
+    "routePurpose": "not-found-recovery"
+  },
+  "seo": {
+    "title": {
+      "es": "Página no encontrada | PokeAPI Runtime Demo",
+      "en": "Page not found | PokeAPI Runtime Demo",
+      "fr": "Page introuvable | PokeAPI Runtime Demo",
+      "de": "Seite nicht gefunden | PokeAPI Runtime Demo"
+    },
+    "description": {
+      "es": "La página solicitada no está disponible en PokeAPI Runtime Demo. Vuelve al inicio o usa una ruta publicada para continuar.",
+      "en": "The requested page is not available on PokeAPI Runtime Demo. Return home or use a published route to continue.",
+      "fr": "La page demandée n'est pas disponible sur PokeAPI Runtime Demo. Revenez à l'accueil ou utilisez une route publiée pour continuer.",
+      "de": "Die angeforderte Seite ist auf PokeAPI Runtime Demo nicht verfügbar. Kehre zur Startseite zurück oder nutze eine veröffentlichte Route."
+    },
+    "canonical": "https://pokeapi-demo.zoolandingpage.com.mx/404",
+    "robots": "noindex,follow",
+    "keywords": {
+      "es": [
+        "pagina no encontrada",
+        "PokeAPI Runtime Demo"
+      ],
+      "en": [
+        "page not found",
+        "PokeAPI Runtime Demo"
+      ],
+      "fr": [
+        "page introuvable",
+        "PokeAPI Runtime Demo"
+      ],
+      "de": [
+        "seite nicht gefunden",
+        "PokeAPI Runtime Demo"
+      ]
+    },
+    "openGraph": {
+      "title": {
+        "es": "Página no encontrada | PokeAPI Runtime Demo",
+        "en": "Page not found | PokeAPI Runtime Demo",
+        "fr": "Page introuvable | PokeAPI Runtime Demo",
+        "de": "Seite nicht gefunden | PokeAPI Runtime Demo"
+      },
+      "description": {
+        "es": "La página solicitada no está disponible en PokeAPI Runtime Demo. Vuelve al inicio o usa una ruta publicada para continuar.",
+        "en": "The requested page is not available on PokeAPI Runtime Demo. Return home or use a published route to continue.",
+        "fr": "La page demandée n'est pas disponible sur PokeAPI Runtime Demo. Revenez à l'accueil ou utilisez une route publiée pour continuer.",
+        "de": "Die angeforderte Seite ist auf PokeAPI Runtime Demo nicht verfügbar. Kehre zur Startseite zurück oder nutze eine veröffentlichte Route."
+      },
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+      "url": "https://pokeapi-demo.zoolandingpage.com.mx/404",
+      "type": "website"
+    },
+    "twitter": {
+      "title": {
+        "es": "Página no encontrada | PokeAPI Runtime Demo",
+        "en": "Page not found | PokeAPI Runtime Demo",
+        "fr": "Page introuvable | PokeAPI Runtime Demo",
+        "de": "Seite nicht gefunden | PokeAPI Runtime Demo"
+      },
+      "description": {
+        "es": "La página solicitada no está disponible en PokeAPI Runtime Demo. Vuelve al inicio o usa una ruta publicada para continuar.",
+        "en": "The requested page is not available on PokeAPI Runtime Demo. Return home or use a published route to continue.",
+        "fr": "La page demandée n'est pas disponible sur PokeAPI Runtime Demo. Revenez à l'accueil ou utilisez une route publiée pour continuer.",
+        "de": "Die angeforderte Seite ist auf PokeAPI Runtime Demo nicht verfügbar. Kehre zur Startseite zurück oder nutze eine veröffentlichte Route."
+      },
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+      "card": "summary_large_image"
+    }
+  },
+  "structuredData": {
+    "entries": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Página no encontrada | PokeAPI Runtime Demo",
+        "description": "La página solicitada no está disponible en PokeAPI Runtime Demo. Vuelve al inicio o usa una ruta publicada para continuar.",
+        "url": "https://pokeapi-demo.zoolandingpage.com.mx/404",
+        "inLanguage": "es"
+      }
+    ]
+  },
+  "analytics": {
+    "sectionIds": [
+      "home",
+      "rutas"
+    ],
+    "scrollMilestones": [
+      50,
+      100
+    ]
+  }
+}
