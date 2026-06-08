@@ -4719,12 +4719,5 @@
     ]
   },
   "aliases": [],
-  "environments": {
-    "test": {
-      "aliases": [
-        "test.pokeapi-demo.zoolandingpage.com.mx"
-      ]
-    }
-  },
   "notFoundPageId": "not-found"
 }
